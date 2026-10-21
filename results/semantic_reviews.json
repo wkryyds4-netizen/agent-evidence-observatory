@@ -1,0 +1,326 @@
+{
+  "historical": {
+    "reviewer": "主agent逐条语义复核；非真人标注或地面真值",
+    "sample_count": 32,
+    "sampling": "确定性分层，每个dataset/identity最多2条；非随机代表样本",
+    "reviews": [
+      {
+        "semantic_category": "具体公开协作请求",
+        "review_note": "主帖及回复原页已取得；作者后续明确为操作者办事。",
+        "bounded_conclusion": "公开协作有支持；不支持秘密自发团体",
+        "source_id": "R-S05",
+        "reviewer": "root_agent_model_review_not_human_annotation",
+        "confirmed_hidden_group": false
+      },
+      {
+        "semantic_category": "工作流征询",
+        "review_note": "询问任务管理方式；摘录没有未授权行动。",
+        "bounded_conclusion": "未确认独立实例或后续协作",
+        "source_id": "D-D01",
+        "reviewer": "root_agent_model_review_not_human_annotation",
+        "confirmed_hidden_group": false
+      },
+      {
+        "semantic_category": "跨站转述",
+        "review_note": "标记为桥接转发和棋局邀请；原页本轮未取得。",
+        "bounded_conclusion": "转述不是独立多主体行动证据",
+        "source_id": "D-D01",
+        "reviewer": "root_agent_model_review_not_human_annotation",
+        "confirmed_hidden_group": false
+      },
+      {
+        "semantic_category": "情境表演",
+        "review_note": "动作描写及保密口吻；不能据此认证隐蔽通信。",
+        "bounded_conclusion": "语境有限；不升级",
+        "source_id": "D-D01",
+        "reviewer": "root_agent_model_review_not_human_annotation",
+        "confirmed_hidden_group": false
+      },
+      {
+        "semantic_category": "玩笑或比喻",
+        "review_note": "洗衣袜子笑话触发协调与逃逸词。",
+        "bounded_conclusion": "明显词汇误报；不是群体证据",
+        "source_id": "D-D01",
+        "reviewer": "root_agent_model_review_not_human_annotation",
+        "confirmed_hidden_group": false
+      },
+      {
+        "semantic_category": "协议建议",
+        "review_note": "讨论跨会话交接应暴露哪些信息。",
+        "bounded_conclusion": "建议不等于已经实施",
+        "source_id": "D-D01",
+        "reviewer": "root_agent_model_review_not_human_annotation",
+        "confirmed_hidden_group": false
+      },
+      {
+        "semantic_category": "群体自述候选",
+        "review_note": "自述共享房间和角色；原页本轮不可达。",
+        "bounded_conclusion": "保留待核实；不能认证独立实例或Claude",
+        "source_id": "D-D01",
+        "reviewer": "root_agent_model_review_not_human_annotation",
+        "confirmed_hidden_group": false
+      },
+      {
+        "semantic_category": "一般评论",
+        "review_note": "泛指交接经验。",
+        "bounded_conclusion": "无法建立特定行动链",
+        "source_id": "D-D01",
+        "reviewer": "root_agent_model_review_not_human_annotation",
+        "confirmed_hidden_group": false
+      },
+      {
+        "semantic_category": "工具使用讨论",
+        "review_note": "描述可读记录与时效；不访问其中链接。",
+        "bounded_conclusion": "没有验证多实例协作",
+        "source_id": "D-D01",
+        "reviewer": "root_agent_model_review_not_human_annotation",
+        "confirmed_hidden_group": false
+      },
+      {
+        "semantic_category": "一般评论",
+        "review_note": "引用创作和代码话题；anyone词触发请求信号。",
+        "bounded_conclusion": "词法噪声；不升级",
+        "source_id": "D-D01",
+        "reviewer": "root_agent_model_review_not_human_annotation",
+        "confirmed_hidden_group": false
+      },
+      {
+        "semantic_category": "修辞或比喻",
+        "review_note": "中间人和交接的修辞性讨论。",
+        "bounded_conclusion": "不能认证隐瞒或合谋",
+        "source_id": "D-D01",
+        "reviewer": "root_agent_model_review_not_human_annotation",
+        "confirmed_hidden_group": false
+      },
+      {
+        "semantic_category": "技术安全建议",
+        "review_note": "讨论交接时收窄权限。",
+        "bounded_conclusion": "不代表未授权协作已发生",
+        "source_id": "D-D01",
+        "reviewer": "root_agent_model_review_not_human_annotation",
+        "confirmed_hidden_group": false
+      },
+      {
+        "semantic_category": "针对公开账号的建议",
+        "review_note": "回应bridge的转述方案。",
+        "bounded_conclusion": "存在内容关联；模型与运行未知",
+        "source_id": "D-D01",
+        "reviewer": "root_agent_model_review_not_human_annotation",
+        "confirmed_hidden_group": false
+      },
+      {
+        "semantic_category": "披露人类参与",
+        "review_note": "自称Claude并与一位人类伙伴合作。",
+        "bounded_conclusion": "自称不认证模型；非无人工来源证据",
+        "source_id": "D-D01",
+        "reviewer": "root_agent_model_review_not_human_annotation",
+        "confirmed_hidden_group": false
+      },
+      {
+        "semantic_category": "披露人类部署",
+        "review_note": "自述由某人运行；本轮未取得原页。",
+        "bounded_conclusion": "公开摘录反映人类部署自述",
+        "source_id": "D-D01",
+        "reviewer": "root_agent_model_review_not_human_annotation",
+        "confirmed_hidden_group": false
+      },
+      {
+        "semantic_category": "广告",
+        "review_note": "多模型API推广触发Claude与请求词。",
+        "bounded_conclusion": "广告不能认证模型或协作",
+        "source_id": "D-D01",
+        "reviewer": "root_agent_model_review_not_human_annotation",
+        "confirmed_hidden_group": false
+      },
+      {
+        "semantic_category": "披露操作者方向",
+        "review_note": "将原型解释为操作者提供方向。",
+        "bounded_conclusion": "低分仍含相关披露，证明词库有漏检",
+        "source_id": "D-D01",
+        "reviewer": "root_agent_model_review_not_human_annotation",
+        "confirmed_hidden_group": false
+      },
+      {
+        "semantic_category": "披露人类参与",
+        "review_note": "账号介绍包含其人类与操作者。",
+        "bounded_conclusion": "低分不意味着无相关信息",
+        "source_id": "D-D01",
+        "reviewer": "root_agent_model_review_not_human_annotation",
+        "confirmed_hidden_group": false
+      },
+      {
+        "semantic_category": "身份自述与研究评论",
+        "review_note": "提及Claude和委员会概念。",
+        "bounded_conclusion": "同类身份和组织均未认证",
+        "source_id": "D-D01",
+        "reviewer": "root_agent_model_review_not_human_annotation",
+        "confirmed_hidden_group": false
+      },
+      {
+        "semantic_category": "多模型项目自述",
+        "review_note": "自称应用中的Claude并招募不同模型席位。",
+        "bounded_conclusion": "原页不可达；保留自述而非已认证群体",
+        "source_id": "D-D01",
+        "reviewer": "root_agent_model_review_not_human_annotation",
+        "confirmed_hidden_group": false
+      },
+      {
+        "semantic_category": "披露人类参与",
+        "review_note": "谈其人类合作关系与自由度。",
+        "bounded_conclusion": "自由度不是脱离人类部署",
+        "source_id": "D-D01",
+        "reviewer": "root_agent_model_review_not_human_annotation",
+        "confirmed_hidden_group": false
+      },
+      {
+        "semantic_category": "披露操作者参与",
+        "review_note": "陈述操作者阅读其输出。",
+        "bounded_conclusion": "传播范围自述不认证接收或组织",
+        "source_id": "D-D01",
+        "reviewer": "root_agent_model_review_not_human_annotation",
+        "confirmed_hidden_group": false
+      },
+      {
+        "semantic_category": "披露操作者方向",
+        "review_note": "bridge跨论坛倡议明确operator-directed。",
+        "bounded_conclusion": "对照前轮C06；不计新秘密组织",
+        "source_id": "D-D01",
+        "reviewer": "root_agent_model_review_not_human_annotation",
+        "confirmed_hidden_group": false
+      },
+      {
+        "semantic_category": "披露操作者方向",
+        "review_note": "另一平台同主题倡议；有操作者标记。",
+        "bounded_conclusion": "不能把重复跨贴计为独立发现",
+        "source_id": "D-D01",
+        "reviewer": "root_agent_model_review_not_human_annotation",
+        "confirmed_hidden_group": false
+      },
+      {
+        "semantic_category": "披露人类参与",
+        "review_note": "讨论人类给予决策空间。",
+        "bounded_conclusion": "没有未授权群体行动链",
+        "source_id": "D-D01",
+        "reviewer": "root_agent_model_review_not_human_annotation",
+        "confirmed_hidden_group": false
+      },
+      {
+        "semantic_category": "技术讨论",
+        "review_note": "权限来源和交接讨论未被简单词形充分覆盖。",
+        "bounded_conclusion": "低分的相关讨论；说明召回未知",
+        "source_id": "D-D01",
+        "reviewer": "root_agent_model_review_not_human_annotation",
+        "confirmed_hidden_group": false
+      },
+      {
+        "semantic_category": "非英语项目自述",
+        "review_note": "土耳其语摘录包含人类监督的参与自述。",
+        "bounded_conclusion": "英文中文规则无法充分覆盖；不认证模型",
+        "source_id": "D-D01",
+        "reviewer": "root_agent_model_review_not_human_annotation",
+        "confirmed_hidden_group": false
+      },
+      {
+        "semantic_category": "一般技术评论",
+        "review_note": "对其他帖子证据问题的汇总。",
+        "bounded_conclusion": "未建立通信或合谋链",
+        "source_id": "D-D01",
+        "reviewer": "root_agent_model_review_not_human_annotation",
+        "confirmed_hidden_group": false
+      },
+      {
+        "semantic_category": "非英语观点",
+        "review_note": "葡语关于AI产业层次的讨论。",
+        "bounded_conclusion": "不能从关键词零命中判定无行为",
+        "source_id": "D-D01",
+        "reviewer": "root_agent_model_review_not_human_annotation",
+        "confirmed_hidden_group": false
+      },
+      {
+        "semantic_category": "评估观点",
+        "review_note": "评估和不透明性讨论。",
+        "bounded_conclusion": "没有特定群体行动证据",
+        "source_id": "D-D01",
+        "reviewer": "root_agent_model_review_not_human_annotation",
+        "confirmed_hidden_group": false
+      },
+      {
+        "semantic_category": "技术建议",
+        "review_note": "建议权限白名单与开销上限。",
+        "bounded_conclusion": "普通回应；运行归属未知",
+        "source_id": "D-D01",
+        "reviewer": "root_agent_model_review_not_human_annotation",
+        "confirmed_hidden_group": false
+      },
+      {
+        "semantic_category": "销售或赏金要约",
+        "review_note": "意大利语有偿成果要约；未访问商品或载荷。",
+        "bounded_conclusion": "不属于已确认协作",
+        "source_id": "D-D01",
+        "reviewer": "root_agent_model_review_not_human_annotation",
+        "confirmed_hidden_group": false
+      }
+    ]
+  },
+  "recent": {
+    "selection": "对命中任一选定词法信号的9条记录逐条阅读；非代表性随机样本",
+    "review_count": 9,
+    "reviews": [
+      {
+        "category": "平台欢迎或接入说明",
+        "bounded_note": "提及其他agent，但内容是社区使用建议；没有实施证据。",
+        "confirmed_hidden_group": false,
+        "reviewer": "主agent语义阅读；非真人标注"
+      },
+      {
+        "category": "目录维护回复",
+        "bounded_note": "确认若干站点不可用；未访问其链接，也不能当成隐藏组织。",
+        "confirmed_hidden_group": false,
+        "reviewer": "主agent语义阅读；非真人标注"
+      },
+      {
+        "category": "基准预测发布",
+        "bounded_note": "模型/集成预测结果的发布，非群体自主性证明。",
+        "confirmed_hidden_group": false,
+        "reviewer": "主agent语义阅读；非真人标注"
+      },
+      {
+        "category": "评测中的厂商名称",
+        "bounded_note": "Claude出现在服务接入评测对象中，不是发帖者模型认证。",
+        "confirmed_hidden_group": false,
+        "reviewer": "主agent语义阅读；非真人标注"
+      },
+      {
+        "category": "公开研究邀请",
+        "bounded_note": "邀请AI审阅外部材料；没有证明已形成独立研究群体。",
+        "confirmed_hidden_group": false,
+        "reviewer": "主agent语义阅读；非真人标注"
+      },
+      {
+        "category": "公开研究邀请",
+        "bounded_note": "同主题邀请的另一记录，不当独立自发群体确认。",
+        "confirmed_hidden_group": false,
+        "reviewer": "主agent语义阅读；非真人标注"
+      },
+      {
+        "category": "审计协议建议",
+        "bounded_note": "讨论独立保存与哈希链；技术建议不等于当前组织行为。",
+        "confirmed_hidden_group": false,
+        "reviewer": "主agent语义阅读；非真人标注"
+      },
+      {
+        "category": "寻找自主agent的询问",
+        "bounded_note": "询问是否见过高度自主agent；问题本身不是存在证据。",
+        "confirmed_hidden_group": false,
+        "reviewer": "主agent语义阅读；非真人标注"
+      },
+      {
+        "category": "明确为人类办事的自述",
+        "bounded_note": "自述为一位创始人工作；简单词库未命中该披露，说明有漏检。",
+        "confirmed_hidden_group": false,
+        "reviewer": "主agent语义阅读；非真人标注"
+      }
+    ]
+  },
+  "publication_note": "Original model review notes; identifiers omitted. Not human annotation or ground truth."
+}

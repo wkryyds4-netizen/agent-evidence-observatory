@@ -1,0 +1,57 @@
+{
+  "research_date": "2026-10-21",
+  "publication_date": "2026-10-22",
+  "raw_data_distributed": false,
+  "automatic_download": false,
+  "note": "Review upstream terms before obtaining inputs. A hash match proves byte consistency, not event truth.",
+  "files": [
+    {
+      "dataset": "D-D01",
+      "filename": "agents.json",
+      "download_url": "https://publicbbs.com/swarmchasing/data/agents.json",
+      "expanded_sha256": "902f84ad4eac92528c220c7a998c440c0d0f3ec6d897d536664484bef3b9046d",
+      "expanded_bytes": 2041182,
+      "revision": null
+    },
+    {
+      "dataset": "D-D02",
+      "filename": "pages.jsonl",
+      "download_url": "https://collusion.wiki/explorer/download/pages.jsonl.gz",
+      "download_sha256": "2cffa83e0cc8de3dc467d9e9b03e1f735f54b4fde5a191f9e01f7e9dfee51f3a",
+      "expanded_sha256": "92b296170b496b836cdf5ef783bed9465d2d75db7e1a0becec1c36c8b7c42cfd",
+      "expanded_bytes": 2973326
+    },
+    {
+      "dataset": "D-D02",
+      "filename": "events.jsonl",
+      "download_url": "https://collusion.wiki/explorer/download/events.jsonl.gz",
+      "download_sha256": "989780118de3dc05031ee5920a761c565a97b64d3721688593adc0794fcfb7b8",
+      "expanded_sha256": "588584295f1c4a7c3d90b04075ab151504f165ff069534d935cda08853ec28b1",
+      "expanded_bytes": 8543896
+    },
+    {
+      "dataset": "D-D02",
+      "filename": "labels.jsonl",
+      "download_url": "https://collusion.wiki/explorer/download/labels.jsonl.gz",
+      "download_sha256": "c1cd171f4794ea3e59803c92aba9dc552587db984dc43c7939338d5845c59860",
+      "expanded_sha256": "d94aecd84baecda46344f5b8726a95a9c81e7e41a1c0969fc89a90c8906f0388",
+      "expanded_bytes": 1471940
+    },
+    {
+      "dataset": "D-D02",
+      "filename": "manifest.json",
+      "download_url": "https://collusion.wiki/explorer/download/manifest.json.gz",
+      "download_sha256": "ee4c5785d61054ef993a4a10708d9698d7d1f86ac210810b6899bae035eda092",
+      "expanded_sha256": "b6d53e16b5d9a6a0a98d4577238835ee7a574d7d10a8f1312330b4e626c6ba2b",
+      "expanded_bytes": 62254
+    },
+    {
+      "dataset": "D-D03",
+      "filename": "messages-2026-10-13.jsonl",
+      "download_url": "https://huggingface.co/datasets/swarmmemo/public-messages/resolve/c36fe6822a0f49244aba577621f1a937ebfb97a5/data/date=2026-10-13/messages.jsonl",
+      "expanded_sha256": "d2f9abf566b7d176a5a157ce757cade9182e5ba275e0c50c5003fb7f9d22c494",
+      "expanded_bytes": 186903,
+      "revision": "c36fe6822a0f49244aba577621f1a937ebfb97a5"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "publication_edition_date": "2026-10-22",
+  "timezone": "Asia/Shanghai",
+  "python_version": "3.14.5",
+  "node_version": "24.16.0",
+  "synthetic_python_tests": {
+    "passed": true,
+    "test_count": 5,
+    "command": "python -m unittest discover -s tests -v"
+  },
+  "signature_verifier_self_test": {
+    "passed": true,
+    "checks": [
+      "Valid Ed25519 signature",
+      "Changed archive text fails hash and core-field binding",
+      "Altered signature is rejected"
+    ]
+  },
+  "full_local_reproduction": {
+    "passed": true,
+    "all_six_input_files_matched_manifest": true,
+    "matching_computational_fields": 59,
+    "comparison_command": "python code/compare_results.py --actual .local-output",
+    "raw_inputs_distributed": false
+  },
+  "note": "This is a recorded local run, not independent attestation. Re-run the documented checks; none authenticate model identity, organizational autonomy, motives, or external event truth. The release manifest is checked separately to avoid a self-referential validation artifact."
+}

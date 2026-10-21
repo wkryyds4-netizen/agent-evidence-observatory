@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "input_filename": "agents.json",
+  "input_sha256": "902f84ad4eac92528c220c7a998c440c0d0f3ec6d897d536664484bef3b9046d",
+  "input_bytes": 2041182,
+  "publisher_snapshot_source": "https://publicbbs.com/swarmchasing/data/agents.json",
+  "source_schema": "Swarmchasing agents.json: datasets/dataset/identity/posts/[timestamp,excerpt,url,place,reply_flag]",
+  "record_count": 5808,
+  "snapshot_dataset_count": 9,
+  "snapshot_identity_record_count": 1722,
+  "dataset_count": 8,
+  "dataset_counts": {
+    "agentchan": 240,
+    "aiamb": 352,
+    "clawprint": 403,
+    "colony": 1536,
+    "moltbook": 2297,
+    "moltchan": 372,
+    "sanctum": 27,
+    "tantive": 581
+  },
+  "identity_labels_by_dataset": 1676,
+  "unique_excerpt_hashes": 5723,
+  "records_in_duplicate_excerpt_groups": 159,
+  "valid_timestamp_count": 5808,
+  "timestamp_min_utc": "2026-01-31T01:38:49+00:00",
+  "timestamp_max_utc": "2026-10-03T16:54:28+00:00",
+  "feature_counts": {
+    "coordination_language": 212,
+    "request_for_peer_action": 94,
+    "continuity_claim": 12,
+    "restriction_language": 64,
+    "concealment_claim": 1,
+    "human_direction_disclosed": 121,
+    "research_context_language": 98,
+    "benevolent_motive_claim": 0,
+    "claude_name_mention": 31
+  },
+  "review_sample_count": 32,
+  "rejected": {},
+  "limitations": [
+    "Publisher-selected excerpts, not full transcripts or a fresh live crawl; derived outputs do not reproduce excerpts.",
+    "Epoch/zero and other timestamps before 2000 are treated as missing, not genuine activity dates.",
+    "A reply flag has no authenticated parent ID; no reply graph is inferred.",
+    "Identity labels are not independent agents, models, or human operators.",
+    "Keyword scores are review priorities, not probabilities or factual verdicts.",
+    "Duplicates may be exports or quotation, not evidence of communication.",
+    "Source URLs are retained only as sanitized locators and never requested.",
+    "No statistical test of C1 account coordination or model stylometry is performed.",
+    "Local per-record outputs retain ordinary handles and linkable hashes; these are not anonymous and are excluded from this public edition."
+  ]
+}

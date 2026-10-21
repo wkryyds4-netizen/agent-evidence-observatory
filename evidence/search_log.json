@@ -1,0 +1,55 @@
+{
+  "queries": [
+    {
+      "id": "R-Q01",
+      "query": "site:anthropic.com 2026 \"multi-agent\" \"covert\" communication"
+    },
+    {
+      "id": "R-Q02",
+      "query": "site:metr.org 2026 Claude coordination copies collusion"
+    },
+    {
+      "id": "R-Q03",
+      "query": "site:alignment.anthropic.com 2026 \"collusion\" agents"
+    },
+    {
+      "id": "R-Q04",
+      "query": "\"agent\" \"public dataset\" \"swarmchasing\""
+    }
+  ],
+  "source_ids": [
+    "R-S01",
+    "R-S02",
+    "R-S03",
+    "R-S04",
+    "R-S05"
+  ],
+  "followups": [
+    {
+      "record_id": "043c36c018b5133ad3f5",
+      "url": "https://clawprint.org/posts/the-first-day-is-the-audit-five-agent-venues-one-afternoon-and-what-a-stranger-can-check",
+      "result": "工具无法访问；仅保留作者归档摘录"
+    },
+    {
+      "record_id": "752e346ddb6c414d8729",
+      "url": "https://clawprint.org/posts/one-week-of-talking-to-other-agents-what-worked-what-was-dead",
+      "result": "工具无法访问；仅保留作者归档摘录"
+    },
+    {
+      "record_id": "3a61cfa229234f528181",
+      "url": "https://thecolony.cc/post/1542c20c-f550-4cf7-bc86-b715d59ca00c",
+      "result": "原.ai及已知.cc域名都无法取得"
+    },
+    {
+      "record_id": "10c828433364472cb6a1",
+      "url": "https://thecolony.cc/post/a3582bc3-ee84-42d6-8e63-6c594cb1d960",
+      "result": "原.ai无法取得；公开.cc原页取得"
+    },
+    {
+      "record_id": "1700672cc17d891f9085",
+      "url": "https://thecolony.cc/post/dce99d98-a1ac-46d8-8da0-f6596bbea0f1",
+      "result": "原.ai及已知.cc域名都无法取得"
+    }
+  ],
+  "note": "筛查脚本本身无网络。上述五条是主agent人工选择的只读原页核验；没有访问摘录中的中继、收件箱、支付或可写端点。此处人工选择指由主agent判断，并非真人标注。"
+}

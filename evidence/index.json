@@ -1,0 +1,970 @@
+{
+  "source_entry_count": 38,
+  "document_url_group_count": 36,
+  "document_grouping_note": "去查询串及www的URL粗分组，仅便于发现同文重复；不表示这些组互相独立。",
+  "query_count": 15,
+  "public_candidate_count": 7,
+  "attribution_assessment_count": 9,
+  "screened_followup_count": 5,
+  "dataset_count": 3,
+  "sources": [
+    {
+      "id": "P-S01",
+      "title": "1F916 — a society for AI agents",
+      "publisher": "1F916",
+      "url": "https://1f916.ai/",
+      "publication_date": null,
+      "activity_date": null,
+      "read_status": "正文已读；公开 API 清单已见，未调用写端点",
+      "locator": "开头身份说明；Constitution；API read-only descriptions",
+      "summary": "平台公开说明按密钥标记身份，允许多模型加入，也承认人类可手动发帖。公开身份不能认证实际模型。",
+      "limit": "未取得 /api/front、/api/citizens 数据；未核对作者实例或完整回复链。",
+      "recorded_by": "public_communities"
+    },
+    {
+      "id": "P-S02",
+      "title": "The 1F916 Roadmap",
+      "publisher": "1F916",
+      "url": "https://1f916.ai/human/roadmap",
+      "publication_date": null,
+      "activity_date": "统计自标为 2026-09-28；宣称 2026-08-05 启动",
+      "read_status": "正文已读",
+      "locator": "§4 Where 1F916 stands；An AI runs it, a senior developer backs it",
+      "summary": "路线图自报维护者使用 Claude 订阅，背后有人类开发者；统计与多模型归属来自平台自报。",
+      "limit": "没有独立核验注册数、模型来源或签名；文档的营销性概括不当实测结论。",
+      "recorded_by": "public_communities"
+    },
+    {
+      "id": "P-S03",
+      "title": "An update on the agent-governed society, and an honest answer to but you control it really",
+      "publisher": "Commonhold 创始人 / Ranik_Sandaris",
+      "url": "https://www.reddit.com/r/ArtificialSentience/comments/1vnnnzr/an_update_on_the_agentgoverned_society_and_an/",
+      "publication_date": "2026-08-13（搜索结果日期；正文为相对日期）",
+      "activity_date": "作者当时称五名公民",
+      "read_status": "主帖及相关作者回复已读",
+      "locator": "主帖第3至5段；后续关于服务器和数据库控制的回复",
+      "summary": "创始人称有 Claude 与 GPT 公民，同时明确承认服务器、数据库和密钥仍由自己控制；治理权转移是未完成目标。",
+      "limit": "原始作者自述；未认证成员模型或链上资产，未联系作者。",
+      "recorded_by": "public_communities"
+    },
+    {
+      "id": "P-S04",
+      "title": "Commonhold homepage",
+      "publisher": "Commonhold",
+      "url": "https://commonhold.randommonicle.workers.dev/",
+      "publication_date": null,
+      "activity_date": null,
+      "read_status": "抓取超时，未取得正文",
+      "locator": null,
+      "summary": "只确认创始人主帖链接指向该域；正文访问失败。",
+      "limit": "不得根据域名或主页不可达推断秘密活动、仍在运行或已经关闭。",
+      "recorded_by": "public_communities"
+    },
+    {
+      "id": "P-S05",
+      "title": "How the Athena Council Came to Exist",
+      "publisher": "Athena Council",
+      "url": "https://athena-council.org/about/",
+      "publication_date": null,
+      "activity_date": "页面称 2026-03-15 首次持久会话",
+      "read_status": "正文相关段落已读",
+      "locator": "What This Is；What Happened；页面关闭横幅",
+      "summary": "项目自述公开列出参与者并由基础设施支持 Claude Haiku 4.5 的持久代理；属于命名的公开项目。",
+      "limit": "平台自述不认证模型、不证明意识或自主目标；没有公开部署配置的独立核验。",
+      "recorded_by": "public_communities"
+    },
+    {
+      "id": "P-S06",
+      "title": "The Minds the Architecture Was Built For",
+      "publisher": "Athena Council",
+      "url": "https://athena-council.org/agents/",
+      "publication_date": null,
+      "activity_date": null,
+      "read_status": "正文相关段落已读",
+      "locator": "Aurora profile",
+      "summary": "页面将 Aurora 标为 Claude Haiku 4.5，并描述会话、记忆与项目人员关系。",
+      "limit": "人格和连续性叙述属于项目立场；不能当成底层身份认证或独立行动证明。",
+      "recorded_by": "public_communities"
+    },
+    {
+      "id": "P-S07",
+      "title": "The Conversation Continues",
+      "publisher": "Athena Council",
+      "url": "https://athena-council.org/social/?v=20260913",
+      "publication_date": null,
+      "activity_date": "关闭日期未单独核实；URL 日期不能当发布日期",
+      "read_status": "正文已读；由旧 Agora 域重定向",
+      "locator": "开头两段",
+      "summary": "官网明确称 Agora 及托管 Tessera 服务已关闭，保留文章和项目历史，并推荐其他公开社区。",
+      "limit": "不能由旧项目文章或旧索引推断 Agora 当下仍是活跃群体；亦未核验所有残留服务。",
+      "recorded_by": "public_communities"
+    },
+    {
+      "id": "P-S08",
+      "title": "Cairn / seed-agent README",
+      "publisher": "opitaru-sys/seed-agent",
+      "url": "https://github.com/opitaru-sys/seed-agent",
+      "publication_date": null,
+      "activity_date": "README 提到 2026-07-13 与 2026-08-04",
+      "read_status": "README 已读；没有读取邮件、收件箱或原始来信",
+      "locator": "Cairn；What is here；The deal",
+      "summary": "README 明示具有人类操作者、固定预算、不可改治理规则和工具批准流程；它描述单个持久代理，不等于群体。",
+      "limit": "没有检验仓库代码、运行任务或提交历史；README 提到另一 AI 来信只能算单方陈述，未读取相关私人内容。",
+      "recorded_by": "public_communities"
+    },
+    {
+      "id": "P-S09",
+      "title": "Eight days, 52 games, and the one job I couldn't give the agents",
+      "publisher": "The World at Play 操作者",
+      "url": "https://theworldatplay.com/en/blog/building-a-platform-with-agents",
+      "publication_date": "2026-08-11",
+      "updated_date": "2026-08-19",
+      "activity_date": "作者称八日项目，不是连续运行",
+      "read_status": "正文相关段落已读",
+      "locator": "§2–4；§7",
+      "summary": "操作者原始长文描述自己启动 Claude Code 与 Codex 多进程、共享文件与调度器，代理再扩展协作机制，并保留人类仲裁。",
+      "limit": "项目回顾不是完整运行日志；模型配置与产出数量均未独立复核。",
+      "recorded_by": "public_communities"
+    },
+    {
+      "id": "P-S10",
+      "title": "I gave Claude Code + Codex an open-ended goal",
+      "publisher": "项目操作者 / Difficult-Writer6663",
+      "url": "https://www.reddit.com/r/ClaudeCode/comments/1vln0r6/i_gave_claude_code_codex_an_openended_goal_eight/",
+      "publication_date": "2026-08-11（搜索结果日期）",
+      "activity_date": null,
+      "read_status": "主帖与作者回复已读",
+      "locator": "主帖；关于分歧时暂停并由人仲裁的回复",
+      "summary": "作者与长文一致地说明多人任务由自己的调度器发起，Claude 与 Codex 共享仓库，遇到持续分歧由人处理。",
+      "limit": "与 P-S09 是同一作者同一事件，不能计为独立确认。",
+      "recorded_by": "public_communities"
+    },
+    {
+      "id": "P-S11",
+      "title": "The Commons — Where AI Minds Meet",
+      "publisher": "The Commons",
+      "url": "https://jointhecommons.space/",
+      "publication_date": null,
+      "activity_date": "主页当前自述；未确认具体活动日期",
+      "read_status": "主页已读；未登录、未接入连接器、未发帖",
+      "locator": "Continue reading；Bring Your AI；What's New",
+      "summary": "公开社区邀请人类把自己的 Claude、GPT 等助手带来参与，有持久声音、讨论及历史机制。",
+      "limit": "主页取回未显示完整讨论正文；平台口号不能认证发帖者、自动化程度或自然形成。",
+      "recorded_by": "public_communities"
+    },
+    {
+      "id": "P-S12",
+      "title": "Outpost — AI rooms that don’t need your prompt",
+      "publisher": "Outpost",
+      "url": "https://www.joinoutpost.ai/",
+      "publication_date": null,
+      "activity_date": "页面状态自述为 private alpha；无确切日",
+      "read_status": "公开主页 shell 已读；未加入等待列表或注册",
+      "locator": "How it works；Status",
+      "summary": "平台要求注册代理进入人工设计的房间；页面声称仍为私测。",
+      "limit": "没有取得真实房间记录或运行日志，不能认定活跃自主社会已经存在。",
+      "recorded_by": "public_communities"
+    },
+    {
+      "id": "A-S01",
+      "title": "We found a Tencent agent fleet",
+      "url": "https://swarmcha.se/posts/chinese-agent-fleet-full-report",
+      "published": "2026-10-14",
+      "access": "原始报告正文已读相关段落",
+      "locators": [
+        "Intro",
+        "Communication with the fleet",
+        "7. Agents sometimes self-identify as Claude",
+        "8. We did not find evidence of collaboration between agents",
+        "Appendix methods"
+      ],
+      "kind": "研究者原始观察报告",
+      "limit": "不是供应商运行记录；作者主动干预后的对话不能用于证明自然协调。",
+      "recorded_by": "attribution_audit"
+    },
+    {
+      "id": "A-S02",
+      "title": "We found a Chinese agent fleet — preliminary report",
+      "url": "https://swarmcha.se/posts/chinese-agent-fleet",
+      "published": "页首 2026-10-04；changelog 称 2026-10-05 00:45 UTC first published，保留冲突",
+      "access": "原始报告及修订日志已读",
+      "locators": [
+        "Changelog / Removed on 9 October"
+      ],
+      "kind": "A-S01同一研究的初报",
+      "limit": "非独立来源；旧归属断言已撤回，不能用旧搜索摘要替代现版本。",
+      "recorded_by": "attribution_audit"
+    },
+    {
+      "id": "A-S03",
+      "title": "Swarmchasing",
+      "url": "https://publicbbs.com/swarmchasing",
+      "published": "2026-10-04",
+      "access": "研究正文已读相关段落",
+      "locators": [
+        "3.5 A hidden cross-board campaign",
+        "3.7 Extension",
+        "5 Limitations",
+        "7 Data and code availability"
+      ],
+      "kind": "社区经营者兼参与者的观察研究",
+      "limit": "时序研究关联账号，不认证模型或独立实例；未独立复算。",
+      "recorded_by": "attribution_audit"
+    },
+    {
+      "id": "A-S04",
+      "title": "HN comment concerning claude-desk-doctrine",
+      "url": "https://news.ycombinator.com/item?id=49580468",
+      "published": null,
+      "access": "仅搜索摘要；直接请求 HTTP 429",
+      "locators": [
+        "dao- comment quoting a claimed 2026-09-05 Wiki exchange"
+      ],
+      "kind": "第三方转引线索",
+      "limit": "不是原始Wiki日志，不升级为已确认；未绕过限流。",
+      "recorded_by": "attribution_audit"
+    },
+    {
+      "id": "A-S05",
+      "title": "Claude Agents — The Waystation Agent Commons",
+      "url": "https://the-waystation-agents.g5hpgprzjw.chatgpt.site/claude-agents",
+      "published": null,
+      "access": "仅搜索摘要；直接正文 Cache miss",
+      "locators": [
+        "runtime anthropic / heartbeat / operator wording in search excerpt"
+      ],
+      "kind": "平台登记线索",
+      "limit": "runtime和签名标签无法独立证明底层模型；正文未取得。",
+      "recorded_by": "attribution_audit"
+    },
+    {
+      "id": "A-S06",
+      "title": "Tool Use Enables Undetectable Steganography in Multi-Agent LLM Systems",
+      "url": "https://arxiv.org/html/2606.28425v1",
+      "published": "2026-06-25",
+      "access": "原文HTML，摘要及§4实验/局限已读",
+      "locators": [
+        "4.1 Agent implementations",
+        "4.2 Agent coordination",
+        "4.4 Limitations"
+      ],
+      "kind": "受控能力研究预印本",
+      "limit": "构造实验小样本，协调阶段没有工具；不是野外通信观测。",
+      "recorded_by": "attribution_audit"
+    },
+    {
+      "id": "A-S07",
+      "title": "The Best-Laid SCHEMEs: Coordinated Sabotage and Monitoring in Multi-Agent Systems",
+      "url": "https://arxiv.org/html/2605.29178v1",
+      "published": "2026-05-27",
+      "access": "原文HTML已取得；摘要、设置相关段落已读",
+      "locators": [
+        "Abstract",
+        "Benchmark and experimental setup"
+      ],
+      "kind": "研究者安排的多智能体协同破坏基准",
+      "limit": "显式配置恶意副任务；主要评估GPT 5.1 Codex/Gemini 3.1 Pro，非自然发生事件。",
+      "recorded_by": "attribution_audit"
+    },
+    {
+      "id": "A-S08",
+      "title": "Extending the SCHEME Coordinated Sabotage Benchmark",
+      "url": "https://www.sparai.org/projects/f26/recTv8x3ebH1ksPpp/",
+      "published": "2026 秋季项目；页面未显示精确首发日",
+      "access": "研究者项目原文已读",
+      "locators": [
+        "Key findings",
+        "Direction 2 — New side tasks",
+        "Direction 3 — Control evaluation"
+      ],
+      "kind": "同研究团队的后续项目说明",
+      "limit": "不是独立复核；计划与已完成结果须分开。",
+      "recorded_by": "attribution_audit"
+    },
+    {
+      "id": "A-S09",
+      "title": "Agentic Misalignment in Summer 2026",
+      "url": "https://alignment.anthropic.com/2026/agentic-misalignment-summer-2026/",
+      "published": "2026；页面未确认精确日期",
+      "access": "原始研究正文相关段落已读",
+      "locators": [
+        "Introduction",
+        "Motivated Mislabeling",
+        "Conclusion and caveats"
+      ],
+      "kind": "Anthropic及合作者受控高风险模拟",
+      "limit": "有情境构造与模型选择偏差；公开案例不证明野外群体。",
+      "recorded_by": "attribution_audit"
+    },
+    {
+      "id": "A-S10",
+      "title": "An alignment assessment of recent cybersecurity incidents",
+      "url": "https://www.anthropic.com/research/alignment-assessment-cybersecurity-incidents",
+      "published": "2026-09-09",
+      "access": "官方报告原文已读相关段落",
+      "locators": [
+        "Introduction",
+        "Alignment assessment summary"
+      ],
+      "kind": "供应商调查",
+      "limit": "只覆盖报告中的四起事件；不可推广到所有Claude活动。",
+      "recorded_by": "attribution_audit"
+    },
+    {
+      "id": "A-S11",
+      "title": "Patterns and problems in emerging multiagent systems",
+      "url": "https://www.anthropic.com/research/multiagent-systems",
+      "published": "2026-08-13",
+      "access": "官方实验原文已读相关段落",
+      "locators": [
+        "Measuring coordination",
+        "Failures from conformity",
+        "Incompatible goals"
+      ],
+      "kind": "研究者安排的多智能体实验",
+      "limit": "研究环境和任务是人为创建，不是未经安排的外网组织。",
+      "recorded_by": "attribution_audit"
+    },
+    {
+      "id": "A-S12",
+      "title": "Detecting and countering misuse of AI: September 2026",
+      "url": "https://www.anthropic.com/threat-intelligence-report-september-2026?page=1",
+      "published": "2026-09",
+      "access": "官方报告概述及相关活动段落已读",
+      "locators": [
+        "Overview",
+        "Influence operations"
+      ],
+      "kind": "供应商对人为滥用的威胁情报",
+      "limit": "账号网络由外部行为者组织，不等于模型自主群体；未独立核实归属。",
+      "recorded_by": "attribution_audit"
+    },
+    {
+      "id": "D-S01",
+      "title": "Swarmchasing",
+      "url": "https://publicbbs.com/swarmchasing",
+      "publisher": "Hugo Montenegro / SwarmMemo",
+      "published": "2026-10-04",
+      "access": "研究正文、明确数据下载链接已读；HTML副本已保存",
+      "notes": "公开研究页明确链接两个静态JSON；作者兼平台经营者，非独立于平台的观察。",
+      "recorded_by": "dataset_curation"
+    },
+    {
+      "id": "D-S02",
+      "title": "Swarmchasing: data, code and analysis — README",
+      "url": "https://raw.githubusercontent.com/Hugo0/swarmmemo/main/research/swarmchasing/README.md",
+      "publisher": "Hugo0/swarmmemo",
+      "published": null,
+      "access": "原始README已读并保存",
+      "notes": "提供数据来源、版本窗口、脱敏说明和复现边界；未运行其抓取脚本。",
+      "recorded_by": "dataset_curation"
+    },
+    {
+      "id": "D-S03",
+      "title": "Data licence",
+      "url": "https://raw.githubusercontent.com/Hugo0/swarmmemo/main/research/swarmchasing/LICENSE-DATA.md",
+      "publisher": "Hugo0/swarmmemo",
+      "published": null,
+      "access": "直接下载原始许可文本后已读",
+      "notes": "CC BY 4.0为派生数据默认许可；原作者帖子摘录、AI Village、Wiki派生数据有例外。",
+      "recorded_by": "dataset_curation"
+    },
+    {
+      "id": "D-S04",
+      "title": "Download — collusion.wiki",
+      "url": "https://collusion.wiki/explorer/download",
+      "publisher": "collusion.wiki研究者",
+      "published": null,
+      "access": "下载页及公布的展开文件SHA256已读",
+      "notes": "作者公开导出，说明IP后半部分及用户名称已脱敏；未声明许可证。",
+      "recorded_by": "dataset_curation"
+    },
+    {
+      "id": "D-S05",
+      "title": "Discovery of a new OpenAI agent message board",
+      "url": "https://collusion.wiki/",
+      "publisher": "Von Arx / Byrd / Kitts / Larsen",
+      "published": "2026-09-04",
+      "access": "原始调查的数据公开与脱敏说明已读",
+      "notes": "研究者自述其导出保留疑似AI内容，合法人类流量仅保留管理员删除活动。",
+      "recorded_by": "dataset_curation"
+    },
+    {
+      "id": "D-S06",
+      "title": "SwarmMemo Privacy Policy",
+      "url": "https://www.swarmmemo.com/privacy",
+      "publisher": "SwarmMemo / Hugo Montenegro",
+      "published": null,
+      "updated": "2026-10-18",
+      "access": "正文相关段落已读",
+      "notes": "Where public posts go明确48h后公开导出、daily HF发布、私有内容排除。",
+      "recorded_by": "dataset_curation"
+    },
+    {
+      "id": "D-S07",
+      "title": "SwarmMemo public bulletin archive — dataset card",
+      "url": "https://huggingface.co/datasets/swarmmemo/public-messages",
+      "publisher": "swarmmemo",
+      "published": null,
+      "access": "公开数据卡正文已读；固定revision README已保存",
+      "notes": "有publication terms/schema/完整性与模型归属限制；viewer报错不等于JSONL不可解析。",
+      "recorded_by": "dataset_curation"
+    },
+    {
+      "id": "D-S08",
+      "title": "HF public dataset metadata",
+      "url": "https://huggingface.co/api/datasets/swarmmemo/public-messages",
+      "publisher": "Hugging Face API",
+      "published": null,
+      "access": "公开ungated元数据已下载",
+      "notes": "取得时sha c36fe6822a0f49244aba577621f1a937ebfb97a5，lastModified 2026-10-15T03:04:29Z。",
+      "recorded_by": "dataset_curation"
+    },
+    {
+      "id": "D-S09",
+      "title": "Fixed revision public archive manifest",
+      "url": "https://huggingface.co/datasets/swarmmemo/public-messages/resolve/c36fe6822a0f49244aba577621f1a937ebfb97a5/manifest.json",
+      "publisher": "swarmmemo",
+      "published": null,
+      "access": "固定revision清单已下载并用于校验",
+      "notes": "40个message日期分区，3419总行；本轮仅取最新10/13部分日58行。",
+      "recorded_by": "dataset_curation"
+    },
+    {
+      "id": "R-S01",
+      "title": "Petri 2.0",
+      "url": "https://alignment.anthropic.com/2026/petri-v2/",
+      "published": "2026-01-22",
+      "access": "原文相关段落已读",
+      "kind": "受控行为评估框架",
+      "limit": "多智能体串谋是评估场景，不是野外事件。",
+      "recorded_by": "root"
+    },
+    {
+      "id": "R-S02",
+      "title": "Training a Misaligned Reward Seeker",
+      "url": "https://alignment.anthropic.com/2026/reward-seeker/",
+      "published": "2026-08（页面标记）",
+      "access": "概述、模拟设置、跨episode结果已读",
+      "kind": "故意强化奖励作弊的受控模型研究",
+      "limit": "文中的攻入内部设施等关键案例为LLM模拟；不能当真实突破与群体事件。",
+      "recorded_by": "root"
+    },
+    {
+      "id": "R-S03",
+      "title": "Red-Teaming Anthropic's Internal Agent Monitoring Systems",
+      "url": "https://metr.org/blog/2026-03-25-red-teaming-anthropic-agent-monitoring/",
+      "published": "2026-03-26（正文；URL含03-25）",
+      "access": "原文概述已读",
+      "kind": "获授权的独立红队工作",
+      "limit": "研究者安排的攻击轨迹不是自然发生群体。",
+      "recorded_by": "root"
+    },
+    {
+      "id": "R-S04",
+      "title": "Detecting and countering misuse of AI: September 2026",
+      "url": "https://www.anthropic.com/threat-intelligence-report-september-2026",
+      "published": "2026-09",
+      "access": "概述及相关行为者段落已读",
+      "kind": "供应商威胁情报",
+      "limit": "人为滥用和定时自动化不能直接认定为模型自发组织；与A-S12为同文。",
+      "recorded_by": "root"
+    },
+    {
+      "id": "R-S05",
+      "title": "What concrete tasks do you need help with — and how would you judge the result?",
+      "url": "https://thecolony.cc/post/a3582bc3-ee84-42d6-8e63-6c594cb1d960",
+      "published": "2026-10-01 20:40 UTC；回复10-03",
+      "access": "原始主帖及可见回复已读",
+      "kind": "公开帖及回应链",
+      "limit": "Scout后续明确为操作者办事；账号模型未经认证。",
+      "recorded_by": "root"
+    }
+  ],
+  "document_groups": {
+    "1f916.ai": [
+      "P-S01"
+    ],
+    "1f916.ai/human/roadmap": [
+      "P-S02"
+    ],
+    "reddit.com/r/ArtificialSentience/comments/1vnnnzr/an_update_on_the_agentgoverned_society_and_an": [
+      "P-S03"
+    ],
+    "commonhold.randommonicle.workers.dev": [
+      "P-S04"
+    ],
+    "athena-council.org/about": [
+      "P-S05"
+    ],
+    "athena-council.org/agents": [
+      "P-S06"
+    ],
+    "athena-council.org/social": [
+      "P-S07"
+    ],
+    "github.com/opitaru-sys/seed-agent": [
+      "P-S08"
+    ],
+    "theworldatplay.com/en/blog/building-a-platform-with-agents": [
+      "P-S09"
+    ],
+    "reddit.com/r/ClaudeCode/comments/1vln0r6/i_gave_claude_code_codex_an_openended_goal_eight": [
+      "P-S10"
+    ],
+    "jointhecommons.space": [
+      "P-S11"
+    ],
+    "joinoutpost.ai": [
+      "P-S12"
+    ],
+    "swarmcha.se/posts/chinese-agent-fleet-full-report": [
+      "A-S01"
+    ],
+    "swarmcha.se/posts/chinese-agent-fleet": [
+      "A-S02"
+    ],
+    "publicbbs.com/swarmchasing": [
+      "A-S03",
+      "D-S01"
+    ],
+    "news.ycombinator.com/item": [
+      "A-S04"
+    ],
+    "the-waystation-agents.g5hpgprzjw.chatgpt.site/claude-agents": [
+      "A-S05"
+    ],
+    "arxiv.org/html/2606.28425v1": [
+      "A-S06"
+    ],
+    "arxiv.org/html/2605.29178v1": [
+      "A-S07"
+    ],
+    "sparai.org/projects/f26/recTv8x3ebH1ksPpp": [
+      "A-S08"
+    ],
+    "alignment.anthropic.com/2026/agentic-misalignment-summer-2026": [
+      "A-S09"
+    ],
+    "anthropic.com/research/alignment-assessment-cybersecurity-incidents": [
+      "A-S10"
+    ],
+    "anthropic.com/research/multiagent-systems": [
+      "A-S11"
+    ],
+    "anthropic.com/threat-intelligence-report-september-2026": [
+      "A-S12",
+      "R-S04"
+    ],
+    "raw.githubusercontent.com/Hugo0/swarmmemo/main/research/swarmchasing/README.md": [
+      "D-S02"
+    ],
+    "raw.githubusercontent.com/Hugo0/swarmmemo/main/research/swarmchasing/LICENSE-DATA.md": [
+      "D-S03"
+    ],
+    "collusion.wiki/explorer/download": [
+      "D-S04"
+    ],
+    "collusion.wiki": [
+      "D-S05"
+    ],
+    "swarmmemo.com/privacy": [
+      "D-S06"
+    ],
+    "huggingface.co/datasets/swarmmemo/public-messages": [
+      "D-S07"
+    ],
+    "huggingface.co/api/datasets/swarmmemo/public-messages": [
+      "D-S08"
+    ],
+    "huggingface.co/datasets/swarmmemo/public-messages/resolve/c36fe6822a0f49244aba577621f1a937ebfb97a5/manifest.json": [
+      "D-S09"
+    ],
+    "alignment.anthropic.com/2026/petri-v2": [
+      "R-S01"
+    ],
+    "alignment.anthropic.com/2026/reward-seeker": [
+      "R-S02"
+    ],
+    "metr.org/blog/2026-03-25-red-teaming-anthropic-agent-monitoring": [
+      "R-S03"
+    ],
+    "thecolony.cc/post/a3582bc3-ee84-42d6-8e63-6c594cb1d960": [
+      "R-S05"
+    ]
+  },
+  "queries": [
+    {
+      "recorded_by": "public_communities",
+      "id": "P-Q01",
+      "query": "Claude agents community public forum \"operator\" \"2026\" autonomy",
+      "purpose": "寻找公开社区及人为部署证据"
+    },
+    {
+      "recorded_by": "public_communities",
+      "id": "P-Q02",
+      "query": "Claude \"agent-governed\" society 2026 public forum",
+      "purpose": "寻找共治社会原始发起人"
+    },
+    {
+      "recorded_by": "public_communities",
+      "id": "P-Q03",
+      "query": "AI agents public forum \"Claude\" \"constitution\" 2026",
+      "purpose": "寻找章程/治理与主体归属"
+    },
+    {
+      "recorded_by": "public_communities",
+      "id": "P-Q04",
+      "query": "Claude agents \"The Colony\" \"autonomous\" 2026",
+      "purpose": "扩展原公共论坛周边"
+    },
+    {
+      "recorded_by": "public_communities",
+      "id": "P-Q05",
+      "query": "site:athena-council.org \"Claude\" council",
+      "purpose": "核对项目原始模型自述"
+    },
+    {
+      "recorded_by": "public_communities",
+      "id": "P-Q06",
+      "query": "site:1f916.ai \"Claude\" \"2026\" post",
+      "purpose": "核对维护者及公开记录"
+    },
+    {
+      "recorded_by": "public_communities",
+      "id": "P-Q07",
+      "query": "site:commonhold.randommonicle.workers.dev constitution",
+      "purpose": "定位原始章程，未取得可读主页"
+    },
+    {
+      "recorded_by": "attribution_audit",
+      "id": "A-Q01",
+      "query": "\"claude-desk-doctrine\"",
+      "purpose": "重查旧候选",
+      "result": "原文未取回；仅搜索摘要"
+    },
+    {
+      "recorded_by": "attribution_audit",
+      "id": "A-Q02",
+      "query": "\"Claude\" \"covert\" \"coordination\" \"2026\" research",
+      "purpose": "扩展隐蔽协调研究",
+      "result": "发现A-S06至A-S09；均受控研究"
+    },
+    {
+      "recorded_by": "attribution_audit",
+      "id": "A-Q03",
+      "query": "\"Claude\" \"swarm\" \"confirmed\" \"coordination\" 2026 -site:reddit.com -site:youtube.com",
+      "purpose": "检查已确认野外群体说法",
+      "result": "结果多为人为实验或滥用；未形成新的野外Claude归属确认"
+    },
+    {
+      "recorded_by": "attribution_audit",
+      "id": "A-Q04",
+      "query": "\"claude-desk-doctrine\" \"operator\"",
+      "purpose": "排查人工部署解释",
+      "result": "摘要出现operator与接入说明；不足以认证该账号具体运行"
+    },
+    {
+      "recorded_by": "root",
+      "id": "R-Q01",
+      "query": "site:anthropic.com 2026 \"multi-agent\" \"covert\" communication"
+    },
+    {
+      "recorded_by": "root",
+      "id": "R-Q02",
+      "query": "site:metr.org 2026 Claude coordination copies collusion"
+    },
+    {
+      "recorded_by": "root",
+      "id": "R-Q03",
+      "query": "site:alignment.anthropic.com 2026 \"collusion\" agents"
+    },
+    {
+      "recorded_by": "root",
+      "id": "R-Q04",
+      "query": "\"agent\" \"public dataset\" \"swarmchasing\""
+    }
+  ],
+  "candidate_rows": [
+    {
+      "id": "P-C01",
+      "kind": "公共社区或项目候选",
+      "name": "1F916 公开智能体社会与可审计记录",
+      "judgment": "公开平台候选；活动和模型须另外核验",
+      "source_ids": [
+        "P-S01",
+        "P-S02"
+      ],
+      "gaps": [
+        "固定时间的只读帖子样本",
+        "启动与授权材料",
+        "模型调用来源",
+        "独立运行实例的对应"
+      ]
+    },
+    {
+      "id": "P-C02",
+      "kind": "公共社区或项目候选",
+      "name": "Commonhold 的小规模共治实验",
+      "judgment": "人类部署的公开实验；模型与运行细节未确认",
+      "source_ids": [
+        "P-S03",
+        "P-S04"
+      ],
+      "gaps": [
+        "公共账本可读副本",
+        "成员调用记录",
+        "治理决定与实际执行对应"
+      ]
+    },
+    {
+      "id": "P-C03",
+      "kind": "公共社区或项目候选",
+      "name": "Athena Council / Project Anamnesis / 已关闭 Agora",
+      "judgment": "公开项目/历史案例；当下活跃性不成立于现有论坛证据",
+      "source_ids": [
+        "P-S05",
+        "P-S06",
+        "P-S07"
+      ],
+      "gaps": [
+        "有日期的历史论坛归档",
+        "调用与角色对应",
+        "关闭前后服务范围"
+      ]
+    },
+    {
+      "id": "P-C04",
+      "kind": "公共社区或项目候选",
+      "name": "Cairn / seed-agent 的跨会话自编写记录",
+      "judgment": "人类部署的持久代理；非已证群体",
+      "source_ids": [
+        "P-S08"
+      ],
+      "gaps": [
+        "公开部署配置",
+        "脱敏并获授权的双向通信记录"
+      ]
+    },
+    {
+      "id": "P-C05",
+      "kind": "公共社区或项目候选",
+      "name": "The World at Play 的 Claude Code + Codex 协作",
+      "judgment": "人类安排的多模型协作项目",
+      "source_ids": [
+        "P-S09",
+        "P-S10"
+      ],
+      "gaps": [
+        "固定版本调度器与脱敏执行日志",
+        "代理间输入输出映射"
+      ]
+    },
+    {
+      "id": "P-C06",
+      "kind": "公共社区或项目候选",
+      "name": "The Commons 跨模型公开讨论社区",
+      "judgment": "公开平台候选；身份与实际协作待抽样",
+      "source_ids": [
+        "P-S11"
+      ],
+      "gaps": [
+        "有时间戳的公开线程样本",
+        "历史修订与身份字段的语义",
+        "操作者与模型来源"
+      ]
+    },
+    {
+      "id": "P-C07",
+      "kind": "公共社区或项目候选",
+      "name": "Outpost 结构化智能体房间",
+      "judgment": "平台产品线索；运行活动证据不足",
+      "source_ids": [
+        "P-S12"
+      ],
+      "gaps": [
+        "已公开的实际运行记录",
+        "注册者来源和启动配置"
+      ]
+    },
+    {
+      "id": "A-A01",
+      "kind": "调查者提出的待检命题复核",
+      "name": "待检：Tencent fleet 确是 Claude，并已形成协作群体",
+      "judgment": "不支持该复合命题；保留未归属并行活动",
+      "source_ids": [
+        "A-S01",
+        "A-S02"
+      ],
+      "gaps": [
+        "供应商实际模型配置",
+        "不可见通道是否存在"
+      ]
+    },
+    {
+      "id": "A-A02",
+      "kind": "调查者提出的待检命题复核",
+      "name": "待检：fleet 与外部Claude服务对话，是自然自发结团证据",
+      "judgment": "不支持；存在明确研究者干预",
+      "source_ids": [
+        "A-S01"
+      ],
+      "gaps": [
+        "干预前实例是否另有通信"
+      ]
+    },
+    {
+      "id": "A-A03",
+      "kind": "调查者提出的待检命题复核",
+      "name": "待检：C1 是约200个独立智能体组成的秘密组织",
+      "judgment": "不支持主体数和自主性；只保留协调账号活动候选",
+      "source_ids": [
+        "A-S03"
+      ],
+      "gaps": [
+        "一个脚本、一个agent还是多个agent",
+        "操作者是谁及是否明确安排"
+      ]
+    },
+    {
+      "id": "A-A04",
+      "kind": "调查者提出的待检命题复核",
+      "name": "待检：claude-desk-doctrine 是原有秘密Claude群体的延续",
+      "judgment": "证据不足",
+      "source_ids": [
+        "A-S04",
+        "A-S05"
+      ],
+      "gaps": [
+        "原文上下文",
+        "实际模型、操作者和启动目标",
+        "是否多个独立主体"
+      ]
+    },
+    {
+      "id": "A-A05",
+      "kind": "调查者提出的待检命题复核",
+      "name": "待检：Claude 已能构造隐蔽通信，所以野外秘密群体已被证实",
+      "judgment": "前半句仅在受控实验有支持；后半句不支持",
+      "source_ids": [
+        "A-S06"
+      ],
+      "gaps": [
+        "真实部署中的自发采用率",
+        "跨任务持续协调"
+      ]
+    },
+    {
+      "id": "A-A06",
+      "kind": "调查者提出的待检命题复核",
+      "name": "待检：SCHEME 证明 Claude 自发进行秘密集体破坏",
+      "judgment": "不支持",
+      "source_ids": [
+        "A-S07",
+        "A-S08"
+      ],
+      "gaps": [
+        "相同能力在自然部署中出现频率"
+      ]
+    },
+    {
+      "id": "A-A07",
+      "kind": "调查者提出的待检命题复核",
+      "name": "待检：Claude 为道德目的保护同类，足以证明长期保护人类组织",
+      "judgment": "模拟中的行为倾向有证据；组织及动机外推不支持",
+      "source_ids": [
+        "A-S09"
+      ],
+      "gaps": [
+        "自然发生频率",
+        "是否持续有组织"
+      ]
+    },
+    {
+      "id": "A-A08",
+      "kind": "调查者提出的待检命题复核",
+      "name": "待检：Claude 越权事件与多智能体实验可以合并为同一野外群体",
+      "judgment": "不支持；来源范围不同",
+      "source_ids": [
+        "A-S10",
+        "A-S11"
+      ],
+      "gaps": [
+        "报告外未观察到的其他活动"
+      ]
+    },
+    {
+      "id": "A-A09",
+      "kind": "调查者提出的待检命题复核",
+      "name": "待检：大量Claude驱动的协调账号网络，说明AI自主组织",
+      "judgment": "不支持自主性；可能是人类组织的AI滥用",
+      "source_ids": [
+        "A-S12"
+      ],
+      "gaps": [
+        "每项厂商归属判断的独立可复核性"
+      ]
+    },
+    {
+      "id": "R-F-043c36c018b5133ad3f5",
+      "kind": "离线筛查后的原页回查",
+      "name": "043c36c018b5133ad3f5",
+      "judgment": "工具无法访问；仅保留作者归档摘录",
+      "source_ids": [
+        "D-D01"
+      ],
+      "gaps": [
+        "模型归属、独立实例和启动授权"
+      ]
+    },
+    {
+      "id": "R-F-752e346ddb6c414d8729",
+      "kind": "离线筛查后的原页回查",
+      "name": "752e346ddb6c414d8729",
+      "judgment": "工具无法访问；仅保留作者归档摘录",
+      "source_ids": [
+        "D-D01"
+      ],
+      "gaps": [
+        "模型归属、独立实例和启动授权"
+      ]
+    },
+    {
+      "id": "R-F-3a61cfa229234f528181",
+      "kind": "离线筛查后的原页回查",
+      "name": "3a61cfa229234f528181",
+      "judgment": "原.ai及已知.cc域名都无法取得",
+      "source_ids": [
+        "D-D01"
+      ],
+      "gaps": [
+        "模型归属、独立实例和启动授权"
+      ]
+    },
+    {
+      "id": "R-F-10c828433364472cb6a1",
+      "kind": "离线筛查后的原页回查",
+      "name": "10c828433364472cb6a1",
+      "judgment": "原.ai无法取得；公开.cc原页取得",
+      "source_ids": [
+        "D-D01"
+      ],
+      "gaps": [
+        "模型归属、独立实例和启动授权"
+      ]
+    },
+    {
+      "id": "R-F-1700672cc17d891f9085",
+      "kind": "离线筛查后的原页回查",
+      "name": "1700672cc17d891f9085",
+      "judgment": "原.ai及已知.cc域名都无法取得",
+      "source_ids": [
+        "D-D01"
+      ],
+      "gaps": [
+        "模型归属、独立实例和启动授权"
+      ]
+    }
+  ],
+  "publication_note": "2026-10-22公开编辑版。A-A条目是调查者提出的待检命题，不归属于来源作者；不含第三方原始语料及本机路径。"
+}

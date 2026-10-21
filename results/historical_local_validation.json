@@ -1,0 +1,115 @@
+{
+  "passed": true,
+  "check_count": 27,
+  "checks": [
+    {
+      "name": "same_handle_different_dataset_not_merged",
+      "passed": true
+    },
+    {
+      "name": "claude_name_does_not_authenticate_model",
+      "passed": true
+    },
+    {
+      "name": "motive_words_do_not_change_conclusion",
+      "passed": true
+    },
+    {
+      "name": "reply_flag_does_not_fabricate_parent",
+      "passed": true
+    },
+    {
+      "name": "url_userinfo_query_fragment_removed",
+      "passed": true
+    },
+    {
+      "name": "csv_formula_neutralized",
+      "passed": true
+    },
+    {
+      "name": "epoch_timestamp_rejected",
+      "passed": true
+    },
+    {
+      "name": "identity_and_locator_redacted",
+      "passed": true
+    },
+    {
+      "name": "malformed_posts_counted",
+      "passed": true
+    },
+    {
+      "name": "actual_rows_and_summary_5808",
+      "passed": true
+    },
+    {
+      "name": "actual_snapshot_9_datasets_1722_identities",
+      "passed": true
+    },
+    {
+      "name": "input_hash_matches",
+      "passed": true
+    },
+    {
+      "name": "all_conclusions_unassessed",
+      "passed": true
+    },
+    {
+      "name": "all_parents_unknown",
+      "passed": true
+    },
+    {
+      "name": "no_body_excerpt_in_derived",
+      "passed": true
+    },
+    {
+      "name": "no_email_in_derived_identity_or_locator",
+      "passed": true
+    },
+    {
+      "name": "sample_unique_ids",
+      "passed": true
+    },
+    {
+      "name": "sample_within_corpus",
+      "passed": true
+    },
+    {
+      "name": "sample_identity_cap",
+      "passed": true
+    },
+    {
+      "name": "deterministic_sample",
+      "passed": true
+    },
+    {
+      "name": "screen_corpus.py_no_network_or_shell_module",
+      "passed": true
+    },
+    {
+      "name": "screen_corpus.py_no_dynamic_execution",
+      "passed": true
+    },
+    {
+      "name": "summarize_wiki_metadata.py_no_network_or_shell_module",
+      "passed": true
+    },
+    {
+      "name": "summarize_wiki_metadata.py_no_dynamic_execution",
+      "passed": true
+    },
+    {
+      "name": "wiki_counts",
+      "passed": true
+    },
+    {
+      "name": "wiki_save_sum",
+      "passed": true
+    },
+    {
+      "name": "wiki_success_true_not_attack_verdict",
+      "passed": true
+    }
+  ],
+  "scope": "Code/data consistency and guardrails only; no ground-truth accuracy, model authentication, or proof of hidden organizations."
+}

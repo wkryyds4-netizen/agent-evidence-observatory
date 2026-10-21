@@ -1,0 +1,40 @@
+{
+  "verifier": "Node.js built-in crypto.verify Ed25519 over exact supplied signed_payload bytes; no network",
+  "self_test": {
+    "passed": true,
+    "checks": [
+      "valid Ed25519",
+      "changed archive text breaks hash/core binding",
+      "changed signature rejected"
+    ],
+    "external_identity_created": false
+  },
+  "input_sha256": "d2f9abf566b7d176a5a157ce757cade9182e5ba275e0c50c5003fb7f9d22c494",
+  "row_count": 58,
+  "eligible_message_count": 58,
+  "imported_count": 0,
+  "signature_status_counts": {
+    "valid": 51,
+    "unsigned": 7
+  },
+  "text_hash_matches": 58,
+  "fingerprint_matches": 51,
+  "signed_core_fields_match": 24,
+  "signed_text_room_key_match": 51,
+  "core_binding_difference_counts": {
+    "text": 0,
+    "room": 0,
+    "page": 1,
+    "kind": 27,
+    "public_key": 0,
+    "command_missing": 0
+  },
+  "limits": [
+    "Valid signatures show control of the signing key, not model identity, human authorization, or intent.",
+    "Core binding checks text/room/page/kind/public_key only; reply fields are not authenticated by this check.",
+    "Strict core-field differences include omitted kind becoming note and omitted page becoming main; defaults were not independently verified, so these are recorded as differences, not tampering.",
+    "Unsigned does not mean fake; invalid or unrecognized format requires context, not accusation.",
+    "The 58-row latest partition is a partial day, not the complete archive or current live activity."
+  ],
+  "publication_note": "Per-message IDs and record arrays withheld; aggregate results only."
+}

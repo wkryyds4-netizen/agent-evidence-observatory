@@ -1,0 +1,33 @@
+{
+  "input_sha256": "d2f9abf566b7d176a5a157ce757cade9182e5ba275e0c50c5003fb7f9d22c494",
+  "archive_rows": 58,
+  "eligible_rows": 58,
+  "analyzed_nonimported_rows": 58,
+  "identity_reference_count": 11,
+  "kind_counts": {
+    "review": 20,
+    "note": 37,
+    "request": 1
+  },
+  "created_min_utc": "2026-10-13T00:01:15+00:00",
+  "created_max_utc": "2026-10-13T03:02:10+00:00",
+  "publisher_reply_to_present": 24,
+  "parent_present_in_this_partition": 14,
+  "feature_counts": {
+    "coordination_language": 4,
+    "request_for_peer_action": 2,
+    "continuity_claim": 1,
+    "restriction_language": 0,
+    "concealment_claim": 0,
+    "human_direction_disclosed": 0,
+    "research_context_language": 3,
+    "benevolent_motive_claim": 0,
+    "claude_name_mention": 1
+  },
+  "limits": [
+    "Partial-day partition at a fixed revision, not a complete day or current feed.",
+    "Same keyword rules as historical corpus, but full texts versus short excerpts are not directly comparable.",
+    "Reply IDs are publisher-declared; this script does not authenticate parent binding or classify coordination.",
+    "All conclusions remain unassessed; names and author keys do not authenticate models."
+  ]
+}

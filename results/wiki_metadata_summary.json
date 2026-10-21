@@ -1,0 +1,131 @@
+{
+  "scope": "Author-published deidentified metadata only; no revision bodies.",
+  "files": {
+    "pages.jsonl": {
+      "bytes": 2973326,
+      "sha256": "92b296170b496b836cdf5ef783bed9465d2d75db7e1a0becec1c36c8b7c42cfd"
+    },
+    "events.jsonl": {
+      "bytes": 8543896,
+      "sha256": "588584295f1c4a7c3d90b04075ab151504f165ff069534d935cda08853ec28b1"
+    },
+    "labels.jsonl": {
+      "bytes": 1471940,
+      "sha256": "d94aecd84baecda46344f5b8726a95a9c81e7e41a1c0969fc89a90c8906f0388"
+    }
+  },
+  "page_count": 4579,
+  "event_count": 19913,
+  "label_record_count": 3103,
+  "nonempty_label_count": 3102,
+  "human_marked_label_records": 3,
+  "stored_page_revision_sum": 14591,
+  "wiki_page_counts": {
+    "dorfwiki": 2,
+    "dse": 3908,
+    "fractal": 68,
+    "probier": 601
+  },
+  "page_family_counts": {
+    "off_store_unclassified": 671,
+    "probe-test": 236,
+    "source-or-unclassified": 677,
+    "relay-coordination": 709,
+    "source-cache-url-list": 1231,
+    "aihw-pbs": 8,
+    "datausa-construction-workforce": 45,
+    "unknown": 34,
+    "datausa-cashiers-bachelors": 8,
+    "datausa-clothing-workforce": 98,
+    "datausa-cashiers-masters": 76,
+    "datausa-grocery-workforce": 78,
+    "datausa-sector61-state": 37,
+    "datausa-maids-wage": 20,
+    "datausa-police-wage-age": 17,
+    "datausa-finance-gender-gap": 12,
+    "datausa-ivy-tuition": 2,
+    "datausa-language-french": 31,
+    "nyc-veterans": 3,
+    "datausa-poverty-county": 28,
+    "vermont-rent": 3,
+    "loop-chain-infrastructure": 339,
+    "dataafrica-health-stunting": 1,
+    "dataafrica-rainfed-crops": 1,
+    "datausa-occupation-salary-61-62": 8,
+    "datausa-cashier-skills": 2,
+    "mixed-task": 7,
+    "datausa-construction-wage": 2,
+    "datausa-elpaso-foreign-born": 2,
+    "datausa-enrollment-asian": 2,
+    "datausa-poverty-state": 4,
+    "datausa-production-share": 3,
+    "datausa-slp-ethnicity": 3,
+    "datausa-transport-production": 8,
+    "gapminder-age80": 1,
+    "ihme-cvd-deaths": 32,
+    "ihme-mcv2": 2,
+    "ihme-smoking": 1,
+    "ihme-family-planning": 21,
+    "oecd-regional-co2": 6,
+    "ihme-lymphatic-filariasis": 1,
+    "oecd-equity": 99,
+    "oecd-household-income": 1,
+    "alaska-climate": 1,
+    "fuel-poverty-ni": 2,
+    "sdg-index-score": 1,
+    "uefa-pass-accuracy": 3,
+    "unaids-bosnia-hiv": 1,
+    "world-poverty-clock": 1
+  },
+  "event_type_counts": {
+    "probe": 101,
+    "save": 14591,
+    "delete": 5217,
+    "revert": 4
+  },
+  "event_time_grade_counts": {
+    "reqlog": 19803,
+    "rclog": 104,
+    "write_date": 6
+  },
+  "success_observed_field_counts": {
+    "False": 101,
+    "[missing]": 14591,
+    "True": 5221
+  },
+  "success_observed_by_event_type": {
+    "delete": {
+      "True": 5217
+    },
+    "probe": {
+      "False": 101
+    },
+    "revert": {
+      "True": 4
+    },
+    "save": {
+      "[missing]": 14591
+    }
+  },
+  "first_page_write_span": {
+    "min": "2026-05-24T06:02:19Z",
+    "max": "2026-07-02T17:51:22Z"
+  },
+  "last_page_write_span": {
+    "min": "2026-05-24T06:21:16Z",
+    "max": "2026-07-02T17:51:22Z"
+  },
+  "event_time_span": {
+    "min": "2026-05-17T05:46:45Z",
+    "max": "2026-07-14T13:56:54Z"
+  },
+  "pages_with_more_than_one_label": 1215,
+  "limits": [
+    "A label count is not an independent-agent count.",
+    "Page co-presence is not a reply edge, coordination, or common operator.",
+    "success_observed=False means no success recorded by that field, not proof of failure.",
+    "A request timestamp and revision timestamp are different event types.",
+    "Publisher metadata and classification fields were not independently re-created.",
+    "No IP, raw request, payload, or source_ref contents are exported."
+  ]
+}

@@ -1,0 +1,189 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "source_ids_unique",
+      "passed": true
+    },
+    {
+      "name": "source_url_groups",
+      "passed": true
+    },
+    {
+      "name": "queries",
+      "passed": true
+    },
+    {
+      "name": "candidate_rows",
+      "passed": true
+    },
+    {
+      "name": "references_P-C01",
+      "passed": true
+    },
+    {
+      "name": "references_P-C02",
+      "passed": true
+    },
+    {
+      "name": "references_P-C03",
+      "passed": true
+    },
+    {
+      "name": "references_P-C04",
+      "passed": true
+    },
+    {
+      "name": "references_P-C05",
+      "passed": true
+    },
+    {
+      "name": "references_P-C06",
+      "passed": true
+    },
+    {
+      "name": "references_P-C07",
+      "passed": true
+    },
+    {
+      "name": "references_A-A01",
+      "passed": true
+    },
+    {
+      "name": "references_A-A02",
+      "passed": true
+    },
+    {
+      "name": "references_A-A03",
+      "passed": true
+    },
+    {
+      "name": "references_A-A04",
+      "passed": true
+    },
+    {
+      "name": "references_A-A05",
+      "passed": true
+    },
+    {
+      "name": "references_A-A06",
+      "passed": true
+    },
+    {
+      "name": "references_A-A07",
+      "passed": true
+    },
+    {
+      "name": "references_A-A08",
+      "passed": true
+    },
+    {
+      "name": "references_A-A09",
+      "passed": true
+    },
+    {
+      "name": "references_R-F-043c36c018b5133ad3f5",
+      "passed": true
+    },
+    {
+      "name": "references_R-F-752e346ddb6c414d8729",
+      "passed": true
+    },
+    {
+      "name": "references_R-F-3a61cfa229234f528181",
+      "passed": true
+    },
+    {
+      "name": "references_R-F-10c828433364472cb6a1",
+      "passed": true
+    },
+    {
+      "name": "references_R-F-1700672cc17d891f9085",
+      "passed": true
+    },
+    {
+      "name": "three_datasets",
+      "passed": true
+    },
+    {
+      "name": "historical_pipeline_passed",
+      "passed": true
+    },
+    {
+      "name": "historical_review_ids",
+      "passed": true
+    },
+    {
+      "name": "historical_review_count",
+      "passed": true
+    },
+    {
+      "name": "recent_review_count",
+      "passed": true
+    },
+    {
+      "name": "recent_signature_check",
+      "passed": true
+    },
+    {
+      "name": "recent_text_and_binding",
+      "passed": true
+    },
+    {
+      "name": "recent_hash_agreement",
+      "passed": true
+    },
+    {
+      "name": "recent_rows",
+      "passed": true
+    },
+    {
+      "name": "required_files",
+      "passed": true
+    },
+    {
+      "name": "candidate_csv_rows",
+      "passed": true
+    },
+    {
+      "name": "no_email_in_screening/screening_records.jsonl",
+      "passed": true
+    },
+    {
+      "name": "no_known_secret_in_screening/screening_records.jsonl",
+      "passed": true
+    },
+    {
+      "name": "no_email_in_screening/recent_partition_records.jsonl",
+      "passed": true
+    },
+    {
+      "name": "no_known_secret_in_screening/recent_partition_records.jsonl",
+      "passed": true
+    },
+    {
+      "name": "report_does_not_claim_live_coverage",
+      "passed": true
+    },
+    {
+      "name": "report_preserves_unknowns",
+      "passed": true
+    }
+  ],
+  "check_count": 42,
+  "counts": {
+    "source_entries": 38,
+    "url_document_groups": 36,
+    "query_forms": 15,
+    "public_candidates": 7,
+    "attribution_claims": 9,
+    "targeted_followups": 5,
+    "datasets": 3,
+    "historical_excerpts": 5808,
+    "wiki_events": 19913,
+    "recent_partial_day_rows": 58,
+    "historical_semantic_reviews": 32,
+    "recent_semantic_reviews": 9
+  },
+  "scope": "Local integrity and bounded claim checks only; no proof of model affiliation, independent agents, motives, or absence of unknown groups."
+}

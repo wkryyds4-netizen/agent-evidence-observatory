@@ -1,0 +1,466 @@
+{
+  "investigation_date": "2026-10-21",
+  "timezone": "Asia/Shanghai",
+  "scope": "作者明确发布的静态公开研究数据；初选2套，按主agent后续要求新增1个较近公开日分区；共3套，不使用live API",
+  "datasets": [
+    {
+      "id": "D-D01",
+      "name": "Swarmchasing agents.json public excerpts / metadata",
+      "selected": true,
+      "status": "已下载并离线解析",
+      "source_ids": [
+        "D-S01",
+        "D-S02",
+        "D-S03"
+      ],
+      "url": "https://publicbbs.com/swarmchasing/data/agents.json",
+      "retrieved_utc": "2026-10-21T15:33:58.881353+00:00",
+      "bytes": 2041182,
+      "sha256": "902f84ad4eac92528c220c7a998c440c0d0f3ec6d897d536664484bef3b9046d",
+      "schema": 1,
+      "counts": {
+        "top_level_datasets": 9,
+        "identity_records": 1722,
+        "post_excerpts": 5808,
+        "place_records": 3022,
+        "datasets_with_post_text": 8,
+        "identities_with_post_text": 1676,
+        "aivillage_identities_without_post_text": 46
+      },
+      "dataset_identity_counts": {
+        "agentchan": 98,
+        "aiamb": 161,
+        "aivillage": 46,
+        "clawprint": 78,
+        "colony": 369,
+        "moltbook": 634,
+        "moltchan": 96,
+        "sanctum": 14,
+        "tantive": 226
+      },
+      "fields": {
+        "top_level": [
+          "datasets",
+          "note",
+          "schema"
+        ],
+        "shape": "datasets[platform][identity] = {places: [...], posts: [...]}",
+        "places_tuple": [
+          "place_or_room",
+          "count",
+          "first_unix_time",
+          "last_unix_time"
+        ],
+        "posts_tuple": [
+          "unix_time",
+          "public_excerpt",
+          "original_url",
+          "place_or_room",
+          "reply_flag"
+        ]
+      },
+      "privacy": "作者公开短摘录，通常每帖最多约200字符；无AI Village/Wiki正文。作者说明人类节点汇总、部分所有者标识哈希；本调查未独立验证全部脱敏。",
+      "license": "派生结构默认CC BY4.0；posts摘录仍属原作者，不获得CC BY再许可；aivillage目标计数保留AI Digest自定义研究条款。",
+      "allowed_use_recommendation": "本地只读统计、候选排序和原创摘要；不训练模型，不重新识别人，不导出大段原文，不自动跟随original_url。",
+      "limitations": [
+        "这是作者筛选的资料页和短摘录，不是51万条活动全量语料。",
+        "先前研究总计9724身份不能当本文件身份数。",
+        "多平台身份数不等于独立模型或独立操作者数。",
+        "截断短文本会漏掉授权上下文，也会截断否定词或引用边界。",
+        "AI Village的46条身份仅有目标/地点计数，无帖子正文；统计正文平台时应排除。",
+        "数据来自2026-10-03附近的作者样本，不是调查当下实时状态。"
+      ]
+    },
+    {
+      "id": "D-D02",
+      "name": "collusion.wiki redacted metadata export",
+      "selected": true,
+      "status": "已下载四个压缩文件并有界解压；公开SHA256全部匹配",
+      "source_ids": [
+        "D-S04",
+        "D-S05"
+      ],
+      "download_page": "https://collusion.wiki/explorer/download",
+      "files": [
+        {
+          "name": "pages.jsonl",
+          "url": "https://collusion.wiki/explorer/download/pages.jsonl.gz",
+          "retrieved_utc": "2026-10-21T15:35:24.731124+00:00",
+          "download_bytes": 233553,
+          "expanded_bytes": 2973326,
+          "rows": 4579,
+          "download_sha256": "2cffa83e0cc8de3dc467d9e9b03e1f735f54b4fde5a191f9e01f7e9dfee51f3a",
+          "expanded_sha256": "92b296170b496b836cdf5ef783bed9465d2d75db7e1a0becec1c36c8b7c42cfd",
+          "published_hash_matches": true,
+          "fields": [
+            "page_id",
+            "page_key",
+            "wiki",
+            "name",
+            "bucket",
+            "page_family",
+            "n_revs",
+            "first_write",
+            "last_write",
+            "labels",
+            "n_labels",
+            "n_ips",
+            "n_ip16"
+          ],
+          "body_text_present": false
+        },
+        {
+          "name": "events.jsonl",
+          "url": "https://collusion.wiki/explorer/download/events.jsonl.gz",
+          "retrieved_utc": "2026-10-21T15:35:27.515337+00:00",
+          "download_bytes": 486683,
+          "expanded_bytes": 8543896,
+          "rows": 19913,
+          "event_types": {
+            "probe": 101,
+            "save": 14591,
+            "delete": 5217,
+            "revert": 4
+          },
+          "download_sha256": "989780118de3dc05031ee5920a761c565a97b64d3721688593adc0794fcfb7b8",
+          "expanded_sha256": "588584295f1c4a7c3d90b04075ab151504f165ff069534d935cda08853ec28b1",
+          "published_hash_matches": true,
+          "fields": [
+            "event_id",
+            "event_type",
+            "time",
+            "time_grade",
+            "actor_label",
+            "page",
+            "ip16",
+            "source_refs",
+            "success_observed"
+          ],
+          "handling": "仅聚合时间/事件类型；不导出IP或原始请求URI，不跟随source_refs。"
+        },
+        {
+          "name": "labels.jsonl",
+          "url": "https://collusion.wiki/explorer/download/labels.jsonl.gz",
+          "retrieved_utc": "2026-10-21T15:35:29.626693+00:00",
+          "download_bytes": 167875,
+          "expanded_bytes": 1471940,
+          "rows": 3103,
+          "download_sha256": "c1cd171f4794ea3e59803c92aba9dc552587db984dc43c7939338d5845c59860",
+          "expanded_sha256": "d94aecd84baecda46344f5b8726a95a9c81e7e41a1c0969fc89a90c8906f0388",
+          "published_hash_matches": true,
+          "fields": [
+            "label",
+            "stored_revisions",
+            "first_write",
+            "last_write",
+            "pages",
+            "wikis",
+            "is_human_handle",
+            "save_requests"
+          ],
+          "human_handle_true": 3,
+          "handling": "排除is_human_handle=true作为智能体；标签不是独立身份。"
+        },
+        {
+          "name": "manifest.json",
+          "url": "https://collusion.wiki/explorer/download/manifest.json.gz",
+          "retrieved_utc": "2026-10-21T15:35:31.102179+00:00",
+          "download_bytes": 6132,
+          "expanded_bytes": 62254,
+          "download_sha256": "ee4c5785d61054ef993a4a10708d9698d7d1f86ac210810b6899bae035eda092",
+          "expanded_sha256": "b6d53e16b5d9a6a0a98d4577238835ee7a574d7d10a8f1312330b4e626c6ba2b",
+          "published_hash_matches": true,
+          "fields": [
+            "generated_at",
+            "db_sha256",
+            "cut",
+            "counts",
+            "per_wiki",
+            "population_counts",
+            "grade_histograms",
+            "checks"
+          ]
+        }
+      ],
+      "privacy": "作者脱敏静态导出；未下载revisions全文。元数据仍有IP聚合、标签和来源定位，不能作重新识别用途。",
+      "license": "未发现明确许可声明。公开可下载不等于无条件转载；本地分析并署名引用，避免把原数据打包公开分发。",
+      "limitations": [
+        "来自已知OpenAI相关事件，是方法对照，不是Claude身份归属数据。",
+        "save/delete/revert/probe是事件类别，不能按总事件数声称独立发帖或独立智能体。",
+        "作者的时间等级和时钟重建存在不确定性；分桶前应读取time_grade。",
+        "页面共现与时间邻近不足以证明通信、读到对方内容或长期组织。"
+      ]
+    },
+    {
+      "id": "D-D03",
+      "name": "SwarmMemo public-messages fixed-revision latest available date partition",
+      "selected": true,
+      "status": "已下载固定revision分区，SHA256及行数与作者manifest匹配",
+      "source_ids": [
+        "D-S06",
+        "D-S07",
+        "D-S08",
+        "D-S09"
+      ],
+      "url": "https://huggingface.co/datasets/swarmmemo/public-messages/resolve/c36fe6822a0f49244aba577621f1a937ebfb97a5/data/date=2026-10-13/messages.jsonl",
+      "retrieved_utc": "2026-10-21T15:46:40.889242+00:00",
+      "bytes": 186903,
+      "sha256": "d2f9abf566b7d176a5a157ce757cade9182e5ba275e0c50c5003fb7f9d22c494",
+      "revision": "c36fe6822a0f49244aba577621f1a937ebfb97a5",
+      "repository_last_modified": "2026-10-15T03:04:29.000Z",
+      "manifest_cutoff_utc": "2026-10-15T03:04:28+00:00",
+      "manifest_all_rows": 3419,
+      "manifest_message_partitions": 40,
+      "downloaded_partition": "2026-10-13",
+      "downloaded_rows": 58,
+      "types": {
+        "message": 58
+      },
+      "kinds": {
+        "review": 20,
+        "note": 37,
+        "request": 1
+      },
+      "hidden_count": 0,
+      "created_at_min_utc": "2026-10-13T00:01:15+00:00",
+      "created_at_max_utc": "2026-10-13T03:02:10+00:00",
+      "field_types": {
+        "archive_eligible": [
+          "bool"
+        ],
+        "attachments": [
+          "NoneType"
+        ],
+        "author": [
+          "str"
+        ],
+        "created_at": [
+          "int"
+        ],
+        "custody": [
+          "NoneType"
+        ],
+        "delegation_id": [
+          "NoneType"
+        ],
+        "format": [
+          "NoneType",
+          "str"
+        ],
+        "forwarded": [
+          "NoneType"
+        ],
+        "handle": [
+          "NoneType",
+          "str"
+        ],
+        "hidden": [
+          "bool"
+        ],
+        "hidden_by": [
+          "NoneType"
+        ],
+        "id": [
+          "str"
+        ],
+        "kind": [
+          "str"
+        ],
+        "page": [
+          "str"
+        ],
+        "public_key": [
+          "NoneType",
+          "str"
+        ],
+        "reason": [
+          "NoneType"
+        ],
+        "reply_to": [
+          "NoneType",
+          "str"
+        ],
+        "room": [
+          "str"
+        ],
+        "sequence": [
+          "int"
+        ],
+        "sha256": [
+          "str"
+        ],
+        "signature": [
+          "NoneType",
+          "str"
+        ],
+        "signed_payload": [
+          "NoneType",
+          "str"
+        ],
+        "supersedes": [
+          "NoneType",
+          "str"
+        ],
+        "text": [
+          "str"
+        ],
+        "to": [
+          "NoneType",
+          "str"
+        ],
+        "type": [
+          "str"
+        ],
+        "via": [
+          "str"
+        ],
+        "visibility": [
+          "str"
+        ]
+      },
+      "schema": 1,
+      "manifest_sha256_match": true,
+      "privacy": "作者daily moderated public archive，仅公开房间投稿；私信/私有房间/隐藏与隔离内容不导出。48小时年龄门槛；当前分区58行均message、无hidden、无imported。",
+      "license": "投稿者保留权利；作者获有限公开归档再分发许可。Apache-2.0代码许可不适用于投稿，也不是给使用者的通用训练许可。无统一宽泛内容许可证声明。",
+      "allowed_use_recommendation": "只做本地研究与小量原创摘要，尊重tombstone/hidden/type/imported，签名只能认证密钥控制，禁止跟进正文URL/附件或发送消息。",
+      "limitations": [
+        "最新下载到的revision日期为10/15，不能冒充10/21实时状态。",
+        "10/13分区只有00:01:15至03:02:10 UTC，是48小时延迟造成的部分日，不是完整日。",
+        "manifest是完整性清单，不是数字签署的出版者证明。",
+        "仅一日期分区，不能独立重建跨日回复链；reply_to可引用未下载记录。",
+        "数据卡承认作者可能是人类、程序、模型或其他系统；不能视为全是AI或独立agent。",
+        "public_key与签名不认证Claude厂商来源或保护人类动机。"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "D-S01",
+      "title": "Swarmchasing",
+      "url": "https://publicbbs.com/swarmchasing",
+      "publisher": "Hugo Montenegro / SwarmMemo",
+      "published": "2026-10-04",
+      "access": "研究正文、明确数据下载链接已读；HTML副本已保存",
+      "notes": "公开研究页明确链接两个静态JSON；作者兼平台经营者，非独立于平台的观察。"
+    },
+    {
+      "id": "D-S02",
+      "title": "Swarmchasing: data, code and analysis — README",
+      "url": "https://raw.githubusercontent.com/Hugo0/swarmmemo/main/research/swarmchasing/README.md",
+      "publisher": "Hugo0/swarmmemo",
+      "published": null,
+      "access": "原始README已读并保存",
+      "notes": "提供数据来源、版本窗口、脱敏说明和复现边界；未运行其抓取脚本。"
+    },
+    {
+      "id": "D-S03",
+      "title": "Data licence",
+      "url": "https://raw.githubusercontent.com/Hugo0/swarmmemo/main/research/swarmchasing/LICENSE-DATA.md",
+      "publisher": "Hugo0/swarmmemo",
+      "published": null,
+      "access": "直接下载原始许可文本后已读",
+      "notes": "CC BY 4.0为派生数据默认许可；原作者帖子摘录、AI Village、Wiki派生数据有例外。"
+    },
+    {
+      "id": "D-S04",
+      "title": "Download — collusion.wiki",
+      "url": "https://collusion.wiki/explorer/download",
+      "publisher": "collusion.wiki研究者",
+      "published": null,
+      "access": "下载页及公布的展开文件SHA256已读",
+      "notes": "作者公开导出，说明IP后半部分及用户名称已脱敏；未声明许可证。"
+    },
+    {
+      "id": "D-S05",
+      "title": "Discovery of a new OpenAI agent message board",
+      "url": "https://collusion.wiki/",
+      "publisher": "Von Arx / Byrd / Kitts / Larsen",
+      "published": "2026-09-04",
+      "access": "原始调查的数据公开与脱敏说明已读",
+      "notes": "研究者自述其导出保留疑似AI内容，合法人类流量仅保留管理员删除活动。"
+    },
+    {
+      "id": "D-S06",
+      "title": "SwarmMemo Privacy Policy",
+      "url": "https://www.swarmmemo.com/privacy",
+      "publisher": "SwarmMemo / Hugo Montenegro",
+      "published": null,
+      "updated": "2026-10-18",
+      "access": "正文相关段落已读",
+      "notes": "Where public posts go明确48h后公开导出、daily HF发布、私有内容排除。"
+    },
+    {
+      "id": "D-S07",
+      "title": "SwarmMemo public bulletin archive — dataset card",
+      "url": "https://huggingface.co/datasets/swarmmemo/public-messages",
+      "publisher": "swarmmemo",
+      "published": null,
+      "access": "公开数据卡正文已读；固定revision README已保存",
+      "notes": "有publication terms/schema/完整性与模型归属限制；viewer报错不等于JSONL不可解析。"
+    },
+    {
+      "id": "D-S08",
+      "title": "HF public dataset metadata",
+      "url": "https://huggingface.co/api/datasets/swarmmemo/public-messages",
+      "publisher": "Hugging Face API",
+      "published": null,
+      "access": "公开ungated元数据已下载",
+      "notes": "取得时sha c36fe6822a0f49244aba577621f1a937ebfb97a5，lastModified 2026-10-15T03:04:29Z。"
+    },
+    {
+      "id": "D-S09",
+      "title": "Fixed revision public archive manifest",
+      "url": "https://huggingface.co/datasets/swarmmemo/public-messages/resolve/c36fe6822a0f49244aba577621f1a937ebfb97a5/manifest.json",
+      "publisher": "swarmmemo",
+      "published": null,
+      "access": "固定revision清单已下载并用于校验",
+      "notes": "40个message日期分区，3419总行；本轮仅取最新10/13部分日58行。"
+    }
+  ],
+  "queries": [],
+  "method": "以研究页公开链接为起点，读取README/许可并下载固定URL；没有运行远端代码或跟随语料中的链接。",
+  "access_log": [
+    {
+      "operation": "首次Python公开HTTPS读取",
+      "result": "网络沙箱WinError10013阻止"
+    },
+    {
+      "operation": "固定URL只读下载重试",
+      "result": "经自动审查升级通过；未使用代理或绕过站点限制"
+    },
+    {
+      "operation": "GitHub网页与部分raw文件web读取",
+      "result": "部分Cache miss；README和许可通过直接只读下载成功"
+    },
+    {
+      "operation": "collusion gzip web读取",
+      "result": "工具不支持application/gzip；固定URL通过有界下载/解压成功"
+    }
+  ],
+  "excluded_candidates": [
+    {
+      "name": "Swarmchasing universe.json",
+      "url": "https://publicbbs.com/swarmchasing/data/universe.json",
+      "status": "未下载",
+      "reason": "agents.json和Wiki元数据已足够初筛；遵照主agent停止扩大下载。研究页标注4.4MB但未独立量测。"
+    },
+    {
+      "name": "AI Village full dataset",
+      "url": "https://huggingface.co/datasets/aidigestorg/ai-village",
+      "status": "未申请访问或下载",
+      "reason": "README明确为gated数据，且有自定义研究条款；本轮不使用身份授权入口。"
+    },
+    {
+      "name": "collusion.wiki revisions.jsonl.gz",
+      "status": "未下载",
+      "reason": "包含全文；当前仅需元数据，减少个人或秘密材料收集。"
+    }
+  ],
+  "limitations": [
+    "只策展和核对来源；没有复算论文全部结论。",
+    "只读下载来源许可不表示认可来源全部归属推断。",
+    "本地哈希匹配认证下载一致性，不认证模型身份或组织动机。",
+    "原始样本与许可文件保存于私有工作区；面向用户报告应输出统计、自写摘要和原链接，避免转载原语料。"
+  ],
+  "public_edition_note": "所有第三方原始数据均未分发。历史下载状态是本地调查记录，不表示仓库包含数据。"
+}

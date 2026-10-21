@@ -1,0 +1,24 @@
+# 第三方来源、权利与公开范围
+
+根目录MIT许可证适用于本项目原创代码和原创文档中可许可的部分。它不重新许可第三方帖子、论文、商标、上游数据库或所引网站内容；不表示获得原始内容的训练许可。这里记录的是研究时所见条款与本项目发布选择，复用上游资料时仍须查看对应来源。
+
+## 主要研究输入
+
+| 输入 | 上游与归属 | 本次所见条款及处理 |
+| --- | --- | --- |
+| Swarmchasing `agents.json` | Hugo Montenegro，[研究页](https://publicbbs.com/swarmchasing)、[许可文件](https://raw.githubusercontent.com/Hugo0/swarmmemo/main/research/swarmchasing/LICENSE-DATA.md) | 派生结构默认CC BY4.0；原帖摘录保留原作者权利，AI Village部分另有研究条款。未分发原始文件、摘录、身份计数明细和逐条账号映射；发布原创聚合分析。 |
+| collusion.wiki元数据 | Von Arx、Byrd、Kitts、Larsen（2026），[调查](https://collusion.wiki/)、[下载页](https://collusion.wiki/explorer/download) | 研究时未见统一明确许可。只下载作者的公开静态元数据用于本地研究，未下载修订正文；公开仓库只保留原创统计、来源和哈希，不再分发导出文件。 |
+| SwarmMemo public-messages | SwarmMemo / Hugo Montenegro与各投稿者，[数据卡](https://huggingface.co/datasets/swarmmemo/public-messages)、[发布与隐私说明](https://www.swarmmemo.com/privacy) | 投稿者保留权利；归档方的有限公开发布许可不等于所有使用者有任意训练或再许可权。未分发分区、消息正文、签名载荷或逐条消息ID。 |
+| AI Village相关元数据 | AI Digest，[AI Village](https://theaidigest.org/village) | 上游许可说明包含研究用途、禁止未经书面许可训练和禁止重新识别的要求。本次46条身份无正文，未进入帖子筛查，未分发该数据子集。 |
+
+来源清单见[evidence/index.json](evidence/index.json)。原始观察、论文机制和厂商事件说明由各自作者负责，本项目做的是选取、核对和有边界的解释，没有把这些研究冒称为自己的原始发现。
+
+## 发布了什么
+
+原创报告与研究手记；公开来源与查询登记；少量候选的原创判断和公开出处；离线分析与验证代码；聚合统计、输入哈希、原创模型阅读笔记。源索引删除了原本缓存的直接引文和本机绝对路径。历史验证日志保留作版本记录，不意味着原始数据已随仓库公开。
+
+## 没有发布什么
+
+原始研究下载目录、帖子摘录和正文、Wiki逐条导出、HF分区、签名载荷、批量逐条索引、账号映射、私信、凭据、浏览器资料、本机工作目录及缓存。公开报告有必要的少量公开出处，仍可定位所讨论的项目或帖子；不要把它称为匿名数据。
+
+发布前采用白名单构建独立目录，再扫描已知凭据样式、本机路径和禁止文件名。扫描不保证发现所有隐私类型。若发现不适宜公开的内容，请按[贡献说明](CONTRIBUTING.md)提出最小必要的更正信息，避免在Issue里重新传播敏感内容。
