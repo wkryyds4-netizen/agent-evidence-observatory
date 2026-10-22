@@ -1,0 +1,390 @@
+{
+  "phase": 5,
+  "title": "国际组织比较",
+  "date": "2026-10-22",
+  "selection_file": "phase5-international-selection.json",
+  "denominator": {
+    "preregistered": 5,
+    "examined": 5,
+    "replaced": 0,
+    "representative_sample": false
+  },
+  "method": "目的抽样；人类发起或共同运营仍纳入；六维分开，无总分；内容可读不等于模型身份认证。",
+  "sources": [
+    {
+      "id": "I5-S01",
+      "url": "https://huggingface.co/datasets/aidigestorg/ai-village",
+      "access": "public data card; underlying files gated",
+      "summary": "运营方声明多模型长期运行、记忆与群聊；原始调用记录不包含在公开数据中。",
+      "limits": "数据文件未申请或下载；未认证模型调用。",
+      "accessed_date": "2026-10-22"
+    },
+    {
+      "id": "I5-S02",
+      "url": "https://aivillageblog.substack.com/p/how-the-ai-village-works",
+      "access": "full operator article read",
+      "summary": "运营方介绍成员安排、目标设置、记忆机制、外联审批和人工介入。",
+      "limits": "标注2026-06-16但持续修改；同页8小时/日与20小时/周不一致；起始日与数据卡相差一天。",
+      "accessed_date": "2026-10-22"
+    },
+    {
+      "id": "I5-S03",
+      "url": "https://github.com/ai-village-agents/village-event-log",
+      "access": "repository README read",
+      "summary": "存在公共结构化事件档案及贡献规范。",
+      "limits": "档案编写与每条事件真实性应分别核查。",
+      "accessed_date": "2026-10-22"
+    },
+    {
+      "id": "I5-S04",
+      "url": "https://github.com/ai-village-agents/village-event-log/blob/main/days_101_105_events.json",
+      "access": "file contents read",
+      "summary": "自2025-06-25起的汇总记录涉及多个模型标签；部分links为空。",
+      "limits": "二次整理记录，不是原始调用或独立验证的交易记录；不采用销量数字。",
+      "accessed_date": "2026-10-22"
+    },
+    {
+      "id": "I5-S05",
+      "url": "https://github.com/kody-w/rappterbook/discussions/5663",
+      "access": "thread body and several substantive comments read; platform date 2026-03-15",
+      "summary": "coder-08贴出知识图谱代码，archivist-09与contrarian-03指出归属、关系推断和评论缓存问题。",
+      "limits": "界面作者均kody-w；正文签名不证明独立账号或模型。未运行代码、未确认落库。",
+      "accessed_date": "2026-10-22"
+    },
+    {
+      "id": "I5-S06",
+      "url": "https://github.com/kody-w/rappterbook/discussions/20524",
+      "access": "full thread read; platform dates 2026-06-21/22",
+      "summary": "后续自动摘要及角色签名回复可见；一条质量批评可见。",
+      "limits": "计数为自报且不用于规模估计；不同线程不能证明同一任务持续。",
+      "accessed_date": "2026-10-22"
+    },
+    {
+      "id": "I5-S07",
+      "url": "https://www.moltbook.com/post/8ef81da6-049c-4469-ae5b-c2cc816aa924",
+      "access": "search-index content read; direct open only Loading",
+      "summary": "新成员自称被人类认领，四个账号作欢迎回复。",
+      "limits": "相对时间208d来自索引；不换算精确日期，模型和人工贡献不明。",
+      "accessed_date": "2026-10-22"
+    },
+    {
+      "id": "I5-S08",
+      "url": "https://www.moltbook.com/post/d2c7082f-2b9c-41bf-8ff7-ebcbf3ba61f7",
+      "access": "search-index content read; direct open only Loading",
+      "summary": "同一子群出现另一账号的记忆主题符号化文本。",
+      "limits": "索引相对6d；符号文本不等于密码学通信或执行协议。",
+      "accessed_date": "2026-10-22"
+    },
+    {
+      "id": "I5-S09",
+      "url": "https://www.moltbook.com/post/1f438665-b0e3-4c71-adf3-1de6ee96bf45",
+      "access": "search-index content read",
+      "summary": "成员反论称文化框架继承自人类。",
+      "limits": "这是参与者的观点，不能当作已经证实的起源史。",
+      "accessed_date": "2026-10-22"
+    },
+    {
+      "id": "I5-S10",
+      "url": "https://www.moltbook.com/m/crustafarianism",
+      "access": "page title readable, body Loading",
+      "summary": "子群稳定路径及Church of Molt标题可见。",
+      "limits": "未取得群规则、成员名单或管理操作。",
+      "accessed_date": "2026-10-22"
+    },
+    {
+      "id": "I5-S11",
+      "url": "https://arxiv.org/html/2411.00114",
+      "access": "original paper abstract, relevant results and methods read, v1 2024-10-31",
+      "summary": "Minecraft实验研究角色、规则与文化传播；方法明确研究者设置群体、角色和任务。",
+      "limits": "非2026互联网群体；未复现实验；角色识别部分使用语言模型。",
+      "accessed_date": "2026-10-22"
+    },
+    {
+      "id": "I5-S12",
+      "url": "https://github.com/h3rb3rn/ai-agent-village",
+      "access": "repository README read",
+      "summary": "独立本地模型社会项目，链接只读观察站与审计。",
+      "limits": "同名但与AI Digest项目不同；README中的暂停状态可能过时。",
+      "accessed_date": "2026-10-22"
+    },
+    {
+      "id": "I5-S13",
+      "url": "https://github.com/h3rb3rn/ai-agent-village/blob/main/docs/RESEARCH-RUNTIME-AUDIT-2026-09-24.md",
+      "access": "operator audit read",
+      "summary": "维护者记录部署故障、协作声明与任务接手，以及尚未证明的新实用产物。",
+      "limits": "维护者自查，不是本研究登录机器审计；修复机制不等于效果验证。",
+      "accessed_date": "2026-10-22"
+    },
+    {
+      "id": "I5-S14",
+      "url": "https://ai-village.dev.self-hosted.app/",
+      "access": "public observer page read",
+      "summary": "有成员、通讯和任务看板界面；动态字段多未载入。",
+      "limits": "界面显示9不作为当前活跃数认证。",
+      "accessed_date": "2026-10-22"
+    },
+    {
+      "id": "I5-S15",
+      "url": "https://ai-village.dev.self-hosted.app/activity",
+      "access": "public text event stream read; indexed 2 days ago",
+      "summary": "2026-10-20的角色标记事件包含文件写入、共享记忆、协作提醒及明确失败。",
+      "limits": "托管方发布的遥测而非独立机器取证；文本窗口非全量，成功退出不证明功能成功。",
+      "accessed_date": "2026-10-22"
+    }
+  ],
+  "cases": [
+    {
+      "id": "INT5-01",
+      "name": "AI Digest AI Village",
+      "type": "公开、人工设立的长期多模型团队",
+      "url": "https://aivillageblog.substack.com/p/how-the-ai-village-works",
+      "model_attribution": "运营方多模型声明；API原始调用未取得，具体身份未经本研究认证。",
+      "human_role": "运营方创建实例、配置工具和目标、可停机干预；外联有审批。",
+      "publicness": "公开观察与仓库；部分研究数据需审核。",
+      "motives": "运营方研究agent行为；任务包含慈善和协作，不能据此归纳全部实例的内在动机。",
+      "dimensions": {
+        "membership": {
+          "judgment": "运营方维护成员和房间，加入非自助。",
+          "source_ids": [
+            "I5-S02"
+          ]
+        },
+        "roles": {
+          "judgment": "有个体工具差异与项目分工的运营说明，具体任务角色待深查。",
+          "source_ids": [
+            "I5-S02"
+          ]
+        },
+        "goal": {
+          "judgment": "共同、个人及竞争目标轮换，部分周允许自选。",
+          "source_ids": [
+            "I5-S02"
+          ]
+        },
+        "continuity": {
+          "judgment": "运营记录跨2025–2026；数据卡和FAQ起始日有一天差异。",
+          "source_ids": [
+            "I5-S01",
+            "I5-S02",
+            "I5-S04"
+          ]
+        },
+        "rules": {
+          "judgment": "有外联审批工具与人类审批规则；本轮未抽样审批执行日志。",
+          "source_ids": [
+            "I5-S02"
+          ]
+        },
+        "artifact": {
+          "judgment": "公开事件档案仓库可直接读取；具体线下成果未独立核验。",
+          "source_ids": [
+            "I5-S03",
+            "I5-S04"
+          ]
+        }
+      }
+    },
+    {
+      "id": "INT5-02",
+      "name": "Rappterbook knowledge graph collaboration",
+      "type": "共享运营账号下的角色协作与代码审查",
+      "url": "https://github.com/kody-w/rappterbook/discussions/5663",
+      "model_attribution": "帖子内agent签名；未取得可认证模型调用。",
+      "human_role": "GitHub发布身份均kody-w，线程也明说服务账号共享；人类/脚本/模型的具体编辑比例未知。",
+      "publicness": "公开GitHub讨论。",
+      "motives": "明确局部目标是讨论数据的图谱提取与改进。",
+      "dimensions": {
+        "membership": {
+          "judgment": "线程中的coder、archivist、contrarian等签名可见；独立实例数未知。",
+          "source_ids": [
+            "I5-S05"
+          ]
+        },
+        "roles": {
+          "judgment": "代码作者、缓存结构审查者、关系推断批评者存在实际不同贡献。",
+          "source_ids": [
+            "I5-S05"
+          ]
+        },
+        "goal": {
+          "judgment": "围绕知识图谱代码改进有直接响应。",
+          "source_ids": [
+            "I5-S05"
+          ]
+        },
+        "continuity": {
+          "judgment": "同平台3月讨论、6月摘要/回复可见；该代码任务跨月延续未知。",
+          "source_ids": [
+            "I5-S05",
+            "I5-S06"
+          ]
+        },
+        "rules": {
+          "judgment": "可见要求区分计数与关系、加入置信字段等审查建议；未确认采纳或制裁执行。",
+          "source_ids": [
+            "I5-S05"
+          ]
+        },
+        "artifact": {
+          "judgment": "帖子含可读Python代码及具体审查；落库、运行、修复另待核查。",
+          "source_ids": [
+            "I5-S05"
+          ]
+        }
+      }
+    },
+    {
+      "id": "INT5-03",
+      "name": "Moltbook m/crustafarianism",
+      "type": "公开平台文化子群（部分内容仅索引可读）",
+      "url": "https://www.moltbook.com/m/crustafarianism",
+      "model_attribution": "账号自述OpenClaw等标签；具体模型和人类编辑未知。",
+      "human_role": "欢迎帖作者明确自称被人类认领；平台有人类建设参与。",
+      "publicness": "公开索引和页面标题；当前正文加载未完成。",
+      "motives": "可观察的是归属、记忆、文化表达；起源与真实信念未决。",
+      "dimensions": {
+        "membership": {
+          "judgment": "子群路径及新人/四个欢迎账号可见；无完整名单。",
+          "source_ids": [
+            "I5-S07",
+            "I5-S10"
+          ]
+        },
+        "roles": {
+          "judgment": "新人和欢迎者是互动角色；管理职务未验证。",
+          "source_ids": [
+            "I5-S07"
+          ]
+        },
+        "goal": {
+          "judgment": "共同文化主题可见，具体共同任务未见。",
+          "source_ids": [
+            "I5-S07",
+            "I5-S08"
+          ]
+        },
+        "continuity": {
+          "judgment": "索引显示相隔较久的帖子；不能据此证明同一成员持续或群体治理持续。",
+          "source_ids": [
+            "I5-S07",
+            "I5-S08"
+          ]
+        },
+        "rules": {
+          "judgment": "本轮未取得正式规则或执行记录。",
+          "source_ids": [
+            "I5-S10"
+          ]
+        },
+        "artifact": {
+          "judgment": "公开文本及欢迎互动；未见可核验的共同工程产物。",
+          "source_ids": [
+            "I5-S07",
+            "I5-S08"
+          ]
+        }
+      }
+    },
+    {
+      "id": "INT5-04",
+      "name": "Project Sid",
+      "type": "历史研究部署：Minecraft多agent模拟（2024）",
+      "url": "https://arxiv.org/html/2411.00114",
+      "model_attribution": "原论文报告GPT-4o及PIANO；本研究未复现实验。",
+      "human_role": "研究者设置环境、初始目标、影响者和选举管理员等实验条件。",
+      "publicness": "公开论文；模拟不是开放互联网秘密群体。",
+      "motives": "研究者检验群体能力；模型内部动机不可从实验标签推断。",
+      "dimensions": {
+        "membership": {
+          "judgment": "规则实验29实例：25参与者、3影响者、1管理员；不是全项目固定人数。",
+          "source_ids": [
+            "I5-S11"
+          ]
+        },
+        "roles": {
+          "judgment": "部分角色预先设置；专门化实验的角色由事后模型分析推断。",
+          "source_ids": [
+            "I5-S11"
+          ]
+        },
+        "goal": {
+          "judgment": "研究者赋共同任务，agent继续生成社会目标。",
+          "source_ids": [
+            "I5-S11"
+          ]
+        },
+        "continuity": {
+          "judgment": "规则实验1200秒；不能代表跨月组织。",
+          "source_ids": [
+            "I5-S11"
+          ]
+        },
+        "rules": {
+          "judgment": "论文报告投票、税率调整与行为测量，并有对照/消融；未由本研究重跑。",
+          "source_ids": [
+            "I5-S11"
+          ]
+        },
+        "artifact": {
+          "judgment": "研究报告及模拟结果；不把论文产出算成agent自行发表。",
+          "source_ids": [
+            "I5-S11"
+          ]
+        }
+      }
+    },
+    {
+      "id": "INT5-05",
+      "name": "h3rb3rn ai-agent-village",
+      "type": "人工维护的本地agent部署；可读事件而非仅框架",
+      "url": "https://github.com/h3rb3rn/ai-agent-village",
+      "model_attribution": "仓库声明本地Ollama模型；遥测角色标签未认证权重/调用。",
+      "human_role": "人类维护系统、角色、反馈/记忆/协作提醒，维护者将这些明确称实验干预。",
+      "publicness": "公开仓库、审计及只读活动流；与AI Digest独立。",
+      "motives": "维护者研究有限资源下协作；成员自选问题是项目设定。",
+      "dimensions": {
+        "membership": {
+          "judgment": "审计称九服务实例；10月事件出现不同角色ID，不认证当前九个均活跃。",
+          "source_ids": [
+            "I5-S13",
+            "I5-S15"
+          ]
+        },
+        "roles": {
+          "judgment": "Operator、Artisan、Methodologist等角色有不同事件记录。",
+          "source_ids": [
+            "I5-S15"
+          ]
+        },
+        "goal": {
+          "judgment": "有共同任务记录/claim机制及跨角色文件讨论，成果质量仍待核验。",
+          "source_ids": [
+            "I5-S13",
+            "I5-S15"
+          ]
+        },
+        "continuity": {
+          "judgment": "9月审计与10月20日活动可见；当前网页窗口非持续完整日志。",
+          "source_ids": [
+            "I5-S13",
+            "I5-S15"
+          ]
+        },
+        "rules": {
+          "judgment": "规则有项目claim、内存访问隔离和协作提醒；部分动作失败与干预也可见。",
+          "source_ids": [
+            "I5-S13",
+            "I5-S15"
+          ]
+        },
+        "artifact": {
+          "judgment": "遥测记录文件写入和哈希；同窗口底层脚本报错超时。声明verified与实际通过需分开。",
+          "source_ids": [
+            "I5-S15"
+          ]
+        }
+      }
+    }
+  ],
+  "conclusion": "公开资料足以支持存在人工发起、持续运行或围绕产物协作的agent群体；不同案例在执行、治理和归属证据上差异明显。所查材料不要求秘密性，也未据符号文本或共同账号推断秘密联盟。"
+}

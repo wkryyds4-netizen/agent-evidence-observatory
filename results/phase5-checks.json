@@ -1,0 +1,147 @@
+{
+  "passed": true,
+  "check_count": 35,
+  "checks": [
+    {
+      "name": "claude_candidate_count",
+      "passed": true
+    },
+    {
+      "name": "claude_unique_source_ids",
+      "passed": true
+    },
+    {
+      "name": "claude_six_dimensions_with_resolved_sources",
+      "passed": true
+    },
+    {
+      "name": "claude_provenance_fields",
+      "passed": true
+    },
+    {
+      "name": "claude_index_counts",
+      "passed": true
+    },
+    {
+      "name": "bilibili_candidate_count",
+      "passed": true
+    },
+    {
+      "name": "bilibili_unique_source_ids",
+      "passed": true
+    },
+    {
+      "name": "bilibili_six_dimensions_with_resolved_sources",
+      "passed": true
+    },
+    {
+      "name": "bilibili_provenance_fields",
+      "passed": true
+    },
+    {
+      "name": "bilibili_index_counts",
+      "passed": true
+    },
+    {
+      "name": "international_candidate_count",
+      "passed": true
+    },
+    {
+      "name": "international_unique_source_ids",
+      "passed": true
+    },
+    {
+      "name": "international_six_dimensions_with_resolved_sources",
+      "passed": true
+    },
+    {
+      "name": "international_provenance_fields",
+      "passed": true
+    },
+    {
+      "name": "international_index_counts",
+      "passed": true
+    },
+    {
+      "name": "distinct_base_cases",
+      "passed": true
+    },
+    {
+      "name": "source_record_total_not_independent_sources",
+      "passed": true
+    },
+    {
+      "name": "international_frozen_ids",
+      "passed": true
+    },
+    {
+      "name": "bilibili_no_video_or_comment_claim",
+      "passed": true
+    },
+    {
+      "name": "protocol_deviation_preserved",
+      "passed": true
+    },
+    {
+      "name": "snapshot_counts",
+      "passed": true
+    },
+    {
+      "name": "preflight_exclusion_and_order",
+      "passed": true
+    },
+    {
+      "name": "readable_content_fields",
+      "passed": true
+    },
+    {
+      "name": "platform_counters_not_reply_observations",
+      "passed": true
+    },
+    {
+      "name": "no_closure_rate_for_zero_denominator",
+      "passed": true
+    },
+    {
+      "name": "category_counts",
+      "passed": true
+    },
+    {
+      "name": "duplicate_body_group_retained",
+      "passed": true
+    },
+    {
+      "name": "sample_no_raw_body_title_or_author",
+      "passed": true
+    },
+    {
+      "name": "snapshot_hash_scope",
+      "passed": true
+    },
+    {
+      "name": "two_nested_assignments",
+      "passed": true
+    },
+    {
+      "name": "deep_outputs_present",
+      "passed": true
+    },
+    {
+      "name": "nested_assignments_completed",
+      "passed": true
+    },
+    {
+      "name": "INT5-01_deep_source_references",
+      "passed": true
+    },
+    {
+      "name": "INT5-02_deep_source_references",
+      "passed": true
+    },
+    {
+      "name": "INT5-05_deep_source_references",
+      "passed": true
+    }
+  ],
+  "scope": "Saved evidence consistency only; not independent verification of actors, execution or semantic labels."
+}

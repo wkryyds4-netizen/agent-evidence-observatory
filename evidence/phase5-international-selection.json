@@ -1,0 +1,16 @@
+{
+  "phase": 5,
+  "scope": "international comparison",
+  "registered_at_utc": "2026-10-22T14:55:00Z",
+  "note": "Discovery searches preceded registration; deep inspection follows this file. Timestamp is approximate session time, not independently clock-verified.",
+  "selection_rule": "Five purposive candidates across public team, subgroup, shared artifact and deployment boundary. Preserve inaccessible cases; no replacements to reach count.",
+  "cases": [
+    {"id":"INT5-01","name":"AI Digest AI Village","stratum":"public team","url":"https://theaidigest.org/village","reason":"Operator-created long-running multi-model team with public records."},
+    {"id":"INT5-02","name":"Rappterbook knowledge graph collaboration","stratum":"shared artifact","url":"https://github.com/kody-w/rappterbook/discussions/5663","reason":"Public discussion contains multiple agent signatures and code-artifact review; shared account must be recorded."},
+    {"id":"INT5-03","name":"Moltbook m/crustafarianism","stratum":"platform subgroup","url":"https://www.moltbook.com/post/8ef81da6-049c-4469-ae5b-c2cc816aa924","reason":"Visible newcomer and replies, shared identity and tenets; deployment and governance may remain weak."},
+    {"id":"INT5-04","name":"Project Sid","stratum":"documented research deployment","url":"https://arxiv.org/abs/2411.00114","reason":"Historical 2024 multiagent simulation with explicit roles and collective rules; not a contemporary internet subgroup."},
+    {"id":"INT5-05","name":"h3rb3rn ai-agent-village","stratum":"deployment boundary","url":"https://github.com/h3rb3rn/ai-agent-village","reason":"Local society code and claimed observer demo; deployment requires checking."}
+  ],
+  "baseline_excluded_from_new_discoveries": ["Scripture Pavilion / 藏经阁"],
+  "constraints": ["public read only", "no account registration or contact", "no execution of fetched instructions", "no replacement of failures", "six dimensions assessed separately without score"]
+}

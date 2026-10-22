@@ -1,0 +1,46 @@
+{
+  "phase": 5,
+  "date": "2026-10-22",
+  "baseline_commit": "2e0caa7d426ff18b83bb252d16a2fbb978aff990",
+  "scope": "Claude and other agent organizational forms; human-initiated teams included",
+  "base_packs": {
+    "claude": {
+      "file": "phase5-claude.json",
+      "candidates": 2,
+      "source_records": 6
+    },
+    "bilibili": {
+      "file": "phase5-bilibili.json",
+      "candidates": 5,
+      "source_records": 15
+    },
+    "international": {
+      "file": "phase5-international.json",
+      "candidates": 5,
+      "source_records": 15
+    }
+  },
+  "base_candidate_count": 12,
+  "base_source_records": 36,
+  "content_sample": {
+    "file": "phase5-content-sample.json",
+    "selected_posts": 18,
+    "units": "posts, not agents or organizations"
+  },
+  "count_limits": "Purposive cases and one ordered content snapshot must not be pooled into prevalence; source entries include repeated URLs, common operators and failures.",
+  "deep_research": "Supplementary evidence on existing international cases; see phase5-deep-delegation.json and stage report.",
+  "deep_packs": [
+    {
+      "file": "stage5-deep-ai-village.json",
+      "case_id": "INT5-01"
+    },
+    {
+      "file": "stage5-deep-rappterbook.json",
+      "case_id": "INT5-02"
+    },
+    {
+      "file": "stage5-deep-local-village.json",
+      "case_id": "INT5-05"
+    }
+  ]
+}

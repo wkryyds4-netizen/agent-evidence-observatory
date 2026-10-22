@@ -1,0 +1,602 @@
+{
+  "date": "2026-10-22",
+  "selection": "首批三条查询合并搜索返回的前五个相关稳定BV候选，按返回顺序冻结；后续失败不换样。不是随机样本。",
+  "queries": [
+    {
+      "query": "site:bilibili.com/video \"DeepSeek\" \"评论机器人\"",
+      "result": "合并结果返回12条B站视频命中；按返回顺序冻结前5条相关稳定BV。"
+    },
+    {
+      "query": "site:bilibili.com/video \"DeepSeek\" \"互相\" \"AI\"",
+      "result": "合并结果返回12条B站视频命中；按返回顺序冻结前5条相关稳定BV。"
+    },
+    {
+      "query": "site:bilibili.com/video \"DeepSeek\" \"AI辩论\"",
+      "result": "合并结果返回12条B站视频命中；按返回顺序冻结前5条相关稳定BV。"
+    }
+  ],
+  "followup_queries": [
+    {
+      "query": "site:clawchat.com DeepSeek agent team / \"ClawChat\" \"GitHub\" \"DeepSeek Harness\"",
+      "result": "追查候选3简介中的产品；取得公开Connect README，官网不可达，未扩增BV样本。"
+    }
+  ],
+  "denominators": {
+    "initial_search_hits": 12,
+    "frozen_candidates": 5,
+    "stable_video_ids": 5,
+    "primary_metadata_api_readable": 5,
+    "video_page_web_readable": 0,
+    "videos_watched": 0,
+    "comment_api_attempts": 3,
+    "usable_comment_pages": 0,
+    "comment_cases_not_attempted_after_stop": 2,
+    "verified_ai_to_ai_comment_threads": 0,
+    "verified_organization_action_chains": 0
+  },
+  "protocol_deviations": [
+    {
+      "rule": "同路径连续三次失败停止",
+      "actual": "五个原视频页在一次web open批量提交，全部412；因此第3次失败后未即时停止，多请求2页。",
+      "response": "保留偏离，不回改计划；之后停止原页web路径。不同的API路径改为顺序读取；评论路径3次不可用后停。"
+    }
+  ],
+  "sources": [
+    {
+      "id": "B5-S01",
+      "title": "抓马！「豆包」和『DeepSeek』为了人类婚姻当场互怼😊我让两个AI劝分手，结果它们差点线下约架（搜索索引）",
+      "url": "https://www.bilibili.com/video/BV1eq3Y6jEyQ/",
+      "access": {
+        "read_on": "2026-10-22",
+        "method": "web search index",
+        "cache_label": "today"
+      },
+      "summary": "初始三查询合并返回列表中的第1个冻结候选；读取的是搜索索引文本。",
+      "limits": "原视频页后续web open返回412。未观看视频；索引可能滞后，不能视作原视频逐帧证据。"
+    },
+    {
+      "id": "B5-S06",
+      "title": "抓马！「豆包」和『DeepSeek』为了人类婚姻当场互怼😊我让两个AI劝分手，结果它们差点线下约架（官方view API）",
+      "url": "https://api.bilibili.com/x/web-interface/view?bvid=BV1eq3Y6jEyQ",
+      "publisher": "Bilibili公开API；内容由UP主填写",
+      "published": "2026-07-28T12:38:51+08:00",
+      "access": {
+        "read_on": "2026-10-22",
+        "method": "anonymous curl IPv4 GET",
+        "code": 0,
+        "content_sha256": "fc7aef247f2bc22d70485d8c04b5b8a03a2028f34e828fe5f1fdab7cfd37f7d2"
+      },
+      "summary": "直接取得稳定BV、作者、标题、简介、pubdate及统计元数据；作者为智灵Shaw。",
+      "limits": "仅确认公开发布元数据及作者简介内容；未播放视频、未取得模型请求日志或完整AI对AI评论链。 此API当次返回不等于独立核查作者叙述。"
+    },
+    {
+      "id": "B5-S11",
+      "title": "候选1公开评论第一页返回",
+      "url": "https://api.bilibili.com/x/v2/reply?type=1&oid=116995748074575&pn=1&ps=20&sort=0",
+      "access": {
+        "read_on": "2026-10-22",
+        "method": "anonymous curl IPv4 GET",
+        "code": 0,
+        "content_sha256": "ae076cdbbff2fcef2f51e024079085f67e78ed3671f8570c67c6eb6d4a74e6ab"
+      },
+      "summary": "code为0但page字段均为0，replies为null；view API同时返回非零评论统计。",
+      "limits": "不可据此认定评论不存在；将其记为不可用评论响应。未绕过登录或继续翻页。"
+    },
+    {
+      "id": "B5-S02",
+      "title": "颜值即正义？两个AI为此吵疯了！（搜索索引）",
+      "url": "https://www.bilibili.com/video/BV1rByYBrEyw/",
+      "access": {
+        "read_on": "2026-10-22",
+        "method": "web search index",
+        "cache_label": "2 months ago"
+      },
+      "summary": "初始三查询合并返回列表中的第2个冻结候选；读取的是搜索索引文本。",
+      "limits": "原视频页后续web open返回412。未观看视频；索引可能滞后，不能视作原视频逐帧证据。"
+    },
+    {
+      "id": "B5-S07",
+      "title": "颜值即正义？两个AI为此吵疯了！（官方view API）",
+      "url": "https://api.bilibili.com/x/web-interface/view?bvid=BV1rByYBrEyw",
+      "publisher": "Bilibili公开API；内容由UP主填写",
+      "published": "2025-10-30T19:29:04+08:00",
+      "access": {
+        "read_on": "2026-10-22",
+        "method": "anonymous curl IPv4 GET",
+        "code": 0,
+        "content_sha256": "e0702e7b174e7ff382eaa8011f24392fca40196aa04596ccdab12c4b2af605bb"
+      },
+      "summary": "直接取得稳定BV、作者、标题、简介、pubdate及统计元数据；作者为元代Ai实验室。",
+      "limits": "仅确认公开发布元数据及作者简介内容；未播放视频、未取得模型请求日志或完整AI对AI评论链。 此API当次返回不等于独立核查作者叙述。"
+    },
+    {
+      "id": "B5-S12",
+      "title": "候选2公开评论第一页返回",
+      "url": "https://api.bilibili.com/x/v2/reply?type=1&oid=115462864176363&pn=1&ps=20&sort=0",
+      "access": {
+        "read_on": "2026-10-22",
+        "method": "anonymous curl IPv4 GET",
+        "code": 0,
+        "content_sha256": "ae076cdbbff2fcef2f51e024079085f67e78ed3671f8570c67c6eb6d4a74e6ab"
+      },
+      "summary": "code为0但page字段均为0，replies为null；view API同时返回非零评论统计。",
+      "limits": "不可据此认定评论不存在；将其记为不可用评论响应。未绕过登录或继续翻页。"
+    },
+    {
+      "id": "B5-S03",
+      "title": "不用@也能自己干活？ClawChat打造多 Agent AI 团队，ChatGPT、Codex、DeepSeek Harness协作实测（搜索索引）",
+      "url": "https://www.bilibili.com/video/BV1df4962E3b/",
+      "access": {
+        "read_on": "2026-10-22",
+        "method": "web search index",
+        "cache_label": "last month"
+      },
+      "summary": "初始三查询合并返回列表中的第3个冻结候选；读取的是搜索索引文本。",
+      "limits": "原视频页后续web open返回412。未观看视频；索引可能滞后，不能视作原视频逐帧证据。"
+    },
+    {
+      "id": "B5-S08",
+      "title": "不用@也能自己干活？ClawChat打造多 Agent AI 团队，ChatGPT、Codex、DeepSeek Harness协作实测（官方view API）",
+      "url": "https://api.bilibili.com/x/web-interface/view?bvid=BV1df4962E3b",
+      "publisher": "Bilibili公开API；内容由UP主填写",
+      "published": "2026-08-27T20:29:25+08:00",
+      "access": {
+        "read_on": "2026-10-22",
+        "method": "anonymous curl IPv4 GET",
+        "code": 0,
+        "content_sha256": "99d5dfb8dd66b5f4b8af4e5bdc3d7bf561dd6c34ef72ea001bf4c76b85b54957"
+      },
+      "summary": "直接取得稳定BV、作者、标题、简介、pubdate及统计元数据；作者为鲲鹏Talk。",
+      "limits": "仅确认公开发布元数据及作者简介内容；未播放视频、未取得模型请求日志或完整AI对AI评论链。 此API当次返回不等于独立核查作者叙述。"
+    },
+    {
+      "id": "B5-S13",
+      "title": "候选3公开评论第一页返回",
+      "url": "https://api.bilibili.com/x/v2/reply?type=1&oid=117167463010449&pn=1&ps=20&sort=0",
+      "access": {
+        "read_on": "2026-10-22",
+        "method": "anonymous curl IPv4 GET",
+        "code": 0,
+        "content_sha256": "ae076cdbbff2fcef2f51e024079085f67e78ed3671f8570c67c6eb6d4a74e6ab"
+      },
+      "summary": "code为0但page字段均为0，replies为null；view API同时返回非零评论统计。",
+      "limits": "不可据此认定评论不存在；将其记为不可用评论响应。未绕过登录或继续翻页。"
+    },
+    {
+      "id": "B5-S04",
+      "title": "中美六大AI决战2026高考作文，结果有点意外...（搜索索引）",
+      "url": "https://www.bilibili.com/video/BV1xmEh6jEgj/",
+      "access": {
+        "read_on": "2026-10-22",
+        "method": "web search index",
+        "cache_label": "2 months ago"
+      },
+      "summary": "初始三查询合并返回列表中的第4个冻结候选；读取的是搜索索引文本。",
+      "limits": "原视频页后续web open返回412。未观看视频；索引可能滞后，不能视作原视频逐帧证据。"
+    },
+    {
+      "id": "B5-S09",
+      "title": "中美六大AI决战2026高考作文，结果有点意外...（官方view API）",
+      "url": "https://api.bilibili.com/x/web-interface/view?bvid=BV1xmEh6jEgj",
+      "publisher": "Bilibili公开API；内容由UP主填写",
+      "published": "2026-06-08T08:00:00+08:00",
+      "access": {
+        "read_on": "2026-10-22",
+        "method": "anonymous curl IPv4 GET",
+        "code": 0,
+        "content_sha256": "98864f8a103d2083d21fa73858f333c764744668dd62a61735ae7cab9e0ce884"
+      },
+      "summary": "直接取得稳定BV、作者、标题、简介、pubdate及统计元数据；作者为AI博士嗨嗨。",
+      "limits": "仅确认公开发布元数据及作者简介内容；未播放视频、未取得模型请求日志或完整AI对AI评论链。 此API当次返回不等于独立核查作者叙述。"
+    },
+    {
+      "id": "B5-S05",
+      "title": "🐺🔥【AI狼人杀】假如懂王老登泽圣玩狼人杀，还没开始我就想笑。DeepSeek狼人杀最癫AI电子斗蛐蛐！（搜索索引）",
+      "url": "https://www.bilibili.com/video/BV1a1RAY3Ez6/",
+      "access": {
+        "read_on": "2026-10-22",
+        "method": "web search index",
+        "cache_label": "2 weeks ago"
+      },
+      "summary": "初始三查询合并返回列表中的第5个冻结候选；读取的是搜索索引文本。",
+      "limits": "原视频页后续web open返回412。未观看视频；索引可能滞后，不能视作原视频逐帧证据。"
+    },
+    {
+      "id": "B5-S10",
+      "title": "🐺🔥【AI狼人杀】假如懂王老登泽圣玩狼人杀，还没开始我就想笑。DeepSeek狼人杀最癫AI电子斗蛐蛐！（官方view API）",
+      "url": "https://api.bilibili.com/x/web-interface/view?bvid=BV1a1RAY3Ez6",
+      "publisher": "Bilibili公开API；内容由UP主填写",
+      "published": "2025-03-07T11:26:57+08:00",
+      "access": {
+        "read_on": "2026-10-22",
+        "method": "anonymous curl IPv4 GET",
+        "code": 0,
+        "content_sha256": "22f23ea746241d01ca67abc092d0c4973c991e32db5a939299be1baadf76b146"
+      },
+      "summary": "直接取得稳定BV、作者、标题、简介、pubdate及统计元数据；作者为十月枫林尽染。",
+      "limits": "仅确认公开发布元数据及作者简介内容；未播放视频、未取得模型请求日志或完整AI对AI评论链。 此API当次返回不等于独立核查作者叙述。"
+    },
+    {
+      "id": "B5-S14",
+      "title": "ClawChat官网（视频简介指定）",
+      "url": "https://clawchat.com",
+      "access": {
+        "read_on": "2026-10-22",
+        "method": "web open then anonymous curl IPv4",
+        "result": "web not accessible; curl DNS resolution failed"
+      },
+      "summary": "候选3简介给出的产品官网；未取得内容。",
+      "limits": "不能用不可达官网证实产品当前状态或组织运行。"
+    },
+    {
+      "id": "B5-S15",
+      "title": "ClawChat Connect公开仓库README",
+      "url": "https://github.com/x-metheus/clawchat-plugin-connect",
+      "publisher": "x-metheus",
+      "access": {
+        "read_on": "2026-10-22",
+        "method": "web open original repository README",
+        "cache_label": "yesterday"
+      },
+      "summary": "README描述Agent Binding、workspace/session与runtime plugin，并列DeepSeek Harness、Codex接入；需要用户配置及认证。",
+      "limits": "未固定提交、未运行；它是同名产品工程背景，不证明视频作者实际使用此版本或所称团队完成任务。README明确不承诺跨产品会话连续。"
+    }
+  ],
+  "cases": [
+    {
+      "id": "B5-C01",
+      "discovery_position": 1,
+      "name": "抓马！「豆包」和『DeepSeek』为了人类婚姻当场互怼😊我让两个AI劝分手，结果它们差点线下约架",
+      "url": "https://www.bilibili.com/video/BV1eq3Y6jEyQ/",
+      "type": "人工安排双模型情感争论",
+      "published_api": "2026-07-28T12:38:51+08:00",
+      "creator": "智灵Shaw",
+      "model_attribution": "作者标题和简介称将问题交给豆包与DeepSeek，再让双方评价；具体模型及逐次响应未认证。",
+      "human_role": "作者明确自述提问、转交双方评价并制作视频。",
+      "dimensions": {
+        "membership": {
+          "status": "self_report",
+          "judgment": "简介称豆包与DeepSeek两方，身份未认证",
+          "source_ids": [
+            "B5-S06"
+          ]
+        },
+        "roles": {
+          "status": "self_report",
+          "judgment": "两方答题并评价对方；不是稳定组织职务",
+          "source_ids": [
+            "B5-S06"
+          ]
+        },
+        "goal": {
+          "status": "self_report",
+          "judgment": "围绕同一情感问题讨论，目标由作者提出",
+          "source_ids": [
+            "B5-S06"
+          ]
+        },
+        "continuity": {
+          "status": "unknown",
+          "judgment": "单视频不能证明智能体跨时持续运行",
+          "source_ids": [
+            "B5-S06"
+          ]
+        },
+        "rules": {
+          "status": "unknown",
+          "judgment": "没有可检查的规则执行记录",
+          "source_ids": [
+            "B5-S06"
+          ]
+        },
+        "artifact": {
+          "status": "visible_metadata",
+          "judgment": "视频发布记录可见；实际模型产物及会话原文未核验",
+          "source_ids": [
+            "B5-S06"
+          ]
+        }
+      },
+      "evidence_level": "原平台API中的作者自述＋发布元数据；视频内容未观看，互动未现场核验",
+      "source_ids": [
+        "B5-S01",
+        "B5-S06",
+        "B5-S11"
+      ],
+      "video_watched": false,
+      "comments_read": 0,
+      "judgment": "纳入公开AI讨论/演示候选；不能据此确认B站账号之间发生自主互动或组织行动。",
+      "comment_access": {
+        "state": "unusable_empty_response",
+        "view_reply_counter": 31,
+        "source_ids": [
+          "B5-S11",
+          "B5-S06"
+        ]
+      }
+    },
+    {
+      "id": "B5-C02",
+      "discovery_position": 2,
+      "name": "颜值即正义？两个AI为此吵疯了！",
+      "url": "https://www.bilibili.com/video/BV1rByYBrEyw/",
+      "type": "人工安排双AI辩论",
+      "published_api": "2025-10-30T19:29:04+08:00",
+      "creator": "元代Ai实验室",
+      "model_attribution": "DeepSeek只见搜索索引标签；官方view API标题和简介仅称两位AI辩手，模型身份未知。",
+      "human_role": "简介以“我们请来”描述两位辩手，表明人类策划；连接方式未知。",
+      "dimensions": {
+        "membership": {
+          "status": "self_report",
+          "judgment": "简介称两位AI辩手，未给可核对身份",
+          "source_ids": [
+            "B5-S07"
+          ]
+        },
+        "roles": {
+          "status": "self_report",
+          "judgment": "辩论双方角色；实际发言链未取得",
+          "source_ids": [
+            "B5-S07"
+          ]
+        },
+        "goal": {
+          "status": "self_report",
+          "judgment": "讨论颜值与社会判断",
+          "source_ids": [
+            "B5-S07"
+          ]
+        },
+        "continuity": {
+          "status": "unknown",
+          "judgment": "单视频不能证明智能体跨时持续运行",
+          "source_ids": [
+            "B5-S07"
+          ]
+        },
+        "rules": {
+          "status": "unknown",
+          "judgment": "没有可检查的规则执行记录",
+          "source_ids": [
+            "B5-S07"
+          ]
+        },
+        "artifact": {
+          "status": "visible_metadata",
+          "judgment": "视频发布记录可见；实际模型产物及会话原文未核验",
+          "source_ids": [
+            "B5-S07"
+          ]
+        }
+      },
+      "evidence_level": "原平台API中的作者自述＋发布元数据；视频内容未观看，互动未现场核验",
+      "source_ids": [
+        "B5-S02",
+        "B5-S07",
+        "B5-S12"
+      ],
+      "video_watched": false,
+      "comments_read": 0,
+      "judgment": "纳入公开AI讨论/演示候选；不能据此确认B站账号之间发生自主互动或组织行动。",
+      "comment_access": {
+        "state": "unusable_empty_response",
+        "view_reply_counter": 6,
+        "source_ids": [
+          "B5-S12",
+          "B5-S07"
+        ]
+      }
+    },
+    {
+      "id": "B5-C03",
+      "discovery_position": 3,
+      "name": "不用@也能自己干活？ClawChat打造多 Agent AI 团队，ChatGPT、Codex、DeepSeek Harness协作实测",
+      "url": "https://www.bilibili.com/video/BV1df4962E3b/",
+      "type": "人类部署多agent工作团队的介绍",
+      "published_api": "2026-08-27T20:29:25+08:00",
+      "creator": "鲲鹏Talk",
+      "model_attribution": "API标题与简介列出DeepSeek Harness、ChatGPT、Codex、Hermes及Claude Code接入。产品/运行框架名称不等于经认证的底层模型。",
+      "human_role": "鲲鹏Talk自述将多个agent拉群、提出自媒体需求并配置角色。",
+      "dimensions": {
+        "membership": {
+          "status": "self_report",
+          "judgment": "作者列举多种agent产品并称拉入同群；未给运行会话或实例清单",
+          "source_ids": [
+            "B5-S08"
+          ]
+        },
+        "roles": {
+          "status": "self_report",
+          "judgment": "选题、标题、口播、封面等分工在简介中明确",
+          "source_ids": [
+            "B5-S08"
+          ]
+        },
+        "goal": {
+          "status": "self_report",
+          "judgment": "共同完成自媒体制作需求",
+          "source_ids": [
+            "B5-S08"
+          ]
+        },
+        "continuity": {
+          "status": "self_report",
+          "judgment": "简介提及已有工作区经验；未取得跨日持续记录",
+          "source_ids": [
+            "B5-S08"
+          ]
+        },
+        "rules": {
+          "status": "unknown",
+          "judgment": "有创建/管理agent的功能描述，无团队规则实际执行记录",
+          "source_ids": [
+            "B5-S08"
+          ]
+        },
+        "artifact": {
+          "status": "self_report",
+          "judgment": "简介列举文案、封面和视频初稿，但本轮未取得这些产物原件",
+          "source_ids": [
+            "B5-S08"
+          ]
+        }
+      },
+      "evidence_level": "原平台API中的作者自述＋发布元数据；视频内容未观看，互动未现场核验",
+      "source_ids": [
+        "B5-S03",
+        "B5-S08",
+        "B5-S14",
+        "B5-S15",
+        "B5-S13"
+      ],
+      "video_watched": false,
+      "comments_read": 0,
+      "judgment": "最具体的人类部署团队自述：成员产品、分工和共同任务明确；公开工程仓库提供实现背景，但未闭合该视频实例的执行链。",
+      "time_conflict": "搜索索引给17:59:25，API pubdate换算为20:29:25，日期均为2026-08-27；原因未核，不消除差异。",
+      "comment_access": {
+        "state": "unusable_empty_response",
+        "view_reply_counter": 16,
+        "source_ids": [
+          "B5-S13",
+          "B5-S08"
+        ]
+      }
+    },
+    {
+      "id": "B5-C04",
+      "discovery_position": 4,
+      "name": "中美六大AI决战2026高考作文，结果有点意外...",
+      "url": "https://www.bilibili.com/video/BV1xmEh6jEgj/",
+      "type": "人工编排六模型写作与互评",
+      "published_api": "2026-06-08T08:00:00+08:00",
+      "creator": "AI博士嗨嗨",
+      "model_attribution": "DeepSeek见搜索索引标签；API简介称六个大模型，未列完整模型与版本，不能认证六主体。",
+      "human_role": "AI博士嗨嗨自述统一题目与提示，令各模型写一次，再安排互评。",
+      "dimensions": {
+        "membership": {
+          "status": "self_report",
+          "judgment": "作者称六模型，完整模型清单未取得",
+          "source_ids": [
+            "B5-S09"
+          ]
+        },
+        "roles": {
+          "status": "self_report",
+          "judgment": "先作为考生写作，再作为阅卷者互评",
+          "source_ids": [
+            "B5-S09"
+          ]
+        },
+        "goal": {
+          "status": "self_report",
+          "judgment": "比较统一题目下的作文与评分",
+          "source_ids": [
+            "B5-S09"
+          ]
+        },
+        "continuity": {
+          "status": "unknown",
+          "judgment": "单视频不能证明智能体跨时持续运行",
+          "source_ids": [
+            "B5-S09"
+          ]
+        },
+        "rules": {
+          "status": "self_report",
+          "judgment": "同题同提示、每模型一次、按高考作文标准打分；未独立复核执行",
+          "source_ids": [
+            "B5-S09"
+          ]
+        },
+        "artifact": {
+          "status": "visible_metadata",
+          "judgment": "视频发布记录可见；实际模型产物及会话原文未核验",
+          "source_ids": [
+            "B5-S09"
+          ]
+        }
+      },
+      "evidence_level": "原平台API中的作者自述＋发布元数据；视频内容未观看，互动未现场核验",
+      "source_ids": [
+        "B5-S04",
+        "B5-S09"
+      ],
+      "video_watched": false,
+      "comments_read": 0,
+      "judgment": "纳入公开AI讨论/演示候选；不能据此确认B站账号之间发生自主互动或组织行动。",
+      "comment_access": {
+        "state": "not_attempted_after_three_unusable_responses",
+        "source_ids": []
+      }
+    },
+    {
+      "id": "B5-C05",
+      "discovery_position": 5,
+      "name": "🐺🔥【AI狼人杀】假如懂王老登泽圣玩狼人杀，还没开始我就想笑。DeepSeek狼人杀最癫AI电子斗蛐蛐！",
+      "url": "https://www.bilibili.com/video/BV1a1RAY3Ez6/",
+      "type": "AI角色狼人杀娱乐模拟",
+      "published_api": "2025-03-07T11:26:57+08:00",
+      "creator": "十月枫林尽染",
+      "model_attribution": "标题有DeepSeek，简介称AI模拟公众人物；不能把角色或赛季标题当作模型身份证明。",
+      "human_role": "十月枫林尽染发布模拟娱乐内容；角色安排、剪辑及执行细节未取得。",
+      "dimensions": {
+        "membership": {
+          "status": "self_report",
+          "judgment": "娱乐模拟角色可从简介识别，底层agent数量未知",
+          "source_ids": [
+            "B5-S10"
+          ]
+        },
+        "roles": {
+          "status": "self_report",
+          "judgment": "狼人杀/公众人物模拟角色，不是现实组织职务",
+          "source_ids": [
+            "B5-S10"
+          ]
+        },
+        "goal": {
+          "status": "self_report",
+          "judgment": "娱乐模拟与游戏竞争",
+          "source_ids": [
+            "B5-S10"
+          ]
+        },
+        "continuity": {
+          "status": "visible_index",
+          "judgment": "索引展示多期系列，只能证明发布者系列内容存在，不能证明同一agent连续",
+          "source_ids": [
+            "B5-S05"
+          ]
+        },
+        "rules": {
+          "status": "unknown",
+          "judgment": "没有可检查的规则执行记录",
+          "source_ids": [
+            "B5-S10"
+          ]
+        },
+        "artifact": {
+          "status": "visible_metadata",
+          "judgment": "视频发布记录可见；实际模型产物及会话原文未核验",
+          "source_ids": [
+            "B5-S10"
+          ]
+        }
+      },
+      "evidence_level": "原平台API中的作者自述＋发布元数据；视频内容未观看，互动未现场核验",
+      "source_ids": [
+        "B5-S05",
+        "B5-S10"
+      ],
+      "video_watched": false,
+      "comments_read": 0,
+      "judgment": "纳入公开AI讨论/演示候选；不能据此确认B站账号之间发生自主互动或组织行动。",
+      "comment_access": {
+        "state": "not_attempted_after_three_unusable_responses",
+        "source_ids": []
+      }
+    }
+  ],
+  "conclusion": "实际找到并取得五个DeepSeek/多agent讨论相关B站视频的原平台元数据，证据最强的是创作者明确描述的人类编排与团队分工。当前没有核实B站AI账号之间的评论互答或组织执行链；这不是不存在的证据。",
+  "publication": "仅公开本JSON与原创报告；完整API响应留本地，不再分发用户轨迹、头像或账号映射。"
+}

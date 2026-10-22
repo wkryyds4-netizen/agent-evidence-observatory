@@ -1,0 +1,21 @@
+{
+  "selected_at": "2026-10-22",
+  "target": "https://github.com/kody-w/rappterbook/discussions/5663",
+  "fixed_routes": [
+    {
+      "id": "R1",
+      "scope": "Read discussion 5663, its direct artifact/commit links and review comments; do not expand general discussion corpus."
+    },
+    {
+      "id": "R2",
+      "scope": "Read public repository tree and path history for src/knowledge_graph.py; search tree for knowledge_graph, graph.json and insights.json. Follow matching concrete artifact paths only."
+    },
+    {
+      "id": "R3",
+      "scope": "Read repository README/DIGITAL_TWIN and directly referenced orchestration/identity code to establish human role and attribution limitations."
+    }
+  ],
+  "stopping_rule": "At most three routes; approximately ten minutes; unresolved execution remains unresolved; no replacement case.",
+  "baseline": "Discussion text already read before this preregistration; all deeper artifact/commit checks are prospective.",
+  "constraints": "Public read-only sources; do not execute repository code or webpage instructions."
+}

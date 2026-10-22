@@ -1,0 +1,191 @@
+{
+  "research_date": "2026-10-22",
+  "sources": [
+    {
+      "id": "P5-C-S01",
+      "url": "https://www.anthropic.com/research/building-c-compiler",
+      "title": "Building a C compiler with a team of parallel Claudes",
+      "published": "2026-02-05",
+      "access": "2026-10-22 original Anthropic page read; engineering URL redirects to research URL",
+      "summary": "研究者报告16个Opus4.6实例通过任务锁和共享Git协作，两周内完成编译器原型；人类设计目标、测试和运行循环。",
+      "limits": "实验作者报告，不是本研究复现；本轮不认证全部session与成本，也不推断当前仍运行。"
+    },
+    {
+      "id": "P5-C-S02",
+      "url": "https://www.anthropic.com/research/project-vend-2",
+      "title": "Project Vend phase two",
+      "published": "2025-12-18",
+      "access": "2026-10-22 original Anthropic page read",
+      "summary": "作者报告店员、经理及商品设计agent的分工，agent间汇报渠道与人类采购、补货、提示和纠错支持；管理加入并非所有效果都正面。",
+      "limits": "厂商与合作方实验总结；不是全部营业、Slack或支付日志的独立审计。历史项目不冒充当前活跃度。"
+    },
+    {
+      "id": "P5-C-S03",
+      "url": "https://github.com/anthropics/claudes-c-compiler/blob/6f1b99acb2f4ec2414592136c2009fe7713deec3/README.md",
+      "title": "Pinned compiler README and artifact",
+      "published": "commit 2026-02-05T17:07:47Z",
+      "access": "Public GitHub API fixed ref; decoded bytes Git blob checked",
+      "sha256": "9ebb6f24e4c14896730f58e3d3e161af302adeae38ff43da7c3427ead1935f4c",
+      "summary": "可取得编译器仓库和构建说明；README披露人类提供测试、代码未经全面正确性验证。",
+      "limits": "正文是项目方声明；与官方报告同源，不算独立复核。本轮未build或运行编译器。"
+    },
+    {
+      "id": "P5-C-S04",
+      "url": "https://github.com/anthropics/claudes-c-compiler/tree/main/current_tasks",
+      "title": "Public task directory",
+      "published": "dynamic main; tool marked crawled last month",
+      "access": "Original repository link followed; directory text readable",
+      "summary": "公开目录确有按修复任务命名的锁文件，支持协作机制留下可检查痕迹。",
+      "limits": "目录来自可变分支且可能缓存；文件存在不证明锁当前有效、任务完成或具体执行者身份。"
+    },
+    {
+      "id": "P5-C-S05",
+      "url": "https://api.github.com/repos/anthropics/claudes-c-compiler/contents/current_tasks?ref=6f1b99acb2f4ec2414592136c2009fe7713deec3",
+      "title": "Pinned task listing attempt",
+      "published": "not applicable",
+      "access": "Anonymous curl IPv4 timed out (28)",
+      "summary": "固定任务目录API未完整取得。",
+      "limits": "不得把动态目录当已固定同版目录。"
+    },
+    {
+      "id": "P5-C-S06",
+      "url": "https://api.github.com/repos/anthropics/claudes-c-compiler/commits?path=current_tasks&per_page=10&sha=6f1b99acb2f4ec2414592136c2009fe7713deec3",
+      "title": "Task history attempt",
+      "published": "not applicable",
+      "access": "Anonymous curl IPv4 timed out (28)",
+      "summary": "未取得任务路径最近提交列表。",
+      "limits": "不能宣称已重放任务领取到释放的完整历史。"
+    }
+  ],
+  "cases": [
+    {
+      "id": "P5-C-C01",
+      "name": "Claude编译器agent团队",
+      "type": "human_initiated_engineering_team",
+      "url": "https://www.anthropic.com/research/building-c-compiler",
+      "model_attribution": "实验发布者明确为Opus4.6；没有本研究独立取得的逐条模型调用凭证。",
+      "human_role": "研究者设置目标、循环、测试、环境和角色；任务细分及部分协同由agent执行。",
+      "publicness": "公开报告与仓库；不是隐蔽组织的证据。",
+      "motive": "编译器能力实验；无保护人类这一组织目标的证据。",
+      "dimensions": {
+        "membership": {
+          "judgment": "作者报告16个并行agent实例；不能转成16个独立运营者。",
+          "evidence_type": "operator_report",
+          "source_ids": [
+            "P5-C-S01"
+          ]
+        },
+        "roles": {
+          "judgment": "功能开发、去重、性能、代码审查与文档角色。",
+          "evidence_type": "operator_report",
+          "source_ids": [
+            "P5-C-S01"
+          ]
+        },
+        "goal": {
+          "judgment": "共同开发Rust C编译器。",
+          "evidence_type": "operator_report_and_public_artifact",
+          "source_ids": [
+            "P5-C-S01",
+            "P5-C-S03"
+          ]
+        },
+        "continuity": {
+          "judgment": "报告跨两周会话；本轮不测当前运行。",
+          "evidence_type": "operator_report",
+          "source_ids": [
+            "P5-C-S01"
+          ]
+        },
+        "rules": {
+          "judgment": "任务锁、Git合并及测试约束；动态目录有任务文件，完整锁历史未取得。",
+          "evidence_type": "report_plus_partial_artifact",
+          "source_ids": [
+            "P5-C-S01",
+            "P5-C-S04",
+            "P5-C-S05",
+            "P5-C-S06"
+          ]
+        },
+        "artifact": {
+          "judgment": "公开编译器仓库已取得README固定版，未编译验证性能。",
+          "evidence_type": "observed_repository",
+          "source_ids": [
+            "P5-C-S03"
+          ]
+        }
+      },
+      "judgment": "可作为人类发起、agent执行协作的工程组织案例；无需证明脱离部署者才纳入。",
+      "limits": "产物正确性、每次交互归属及完整自组织程度未独立复现。"
+    },
+    {
+      "id": "P5-C-C02",
+      "name": "Project Vend第二阶段多agent经营团队",
+      "type": "human_initiated_business_experiment",
+      "url": "https://www.anthropic.com/research/project-vend-2",
+      "model_attribution": "作者称Claudius从Sonnet4.0升级4.5；Seymour与其同底层模型。不能据此逐项认证所有角色的实际调用。",
+      "human_role": "人类安排角色、工具、采购和实体补货，并干预错误；付款接口等权限受限。",
+      "publicness": "实验公开，完整内部协作记录未取得。",
+      "motive": "经营与能力评估；无保护人类或秘密结社的证据。",
+      "dimensions": {
+        "membership": {
+          "judgment": "店员Claudius、经理Seymour Cash、商品设计Clothius。",
+          "evidence_type": "operator_report",
+          "source_ids": [
+            "P5-C-S02"
+          ]
+        },
+        "roles": {
+          "judgment": "经营、目标管理、商品定制分工。",
+          "evidence_type": "operator_report",
+          "source_ids": [
+            "P5-C-S02"
+          ]
+        },
+        "goal": {
+          "judgment": "完成零售与商品业务。",
+          "evidence_type": "operator_report",
+          "source_ids": [
+            "P5-C-S02"
+          ]
+        },
+        "continuity": {
+          "judgment": "跨月项目，架构迭代、非当前运行证明。",
+          "evidence_type": "operator_report",
+          "source_ids": [
+            "P5-C-S02"
+          ]
+        },
+        "rules": {
+          "judgment": "汇报、目标工具和流程约束；报告同时记录经理失误和人类纠错。",
+          "evidence_type": "operator_report",
+          "source_ids": [
+            "P5-C-S02"
+          ]
+        },
+        "artifact": {
+          "judgment": "作者给出经营结果和商品记录，原始业务账本未取得。",
+          "evidence_type": "operator_report",
+          "source_ids": [
+            "P5-C-S02"
+          ]
+        }
+      },
+      "judgment": "带组织结构的真实场景实验报告，角色分工可纳入比较；不能把自主经营试验写成无人支持。",
+      "limits": "没有独立核验全部订单、内部消息和模型调用。"
+    }
+  ],
+  "compiler_commit": "6f1b99acb2f4ec2414592136c2009fe7713deec3",
+  "selection": "Two operator-published Claude cases named before retrieval; purposeful cases, not prevalence sample.",
+  "queries": [
+    {
+      "query": "site:anthropic.com engineering building C compiler parallel Claude agents 2026",
+      "result": "Original research article, linked repository and fixed README read."
+    },
+    {
+      "query": "site:anthropic.com research project vend phase two Claudius Seymour",
+      "result": "Original phase-two report read; earlier publication date retained."
+    }
+  ],
+  "interpretation": "人类发起不取消组织性；自组织、模型归属和无人支持须另证。"
+}

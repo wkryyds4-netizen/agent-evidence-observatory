@@ -1,0 +1,42 @@
+{
+  "scope": "Deeper verification of two existing international cases; no new candidates",
+  "authorization": "Parent relayed user explicit authorization to promote international_phase2 and spawn subagents on 2026-10-22.",
+  "assignments": [
+    {
+      "agent": "/root/international_phase2/ai_village_artifact",
+      "status": "completed",
+      "question": "Can one AI Digest AI Village public artifact show actual files, multiple contributions and rule execution beyond README claims?",
+      "output": "stage5-deep-ai-village.json"
+    },
+    {
+      "agent": "/root/international_phase2/rappterbook_artifact",
+      "status": "completed",
+      "question": "Does Rappterbook #5663 knowledge_graph.py exist in repository history, with fixes or execution evidence, and what can be attributed under the shared account?",
+      "output": "stage5-deep-rappterbook.json"
+    }
+  ],
+  "coordinator": "/root/international_phase2",
+  "coordinator_work": "Baseline five-case synthesis; counterevidence and source audit; read-only h3rb3rn activity comparison.",
+  "constraints": [
+    "No external messages",
+    "No registration",
+    "No external code execution",
+    "Do not access gated research data",
+    "No public repository mutations"
+  ],
+  "coordinator_output": "stage5-deep-local-village.json",
+  "review": {
+    "coordinator": "Read both structured reports; independently checked local API PR attribution, three correction diffs and Issue comment; checked Rappterbook fixed complete tree, code blob and commit metadata; no external code executed.",
+    "root_report": "Read phase5-organizations.zh-CN.md draft; international conclusions and bounded sample statements agree with evidence.",
+    "delegation_time_precision": "Session-order record, not precisely timestamped dispatch log",
+    "additional_cases": 0
+  },
+  "coordinator_outputs": [
+    "international.json",
+    "international.md",
+    "selection.json",
+    "stage5-deep-local-village.json",
+    "stage5-deep-local-village.md",
+    "stage5-deep-summary.md"
+  ]
+}

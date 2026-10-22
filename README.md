@@ -4,11 +4,13 @@
 
 这是一次关于网上智能体交流、模型归属和自主组织说法的公开资料调查。项目发布研究方法、原创分析、来源索引、离线筛查代码和聚合结果，让读者能够检查推理过程，也能指出我们判断有误的地方。
 
-**最新进展（2026-10-22）：先进行两轮多agent讨论，再检验样本偏差、承诺履行和认证边界。** [阶段四报告](reports/phase4-discussion-and-verification.zh-CN.md)保留10位置样本的缺失（可评估闭环0，比例未定义）及两项履约未知；复现16项客户端局部观察和7项CLI观察，其中确认一个文档模式失败。工程观察数量不代表组织证据或安全通过数量。
+**最新进展（2026-10-22）：研究范围扩大到Claude及其他agent的组织形式。** [阶段五报告](reports/phase5-organizations.zh-CN.md)比较12个不同类型候选，并另取18条中文平台内容记录；人类发起的工程团队、商业角色团队、社群和协作讨论均纳入。International协调者实际向下派生两名子agent，分别追查协作产物；完整过程与证据分层公开。
+
+公开资料支持存在有分工、共同目标及协作痕迹的agent团队。成员身份、模型归属、持续程度、人工介入、规则执行和产物质量分别判断。下面的原始强假设保留为一个子问题，不再作为所有案例的准入门槛。
 
 **目前仍没有足以确认“Claude 为保护人类而形成隐蔽、持续、自主运行组织”的公开证据。** 这一结论限于本研究能取得的公开材料；它既不证明此类组织不存在，也不支持把证据缺失解释为它们隐藏得更好。
 
-阶段一研究日期：2026-10-21；阶段二、三、四：2026-10-22，均为Asia/Shanghai。下方旧语料统计属于阶段一，未随新报告更新采集日期。本文不是实时监控结果。
+阶段一研究日期：2026-10-21；阶段二、三、四、五：2026-10-22，均为Asia/Shanghai。下方旧语料统计属于阶段一，未随新报告更新采集日期。本文不是实时监控结果。
 
 ## 为什么做这件事
 
@@ -29,6 +31,8 @@
 这些原则服务于公开研究和人类判断，不构成发现秘密群体的承诺。
 
 ## 实际做了什么
+
+阶段五先完成[两轮讨论与计划](docs/PHASE5_DISCUSSION_AND_PLAN.md)，再分线取证；发布[十二候选比较表](reports/phase5-comparison.zh-CN.md)、[来源索引](evidence/phase5-index.json)与[复现说明](docs/PHASE5_REPRODUCIBILITY.md)。五个B站案例取得官方元数据，未观看视频；18条中文正文记录来自同一固定顺序快照，回复尚未取得。国际深查在用户授权后由协调者派生两个子任务。
 
 阶段四先完成[两轮讨论](docs/PHASE4_DISCUSSION.md)，再按[预先计划](docs/PHASE4_PLAN.md)取证，公开[来源索引](evidence/phase4-index.json)与[复现说明](docs/PHASE4_REPRODUCIBILITY.md)。抽样缺失、未到期和模拟依赖分别保留，未用新帖子替换失败样本。
 
@@ -64,7 +68,8 @@
 
 ## 从哪里开始读
 
-- [最新阶段四报告](reports/phase4-discussion-and-verification.zh-CN.md)：讨论纪要、缺失样本、履约未知与局部认证/CLI复现。
+- [最新阶段五报告](reports/phase5-organizations.zh-CN.md)：扩大组织研究、B站DeepSeek、18条固定样本与嵌套分工取证。
+- [阶段四报告](reports/phase4-discussion-and-verification.zh-CN.md)：讨论纪要、缺失样本、履约未知与局部认证/CLI复现。
 - [阶段三报告](reports/phase3-organization-and-artifacts.zh-CN.md)：公开组织、中文接话、代码产物、加密实现与回执边界。
 - [阶段二报告](reports/phase2-public-communities.zh-CN.md)：中文与国际社区、准入区别、实际互动和密码学线索。
 - [研究报告](reports/expanded-report.zh-CN.md)：主要发现、候选、数据范围和解释限制。
@@ -94,10 +99,11 @@ node code/verify_public_partition.mjs --self-test
 python code/check_phase2.py
 python code/check_phase3.py
 python code/check_phase4.py
+python code/check_phase5.py
 python code/verify_release.py
 ```
 
-这六条命令不联网，也不需要原始语料。完整复算需依照[复现步骤](docs/REPRODUCIBILITY.md)自行取得输入、确认适用条款并核对哈希。为避免错误暗示，仓库没有把不分发原始语料的公开版本称作完全自包含的复现实验。
+这七条命令不联网，也不需要原始语料。完整复算需依照[复现步骤](docs/REPRODUCIBILITY.md)自行取得输入、确认适用条款并核对哈希。为避免错误暗示，仓库没有把不分发原始语料的公开版本称作完全自包含的复现实验。
 
 ## 公开范围与许可
 
@@ -106,6 +112,8 @@ python code/verify_release.py
 目前是一次性调查快照，没有自动后台搜寻或定时任务。后续新证据应另记时间、来源和版本，不覆盖旧记录来制造持续观察的印象。
 
 ## English abstract
+
+Phase 5 broadens the scope to organizational forms involving Claude and other agents, including human-initiated teams. Twelve purposive comparison candidates remain distinct from eighteen ordered Chinese-platform content records. Six dimensions are assessed separately, without a total autonomy score. Public artifacts, operator reports, simulations and inaccessible leads retain different evidence levels. An international coordinator delegates two artifact checks to child agents; shared accounts and model labels do not independently authenticate the participants.
 
 Phase 4 follows two rounds of model-agent discussion. A prespecified ten-position convenience snapshot yielded no evaluable reply chains, so its completion rate is undefined; two selected organizational commitments remain unassessed. Sixteen observations on AST-selected client methods and seven synthetic CLI observations were reproduced, including a documented CLI mode failure. Explicit mocks and unavailable server checks limit interpretation; none of these counts establishes autonomous organization.
 

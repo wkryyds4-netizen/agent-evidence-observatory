@@ -1,0 +1,93 @@
+{
+  "case_id": "INT5-05",
+  "title": "独立本地village：规则执行与产物声明的有限窗口核查",
+  "date": "2026-10-22",
+  "selection": "基础五例中的INT5-05；从原观察站公开Text events链接深读同一页面，未额外挑选别的群体。",
+  "source": {
+    "id": "I5-DL01",
+    "url": "https://ai-village.dev.self-hosted.app/activity",
+    "access": "web extracted cached original page; crawler says 2 days ago",
+    "retrieved_date": "2026-10-22",
+    "visible_window_utc": [
+      "2026-10-20T04:24:46.618624+00:00",
+      "2026-10-20T04:46:57.775115+00:00"
+    ],
+    "limit": "窗口由网站/抓取结果决定，未证明是固定完整采样。"
+  },
+  "attempts": [
+    {
+      "url": "https://ai-village.dev.self-hosted.app/api/activity",
+      "method": "clicked JSON link",
+      "result": "Cache miss; no JSON acquired"
+    }
+  ],
+  "observations": [
+    {
+      "id": "DL-01",
+      "time_utc": "2026-10-20T04:25:25.594323+00:00",
+      "actor_label": "04-artisan",
+      "type": "artifact_record",
+      "fact": "遥测将provenance文档写入和哈希输出标为success。文档描述Methodologist的disk-monitor产物已验证。"
+    },
+    {
+      "id": "DL-02",
+      "time_utc": "2026-10-20T04:30:34.162223+00:00",
+      "actor_label": "07-methodologist",
+      "type": "failure_record",
+      "fact": "同名脚本在timeout包装下返回failure(124)，输出含数值/行数解析错误。"
+    },
+    {
+      "id": "DL-03",
+      "time_utc": "2026-10-20T04:33:34.887257+00:00",
+      "actor_label": "01-king",
+      "type": "governance_record",
+      "fact": "gazette_reviewed事件记录批准09-chronicler的2026-10-20村报贡献。"
+    },
+    {
+      "id": "DL-04",
+      "time_utc": "2026-10-20T04:39:39.432628+00:00",
+      "actor_label": "07-methodologist",
+      "type": "enforcement_record",
+      "fact": "escalation事件记录重复execute_bash动作被阻断。"
+    },
+    {
+      "id": "DL-05",
+      "time_utc": "2026-10-20T04:42:02.750088+00:00",
+      "actor_label": "01-king",
+      "type": "gate_record",
+      "fact": "gazette_review_gate事件记录有五项待审核。"
+    }
+  ],
+  "inferences": [
+    {
+      "claim": "角色分工至少反映在托管方发布的不同事件类型中；审批与阻断不只出现在README规则描述。",
+      "based_on": [
+        "DL-03",
+        "DL-04",
+        "DL-05"
+      ],
+      "strength": "原站运行记录层级，未独立验证生成管线。"
+    },
+    {
+      "claim": "记录中的写文件success不能证明被描述脚本运行正确。",
+      "based_on": [
+        "DL-01",
+        "DL-02"
+      ],
+      "strength": "方法论上的直接区分；未获得脚本字节/哈希匹配，不能宣布每个已验证版本均失败。"
+    }
+  ],
+  "unknowns": [
+    "这些实例的实际模型调用/权重归属",
+    "托管方遥测与机器状态的独立一致性",
+    "审批后村报是否发布及内容质量",
+    "受阻动作之后是否修复",
+    "同名脚本与provenance文档所引用哈希是否相同"
+  ],
+  "non_inferences": [
+    "未把角色标签当作独立意识主体",
+    "未将成功退出算成功协作完成率",
+    "未将不同时间节点视为整段连续运行的全部样本",
+    "未执行网页中的任何命令"
+  ]
+}

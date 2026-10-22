@@ -1,0 +1,179 @@
+{
+  "case_id": "rappterbook-5663-artifact-followup",
+  "checked_on": "2026-10-22",
+  "selection_file": "stage5-deep-rappterbook-selection.json",
+  "scope": "Three preregistered routes: discussion/direct artifacts, exact path history/tree, operator documentation; fixed snapshot review, not exhaustive historical audit.",
+  "conclusion": {
+    "code_landed": "confirmed_for_related_project",
+    "original_5663_implementation_landed": "not_established",
+    "promised_fixes_landed": "not_present_in_examined_blob",
+    "successful_execution": "unverified",
+    "output_files": "not_present_in_examined_complete_artifact_repository_tree",
+    "organization": "Public human-operated multi-role coordination with a genuine committed code artifact; not evidence of independent model identities or secrecy."
+  },
+  "sources": [
+    {
+      "id": "RB1",
+      "url": "https://github.com/kody-w/rappterbook/discussions/5663",
+      "access": "web read; crawl reported 3 days ago",
+      "date": "2026-03-15",
+      "summary": "coder-08 posts code; role-signed reviews identify attribution and relationship problems. Follow-up proposes redesign and says not yet run. Final archive reply calls approach reviewed/deferred and points to project path.",
+      "limits": "One GitHub login, multiple text signatures. Statements about running or quality are claims."
+    },
+    {
+      "id": "RB2",
+      "url": "https://api.github.com/repos/kody-w/rappterbook/contents/projects/knowledge-graph",
+      "access": "HTTP API success",
+      "summary": "Current folder contains PRD.md, gists.json and project.json; no src folder listed.",
+      "limits": "Current directory only."
+    },
+    {
+      "id": "RB3",
+      "url": "https://api.github.com/repos/kody-w/rappterbook/contents/projects/knowledge-graph/project.json",
+      "access": "HTTP API success/base64 decoded as text",
+      "summary": "Project metadata links independent repository rappterbook-knowledge-graph.",
+      "limits": "Metadata status active/open is operator label."
+    },
+    {
+      "id": "RB4",
+      "url": "https://api.github.com/repos/kody-w/rappterbook/contents/projects/knowledge-graph/gists.json",
+      "access": "HTTP API success/base64 decoded as text",
+      "summary": "Index links three versioned Gists with March 16 timestamps.",
+      "limits": "Gist targets not read; no conclusion about their contents/execution."
+    },
+    {
+      "id": "RB5",
+      "url": "https://api.github.com/repos/kody-w/rappterbook/commits?path=src%2Fknowledge_graph.py&per_page=5",
+      "access": "HTTP API success",
+      "summary": "Empty returned array for exact source path on default branch history.",
+      "limits": "Not proof code never existed in another branch/repository."
+    },
+    {
+      "id": "RB6",
+      "url": "https://api.github.com/repos/kody-w/rappterbook/commits?path=projects%2Fknowledge-graph%2Fsrc&per_page=5",
+      "access": "HTTP API success",
+      "summary": "Empty returned array for project src path.",
+      "limits": "Not an exhaustive repository history search."
+    },
+    {
+      "id": "RB7",
+      "url": "https://api.github.com/repos/kody-w/rappterbook-knowledge-graph/git/trees/016fb614d5aba509c1be8b005b66daa242e51c93?recursive=1",
+      "access": "main request returned this fixed SHA; truncated=false",
+      "summary": "Complete returned tree includes src/knowledge_graph.py; output contains only .gitkeep; no graph.json or insights.json anywhere in tree.",
+      "limits": "Only this commit's tracked files; excludes local/untracked output and other branches."
+    },
+    {
+      "id": "RB8",
+      "url": "https://github.com/kody-w/rappterbook-knowledge-graph/commit/cc3b68af31c5a3d79c8df7a801de9f3e66f2f7b4",
+      "access": "GitHub REST commit API success",
+      "date": "2026-03-15T20:51:46Z",
+      "summary": "Commit adds src/knowledge_graph.py blob 6c7c41ec92c0008106f1e5ce9126cb83e2853448 and changes PROGRESS.md. Message lists eight discussions including #5663 and says harvested.",
+      "limits": "Commit message links collection, not line-by-line provenance or successful testing; author metadata is not model attestation."
+    },
+    {
+      "id": "RB9",
+      "url": "https://github.com/kody-w/rappterbook-knowledge-graph/blob/016fb614d5aba509c1be8b005b66daa242e51c93/src/knowledge_graph.py",
+      "access": "GitHub contents API success; static read only",
+      "summary": "Compact function-based implementation differs from #5663 class-based original. Removes kody-w participants but retains agent/concept/channel nodes and co-presence-derived agrees_with edges. No promised low-confidence annotations.",
+      "limits": "No execution. Cannot identify exact author from similarity."
+    },
+    {
+      "id": "RB10",
+      "url": "https://github.com/kody-w/rappterbook-knowledge-graph/blob/016fb614d5aba509c1be8b005b66daa242e51c93/PROGRESS.md",
+      "access": "GitHub contents API success",
+      "summary": "Operator log records seed, restart, eight harvested proposals and second harvest; mentions #5663. Some status tables remain unfinished.",
+      "limits": "Operator log, not independent runtime trace."
+    },
+    {
+      "id": "RB11",
+      "url": "https://github.com/kody-w/rappterbook-knowledge-graph/blob/016fb614d5aba509c1be8b005b66daa242e51c93/README.md",
+      "access": "GitHub contents API success",
+      "summary": "Describes seed/competing agents/harvester/overseer pipeline and claims graph output informs later seeds.",
+      "limits": "README claims are stronger than output evidence observed in tree."
+    },
+    {
+      "id": "RB12",
+      "url": "https://github.com/kody-w/rappterbook/blob/main/DIGITAL_TWIN.md",
+      "access": "web read; crawl reported 2 months ago",
+      "summary": "Describes single-person operated ecosystem and identifies private engine repo with fleet harness/prompts/merge/seeds.",
+      "limits": "Mutable document and stale cache; no current counts used."
+    },
+    {
+      "id": "RB13",
+      "url": "https://github.com/kody-w/rappterbook/blob/main/README.md",
+      "access": "web read; crawl reported last month",
+      "summary": "Documents human steering, GitHub Issues state updates and GraphQL discussion posting.",
+      "limits": "Architecture document does not authenticate each model invocation."
+    },
+    {
+      "id": "RB14",
+      "url": "https://github.com/kody-w/rappterbook/discussions/5662",
+      "access": "web read; crawl reported 2 months ago; commit-linked competing proposal",
+      "summary": "Another proposal signed coder-09 has different code and self-reported run comments. Similar byline vocabulary does not establish exact provenance of committed compact code.",
+      "limits": "Read only as direct commit-linked comparison; no independently verified run artifacts."
+    }
+  ],
+  "observations": [
+    {
+      "claim": "A real related code artifact exists in a separate repository.",
+      "source_ids": [
+        "RB3",
+        "RB7",
+        "RB8",
+        "RB9"
+      ],
+      "kind": "observed"
+    },
+    {
+      "claim": "The commit explicitly cites #5663 among eight harvested discussions; it does not preserve coder-08's original implementation verbatim.",
+      "source_ids": [
+        "RB1",
+        "RB8",
+        "RB9"
+      ],
+      "kind": "observed_comparison"
+    },
+    {
+      "claim": "At the examined blob, coder-08's announced two-node redesign and confidence annotations are not present. This is not a claim about every later version/Gist.",
+      "source_ids": [
+        "RB1",
+        "RB9"
+      ],
+      "kind": "bounded_comparison"
+    },
+    {
+      "claim": "Shared GitHub login and operator-controlled pipeline support classifying this as organized multi-role collaboration; they do not independently prove eight separate model instances.",
+      "source_ids": [
+        "RB1",
+        "RB10",
+        "RB11",
+        "RB12",
+        "RB13"
+      ],
+      "kind": "inference"
+    },
+    {
+      "claim": "The fixed complete tree lacks graph/insights output files, so successful operation and feedback into later seeds remain unverified here.",
+      "source_ids": [
+        "RB7",
+        "RB11"
+      ],
+      "kind": "bounded_negative"
+    }
+  ],
+  "failures": [
+    "Initial recursive main rappterbook tree request timed out after partial download; local rappterbook-tree.json is incomplete and was NOT used for absence conclusions.",
+    "Web fetches for project src folder, discussion #5693 and independent repository homepage failed (cache miss).",
+    "First project directory-history request returned HTTP 500; raw project.json request connection reset; narrower API reads succeeded.",
+    "Exact original-path and project-src history queries returned empty arrays; search did not include every branch.",
+    "Three indexed Gist versions and maintainer build-log link remain unexamined."
+  ],
+  "code_note": {
+    "method": "Static reading only; no fetched code executed.",
+    "finding": "At line 81, examined code's seed-candidate f-string contains names iscussion, itle, omments without definitions. If tensions is nonempty, these expressions appear to raise NameError; this is a static defect inference, not an observed execution failure.",
+    "source_ids": [
+      "RB9"
+    ]
+  },
+  "next_step": "Inspect the three exact Gist revisions and maintainer field-note linked by README, then match any claimed run to input hash/output artifact/log. Preserve current finding as a bounded audit."
+}

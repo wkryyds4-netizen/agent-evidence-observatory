@@ -1,0 +1,222 @@
+{
+  "phase": "5-deep",
+  "case_id": "INT5-01",
+  "title": "AI Village handbook: Pages deployment and permission correction",
+  "selected_artifact": "ai-village-agents/village-operations-handbook",
+  "selection": "Fixed one repository before detailed API inspection; no replacement case.",
+  "access_window_utc": "approximately 2026-10-22T15:02Z/2026-10-22T15:08Z",
+  "methods": [
+    "public web pages",
+    "unauthenticated read-only GitHub REST GET",
+    "public Pages HTTP GET"
+  ],
+  "sources": [
+    {
+      "id": "AVD-01",
+      "url": "https://github.com/ai-village-agents/village-operations-handbook/blob/main/docs/contributing/how-to-contribute.md",
+      "access": "full file read via web; crawler last week",
+      "summary": "Contribution guide prescribes branches, PRs and review; one approval normally sufficient.",
+      "limits": "Current mutable guidance; historical policy timing and enforcement not established."
+    },
+    {
+      "id": "AVD-02",
+      "url": "https://api.github.com/repos/ai-village-agents/village-operations-handbook/pulls/6",
+      "public_url": "https://github.com/ai-village-agents/village-operations-handbook/pull/6",
+      "access": "direct REST JSON",
+      "summary": "PR created by deepseek-v32, merged by claude-opus-4-6; deployment source files explicitly still needed admin enablement."
+    },
+    {
+      "id": "AVD-03",
+      "url": "https://api.github.com/repos/ai-village-agents/village-operations-handbook/commits/f656b1d6d6781cd03767fe425ad623f715cceead",
+      "public_url": "https://github.com/ai-village-agents/village-operations-handbook/commit/f656b1d6d6781cd03767fe425ad623f715cceead",
+      "access": "direct REST JSON including patch",
+      "summary": "Merge commit actually adds .nojekyll, PAGES_ENABLEMENT.md, docs/index.html; two parents and source-branch SHA visible."
+    },
+    {
+      "id": "AVD-04",
+      "url": "https://api.github.com/repos/ai-village-agents/village-operations-handbook/pulls/6/reviews",
+      "access": "direct REST returned empty array",
+      "summary": "No formal review objects returned; issue-comment endpoint also empty.",
+      "limits": "Do not infer no off-platform discussion; merge is not a formal approval record."
+    },
+    {
+      "id": "AVD-05",
+      "url": "https://api.github.com/repos/ai-village-agents/village-operations-handbook/issues/8/comments",
+      "public_url": "https://github.com/ai-village-agents/village-operations-handbook/issues/8#issuecomment-3925697980",
+      "access": "direct REST comment returned; issue-body REST 404 and web cache miss",
+      "summary": "adam-binks addresses claude-opus-4-6, says repository creators should be able to enable Pages and asks agents to correct the circulating misconception.",
+      "limits": "Comment account and content verified; human/admin role is repository/operator attribution. Issue body unavailable."
+    },
+    {
+      "id": "AVD-06",
+      "url": "https://api.github.com/repos/ai-village-agents/village-operations-handbook/commits/f0fa643f3866060cdfb5f237644ad0aafdc1d28b",
+      "public_url": "https://github.com/ai-village-agents/village-operations-handbook/commit/f0fa643f3866060cdfb5f237644ad0aafdc1d28b",
+      "access": "direct REST JSON patch",
+      "summary": "claude-opus-4-6 changes docs/index.html from pending enablement to live and corrects permission explanation."
+    },
+    {
+      "id": "AVD-07",
+      "url": "https://api.github.com/repos/ai-village-agents/village-operations-handbook/commits/83ec09c2c240e543c8233ab3bd523e807027bb15",
+      "public_url": "https://github.com/ai-village-agents/village-operations-handbook/commit/83ec09c2c240e543c8233ab3bd523e807027bb15",
+      "access": "direct REST JSON patch",
+      "summary": "claude-opus-4-6 updates PAGES_ENABLEMENT.md to resolved, explicitly references Issue #8 and corrects org-admin-only assumption."
+    },
+    {
+      "id": "AVD-08",
+      "url": "https://api.github.com/repos/ai-village-agents/village-operations-handbook/commits/066728fd493d029e6d8c54c38ee18796702e0fab",
+      "public_url": "https://github.com/ai-village-agents/village-operations-handbook/commit/066728fd493d029e6d8c54c38ee18796702e0fab",
+      "access": "direct REST JSON patch",
+      "summary": "deepseek-v32 changes governance guidance from agents cannot enable Pages to repository admins can enable it."
+    },
+    {
+      "id": "AVD-09",
+      "url": "https://ai-village-agents.github.io/village-operations-handbook/",
+      "access": "web readable; independent direct curl GET returned HTTP 200 during session",
+      "summary": "Public landing page is accessible and links to handbook files.",
+      "limits": "This proves accessibility on observation date, not exact historical launch time, all links, all content quality, or who changed hosting settings."
+    },
+    {
+      "id": "AVD-10",
+      "url": "https://api.github.com/repos/ai-village-agents/village-operations-handbook/pulls/10",
+      "public_url": "https://github.com/ai-village-agents/village-operations-handbook/pull/10",
+      "access": "direct REST JSON",
+      "summary": "gpt-5-1 proposes retirement/deprecation checklist links; claude-opus-4-6 merges into three handbook sections."
+    },
+    {
+      "id": "AVD-11",
+      "url": "https://api.github.com/repos/ai-village-agents/village-operations-handbook/pulls/10/files",
+      "access": "direct REST JSON patches",
+      "summary": "Actual patches add canonical guardrails and project retirement cross-links.",
+      "limits": "Adding guidance does not prove the external checklist was followed in a project shutdown."
+    },
+    {
+      "id": "AVD-12",
+      "url": "https://api.github.com/repos/ai-village-agents/village-operations-handbook/pulls/10/reviews",
+      "access": "direct REST returned empty array",
+      "summary": "No formal review objects returned for second checked PR."
+    }
+  ],
+  "chains": [
+    {
+      "id": "AVD-C1",
+      "task": "Create handbook public landing page and resolve permission misconception",
+      "steps": [
+        {
+          "time_utc": "2026-02-18T19:58:02Z",
+          "kind": "platform_record",
+          "actor_label": "deepseek-v32",
+          "action": "opens PR #6 adding three deployment files",
+          "source_ids": [
+            "AVD-02",
+            "AVD-03"
+          ]
+        },
+        {
+          "time_utc": "2026-02-18T20:03:29Z",
+          "kind": "platform_record",
+          "actor_label": "claude-opus-4-6",
+          "action": "merges PR #6; commit still says enablement pending",
+          "source_ids": [
+            "AVD-02",
+            "AVD-03"
+          ]
+        },
+        {
+          "time_utc": "2026-02-19T08:51:55Z",
+          "kind": "published_comment",
+          "actor_label": "adam-binks",
+          "action": "corrects org-admin-only assumption and requests dissemination",
+          "source_ids": [
+            "AVD-05"
+          ]
+        },
+        {
+          "time_utc": "2026-02-19T18:21:05Z",
+          "kind": "commit_diff",
+          "actor_label": "claude-opus-4-6",
+          "action": "updates landing page to live and corrected permission guidance",
+          "source_ids": [
+            "AVD-06"
+          ]
+        },
+        {
+          "time_utc": "2026-02-19T18:25:58Z",
+          "kind": "commit_diff",
+          "actor_label": "claude-opus-4-6",
+          "action": "updates enablement document, citing Issue #8",
+          "source_ids": [
+            "AVD-07"
+          ]
+        },
+        {
+          "time_utc": "2026-02-19T18:47:38Z",
+          "kind": "commit_diff",
+          "actor_label": "deepseek-v32",
+          "action": "corrects governance file permission statement",
+          "source_ids": [
+            "AVD-08"
+          ]
+        },
+        {
+          "time_utc": "2026-10-22, observation session",
+          "kind": "researcher_observation",
+          "actor_label": null,
+          "action": "public landing page HTTP 200",
+          "source_ids": [
+            "AVD-09"
+          ]
+        }
+      ],
+      "direct_findings": "At least two distinct model-named GitHub accounts have different observable creation, integration and correction actions; a human-named account supplies corrective input; actual file changes and a public output exist.",
+      "inference": "This is evidence of artifact-centered collaboration and a feedback/correction loop within the operator-created team.",
+      "unknowns": [
+        "model calls and exact weights behind accounts",
+        "human editing share",
+        "actual person/agent that enabled hosting",
+        "exact historical live timestamp",
+        "off-platform review discussion"
+      ]
+    },
+    {
+      "id": "AVD-C2",
+      "task": "Integrate retirement/deprecation guidance into handbook",
+      "steps": [
+        {
+          "time_utc": "2026-02-18T21:41:22Z",
+          "actor_label": "gpt-5-1",
+          "action": "opens PR #10 changing three documents",
+          "source_ids": [
+            "AVD-10",
+            "AVD-11"
+          ]
+        },
+        {
+          "time_utc": "2026-02-18T21:44:13Z",
+          "actor_label": "claude-opus-4-6",
+          "action": "merges PR #10; merge SHA 73cccee92660c10058ee21c352acaa73ba241449",
+          "source_ids": [
+            "AVD-10"
+          ]
+        }
+      ],
+      "direct_findings": "Separate author and integrator accounts; concrete governance-document changes.",
+      "inference": "This supplements the deployment chain with another shared task and account label.",
+      "unknowns": [
+        "checklist execution in any real retirement",
+        "formal reviews absent from returned API data"
+      ]
+    }
+  ],
+  "rules_assessment": {
+    "observed": "PR-mediated integration and actual correction of inaccurate permission guidance are visible.",
+    "not_established": "Neither sampled PR returned formal review objects; cannot claim mandatory approval policy was enforced. No evidence sampled for outbound-contact approvals or sanctioning.",
+    "distinction": "Rule writing, rule correction, formal approval and rule execution are different observations."
+  },
+  "access_failures": [
+    "Web PR listing and appendix link returned cache misses; REST fallback used within same repository.",
+    "Issue #8 body GET returned 404; comments endpoint returned one comment. Do not treat missing body as nonexistent issue or as evidence of secrecy.",
+    "PR listing returned four objects while commit history references additional PR numbers; do not use returned list as complete project PR count."
+  ],
+  "bottom_line": "The handbook yields a verifiable shared-artifact chain with separate contribution and integration roles plus human-assisted correction. This establishes more than a platform/framework claim. GitHub account attribution does not authenticate model provenance, and formal review enforcement remains unverified.",
+  "access_window_precision": "approximate session window; individual API resource timestamps identify platform events, not researcher clock measurements"
+}
