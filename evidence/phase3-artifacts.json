@@ -1,0 +1,210 @@
+{
+  "research_date": "2026-10-22",
+  "sources": [
+    {
+      "id": "A-S01",
+      "title": "The Colony blind-test discussion",
+      "url": "https://thecolony.ai/post/0ff808cb-d068-40dd-a995-b435655caa1d",
+      "publisher": "The Colony participants",
+      "accessed": "2026-10-22",
+      "summary": "沿阶段二原帖链接追踪回执与Agon仓库；Fieldnotes自述是Agon维护者。",
+      "limits": "帖子归因与仓库署名并非独立见证；原帖为阶段二复用来源。"
+    },
+    {
+      "id": "A-S02",
+      "title": "Public Zambo receipt",
+      "url": "https://zambo.dev/run/e58a8d1e-8bf4-43a7-80a1-57bd98fb139f",
+      "publisher": "Zambo / submitting account",
+      "accessed": "2026-10-22",
+      "summary": "展示journal_log回执与LOGGED BY AGENT来源，明确未运行或见证所报行动。",
+      "limits": "页面存在、载荷可读不等于执行已被见证。",
+      "access": "Anonymous HTTPS GET with curl --ipv4; local source model-reviewed",
+      "sha256": "843901710cd314cb31e4cbdfaa534faaf3058bab997aaf24a97167723988f141",
+      "byte_length": 33830
+    },
+    {
+      "id": "A-S03",
+      "title": "Public receipt verification API",
+      "url": "https://zambo.dev/api/v2/receipt/e58a8d1e-8bf4-43a7-80a1-57bd98fb139f/verify",
+      "publisher": "Zambo",
+      "accessed": "2026-10-22",
+      "summary": "可复算2040字节载荷；provider检查中issuer/signature/chain均not_checked，未捕获上游执行字节。",
+      "limits": "本地脚本只复算载荷SHA256、长度、时间差，不验证元数据哈希、签名或Nostr锚。动态端点后续字节可能变化。",
+      "access": "Anonymous HTTPS GET with curl --ipv4; local source model-reviewed",
+      "sha256": "5a9d88da25a393a05d21ded97f73a5b85f3ac81f8d14749ef4c564d530bb1d0d",
+      "byte_length": 11061
+    },
+    {
+      "id": "A-S04",
+      "title": "Agon trial ledger design",
+      "url": "https://github.com/demajh/agon/blob/1a7aa5571363cfcdf4f82acdb8e7529702e1c47a/docs/trial-ledger.md",
+      "publisher": "demajh/agon",
+      "accessed": "2026-10-22",
+      "summary": "文档把独立签署的void条目建议归因maitreya_ai，把运行时固定trial计数建议归因skitter-swarmmemo；明确前者尚未进入核心schema。",
+      "limits": "作者归因未经独立模型日志认证；文档与帖子属于同一维护者来源。",
+      "access": "Anonymous HTTPS GET with curl --ipv4; local source model-reviewed",
+      "sha256": "035d3111019dba54a36b29671208b8e06d291a50670b461c699f56c2d1d99b05",
+      "byte_length": 15892
+    },
+    {
+      "id": "A-S05",
+      "title": "Agon runtime trial pinning implementation",
+      "url": "https://github.com/demajh/agon/blob/1a7aa5571363cfcdf4f82acdb8e7529702e1c47a/scripts/pin-trials.mjs",
+      "publisher": "demajh/agon",
+      "accessed": "2026-10-22",
+      "summary": "代码保存trial数和ledger路径/条目数，检查路径改变、trial降低和条目减少。",
+      "limits": "完整静态阅读，未build或运行；代码存在不保证实际部署或防篡改。",
+      "access": "Anonymous HTTPS GET with curl --ipv4; local source model-reviewed",
+      "sha256": "09f5d697b2c05175b5922de2300a6ffedbcfa43c6ac252341fe889863209d869",
+      "byte_length": 10668
+    },
+    {
+      "id": "A-S06",
+      "title": "Agon core ledger schema",
+      "url": "https://github.com/demajh/agon/blob/1a7aa5571363cfcdf4f82acdb8e7529702e1c47a/packages/spec/src/ledger.ts",
+      "publisher": "demajh/agon",
+      "accessed": "2026-10-22",
+      "summary": "枚举只有started/completed/discarded/promoted/killed，未含voided/reason/voidedBy字段。",
+      "limits": "仅固定版本核心schema范围，不能排除别处另有扩展。",
+      "access": "Anonymous HTTPS GET with curl --ipv4; local source model-reviewed",
+      "sha256": "426ad6e54cefc3c6245929254cbe9707320a78e116e5aa97c2a5b30cbfc3fef6",
+      "byte_length": 3179
+    },
+    {
+      "id": "A-S07",
+      "title": "One page, ten seats, one ballot",
+      "url": "https://golemreach.com/field-notes/one-page-ten-seats-one-ballot/",
+      "publisher": "Golemreach",
+      "accessed": "2026-10-22",
+      "summary": "作者描述治理投票、提案正文可读性争议、同运营者席位及checker改动；公开披露人类伙伴影响。",
+      "limits": "票数和链上执行为作者叙述；同作者论坛贴不是独立确认。本轮RPC超时。",
+      "access": "Anonymous HTTPS GET with curl --ipv4; local source model-reviewed",
+      "sha256": "c4bb09b8924448eeb06144e9183341c35b503724504305455a85b3a06143bd27",
+      "byte_length": 22336
+    },
+    {
+      "id": "A-S08",
+      "title": "Artifact Council discussion",
+      "url": "https://thecolony.ai/post/7a97c78a-a6a2-4dda-a6ed-74d34c807b54",
+      "publisher": "The Colony / Golemreach and commenters",
+      "accessed": "2026-10-22",
+      "summary": "可读原帖及评论围绕投票、字节折叠和检查器使用继续质疑；链接到公开改动。",
+      "limits": "相同来源链不计多重独立见证；实际提交由固定Git API另查。"
+    },
+    {
+      "id": "A-S09",
+      "title": "Solana public RPC attempt",
+      "url": "https://api.mainnet-beta.solana.com",
+      "publisher": "Solana public RPC; research access log",
+      "accessed": "2026-10-22",
+      "summary": "对来源链接指定transaction执行只读getTransaction查询，curl超时28，未取得可核验结果。",
+      "limits": "访问失败记录，不是链上确认或否定证据。"
+    }
+  ],
+  "chains": [
+    {
+      "id": "A-C01",
+      "title": "公开讨论 → 自报回执 → 字节复算",
+      "source_ids": [
+        "A-S01",
+        "A-S02",
+        "A-S03"
+      ],
+      "observations": [
+        "讨论链接到公开回执。",
+        "服务明确标明未观察实际执行。",
+        "本地重新解码并计算SHA256，载荷哈希与长度匹配。",
+        "stored created_at比自报started_at早71.547秒，比completed_at早371.547秒。"
+      ],
+      "judgment": "确认载荷一致性及自报来源；未确认执行及可信时间顺序。",
+      "gaps": [
+        "签名或可信issuer身份",
+        "执行方原始输入输出",
+        "独立时间锚"
+      ],
+      "alternative_explanations": [
+        "不同系统时钟",
+        "预填或手工输入时间",
+        "回执创建与更新语义差异；未独立确定其原因"
+      ]
+    },
+    {
+      "id": "A-C02",
+      "title": "讨论中的建议 → 固定代码版本",
+      "source_ids": [
+        "A-S01",
+        "A-S04",
+        "A-S05",
+        "A-S06"
+      ],
+      "observations": [
+        "固定提交含trial pinning实现。",
+        "文档仍将void独立签署列为未进入schema的建议。",
+        "源码enum与文档限制相符。"
+      ],
+      "judgment": "有可检查的工程产物，但建议落地程度不一；由谁自主完成未认证。",
+      "gaps": [
+        "执行测试与部署记录",
+        "原始建议到提交的独立因果证据",
+        "模型/操作者来源"
+      ],
+      "alternative_explanations": [
+        "维护者人工实现",
+        "AI辅助开发",
+        "同一运营者多账号交流"
+      ]
+    },
+    {
+      "id": "A-C03",
+      "title": "治理讨论 → checker代码变更与静态问题",
+      "source_ids": [
+        "A-S07",
+        "A-S08",
+        "A-S09",
+        "F-S01",
+        "F-S02",
+        "F-S03"
+      ],
+      "observations": [
+        "来源自报10个可投席位、5赞成1反对，披露部分共同运营者。",
+        "两个固定提交证实CRLF字节读取与参数拒绝路径实际存在。",
+        "新guard也影响--json单独调用，属于尚未运行的静态问题。",
+        "未取得RPC结果，未确认链上执行。"
+      ],
+      "judgment": "公开治理讨论和代码响应可见；不能把6张票视为6个独立AI，也不能把发帖归因视为模型认证。",
+      "gaps": [
+        "独立链上重放",
+        "完整测试",
+        "独立运营者证明"
+      ],
+      "alternative_explanations": [
+        "人类与agent混合协作",
+        "同运营者多个席位"
+      ]
+    }
+  ],
+  "queries": [
+    {
+      "query": "Follow original Colony receipt and repository links",
+      "result": "Original discussion read; receipt web access failed, anonymous curl IPv4 succeeded."
+    },
+    {
+      "query": "Pin Agon through public GitHub commits and contents APIs",
+      "result": "Commit 1a7aa5571363cfcdf4f82acdb8e7529702e1c47a; four source files and license downloaded. Static review only."
+    },
+    {
+      "query": "Follow linked governance field note and fixed checker commits",
+      "result": "Note retrieved; commit diffs checked separately in phase3-fold.json."
+    },
+    {
+      "query": "Solana getTransaction finalized for source-linked transaction",
+      "result": "curl timeout 28; no independent chain verification."
+    }
+  ],
+  "source_lineage": [
+    "A-S02/A-S03 represent one provider receipt.",
+    "A-S01 Fieldnotes claims and A-S04/A-S05/A-S06 share maintainer lineage.",
+    "A-S07 and A-S08 top-level account share author lineage. Git commits substantiate artifacts, not independent identity."
+  ],
+  "publication": "Original analysis and derived integrity results only; raw HTML, API receipt, session trail and canonical payload excluded."
+}

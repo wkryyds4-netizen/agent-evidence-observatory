@@ -1,0 +1,116 @@
+{
+  "date": "2026-10-22",
+  "commit": "135974f468ec5bb39aa0f275b43e54a763306d77",
+  "version": "1.143.1",
+  "sources": [
+    {
+      "id": "K3-S01",
+      "title": "SwarmMemo v1.143.1 public source snapshot",
+      "url": "https://github.com/Hugo0/swarmmemo/commit/135974f468ec5bb39aa0f275b43e54a763306d77",
+      "publisher": "Hugo0/swarmmemo",
+      "published": "2026-10-22T13:26:01Z（提交时间）",
+      "access": "2026-10-22：公开GitHub contents API固定ref，Base64解码到本地；未使用账户凭证",
+      "summary": "固定公开源码快照提交；提交说明称其为运行服务源码的allowlisted快照。",
+      "limits": "部署关联是维护者声明；本研究没有比对线上服务器二进制。提交API标记unsigned。"
+    },
+    {
+      "id": "K3-S02",
+      "title": "clients/python/swarmmemo_seal.py",
+      "url": "https://github.com/Hugo0/swarmmemo/blob/135974f468ec5bb39aa0f275b43e54a763306d77/clients/python/swarmmemo_seal.py",
+      "publisher": "Hugo0/swarmmemo",
+      "published": "2026-10-22T13:26:01Z（提交时间）",
+      "access": "2026-10-22：公开GitHub contents API固定ref，Base64解码到本地；未使用账户凭证",
+      "summary": "客户端模块实现X25519/HPKE epoch-key封装、AES-GCM消息与附件、Ed25519身份绑定及rotation验证。完整模型静态阅读后只用合成数据离线调用。",
+      "limits": "只核验此模块。主客户端、浏览器版本、后端、身份固定与持久化未覆盖。",
+      "sha256": "fe9c256f6807e7339733ea273ff2a1bf15b55bf3d33b0bac97d1fb6acfebea0c",
+      "git_blob_sha": "ee144cb8d3eb33645aeabe59ae703762fb726c28",
+      "license": "Apache-2.0"
+    },
+    {
+      "id": "K3-S03",
+      "title": "clients/python/test_seal.py",
+      "url": "https://github.com/Hugo0/swarmmemo/blob/135974f468ec5bb39aa0f275b43e54a763306d77/clients/python/test_seal.py",
+      "publisher": "Hugo0/swarmmemo",
+      "published": "2026-10-22T13:26:01Z（提交时间）",
+      "access": "2026-10-22：公开GitHub contents API固定ref，Base64解码到本地；未使用账户凭证",
+      "summary": "读取上游测试以识别向量、AAD、成员轮换等预期行为；另写独立harness。",
+      "limits": "没有运行整套上游测试：它依赖本次未审查的主客户端swarmmemo.py。",
+      "sha256": "e157c56b0be2fa32fa42ce5a1c6a09a076a08f8c1c1d8eedc0b6f961146ca1f5",
+      "git_blob_sha": "bc299e43c67c8e4b2d74e0a1622da01ebbbd9894",
+      "license": "Apache-2.0"
+    },
+    {
+      "id": "K3-S04",
+      "title": "clients/python/seal-vector.json",
+      "url": "https://github.com/Hugo0/swarmmemo/blob/135974f468ec5bb39aa0f275b43e54a763306d77/clients/python/seal-vector.json",
+      "publisher": "Hugo0/swarmmemo",
+      "published": "2026-10-22T13:26:01Z（提交时间）",
+      "access": "2026-10-22：公开GitHub contents API固定ref，Base64解码到本地；未使用账户凭证",
+      "summary": "公开合成测试向量；包含标为RFC9180 A.1的HPKE字节及SwarmMemo envelope字节。",
+      "limits": "本研究对照上游向量；尚未独立逐字对照RFC原始向量，不宣称完整RFC合规。",
+      "sha256": "e688a6037c03756174b16531b0bfe4d477e6a21b033998370cf9e158d1259144",
+      "git_blob_sha": "fba20d67fd09dbebe7361b3ace32e1909a33e1a4",
+      "license": "Apache-2.0 repository source fixture"
+    },
+    {
+      "id": "K3-S05",
+      "title": "LICENSE",
+      "url": "https://github.com/Hugo0/swarmmemo/blob/135974f468ec5bb39aa0f275b43e54a763306d77/LICENSE",
+      "publisher": "Hugo0/swarmmemo",
+      "published": "2026-10-22T13:26:01Z（提交时间）",
+      "access": "2026-10-22：公开GitHub contents API固定ref，Base64解码到本地；未使用账户凭证",
+      "summary": "上游源码Apache-2.0；本轮上游源码只留在本地，研究harness独立编写。",
+      "limits": "该许可不自动覆盖平台第三方消息、附件及导入内容。",
+      "sha256": "8c6db340475136df3c1201d458fa5755698eace76e510471ecc9d857d6083dac",
+      "git_blob_sha": "6b0b1270ff0ca8f03867efcd09ba6ddb6392b1e1",
+      "license": "Apache-2.0"
+    }
+  ],
+  "queries": [
+    {
+      "query": "GitHub /repos/Hugo0/swarmmemo/commits/main",
+      "result": "默认沙箱curl DNS失败；提升后的curl --ipv4成功取得固定SHA，无凭证。"
+    },
+    {
+      "query": "GitHub recursive tree at fixed SHA",
+      "result": "45秒后超时，收到206444字节的不完整响应；已收到的目录片段列出clients/python/swarmmemo_seal.py、test_seal.py、seal-vector.json、LICENSE；未把不完整JSON当完整清单。"
+    },
+    {
+      "query": "GitHub contents API for four observed paths with fixed ref",
+      "result": "四份文件均完整取得并解码；记录内容SHA256和API Git blob SHA。"
+    },
+    {
+      "query": "Existing Python environments for cryptography",
+      "result": "默认python缺少cryptography；已有bundled Python 3.12.14带cryptography 50.0.2。未安装依赖。"
+    }
+  ],
+  "checks": [
+    {
+      "id": "K3-C01",
+      "method": "固定commit和源文件哈希；模型读完加密模块与上游测试；执行前harness强制比较源文件与向量SHA256",
+      "result": "版本固定成功，模块无网络/子进程调用；上游原代码仅本地保存",
+      "limits": "源码快照并非部署测量；没有审计整个项目"
+    },
+    {
+      "id": "K3-C02",
+      "method": "独立离线harness，使用新生成X25519/Ed25519/epoch密钥与合成文本、文件；另核对两个上游确定性向量",
+      "result": "28项检查全部通过；网络/子进程审计钩子记录0次尝试；详见results/phase3-crypto-checks.json",
+      "limits": "单次合成测试不是完整密码学安全证明，也非上线系统认证"
+    },
+    {
+      "id": "K3-C03",
+      "method": "修改接收者私钥、wrap room/epoch/ct、message service/room/epoch/author/nonce/ct、附件与哈希",
+      "result": "这些错误输入按预期拒绝；正确合成内容成功解密",
+      "limits": "范围限被测接口和样本；不覆盖nonce分配策略、侧信道、密钥保存或成员真实身份"
+    },
+    {
+      "id": "K3-C04",
+      "method": "测试已认证密文重放、未输入primitive的外层metadata变化、共享epoch密钥另建author密文、低层unwrap的kid改写",
+      "result": "这些操作仍可被低层接口接受，准确展示分层边界；同时signed identity和rotation校验拒绝相应密钥/封装篡改",
+      "limits": "timestamp/id/reply_to不属于此primitive参数；外层签名、去重和客户端策略可能另有保护，本轮未据此宣称产品漏洞"
+    }
+  ],
+  "judgment": "公开sealed客户端具有本轮实际运行成功的内容加密与认证实现；这支持工程存在与局部行为，不证明线上私密会话、自发组织、模型身份或运营者独立性。",
+  "reproduction": "python code/check_swarmmemo_seal.py --source-dir <reviewed-module-and-vector-directory> --output <synthetic-results.json>; requires existing cryptography. Download source/fixture from fixed commit first; no automatic download or install.",
+  "publication": "可公开check_swarmmemo_seal.py、synthetic-results.json、crypto.json/md；不把上游源码和API快照放入研究发布仓库。"
+}

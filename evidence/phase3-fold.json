@@ -1,0 +1,92 @@
+{
+  "research_date": "2026-10-22",
+  "mode": "Static review only; repository code was not executed.",
+  "sources": [
+    {
+      "id": "F-S01",
+      "title": "Raw-byte reading change",
+      "url": "https://api.github.com/repos/reticuli-labs/panel-artifacts/commits/3b4e19a359b0eb6052da280dc6ca4eec717046c9",
+      "publisher": "GitHub public API / reticuli-labs",
+      "published": "commit metadata: 2026-10-21T18:26:11Z",
+      "access": "HTTPS public API returned HTTP 200 through curl --ipv4 after sandbox DNS failure; read commit patch",
+      "summary": "fold_check.py changes file reads to binary mode followed by UTF-8 decoding, adds raw byte count, file SHA-256 and CR count, then uses the resulting text for folding.",
+      "limits": "Static patch confirms code change, not successful execution. Commit author and co-author trailers are self-attribution; API marks commit unsigned."
+    },
+    {
+      "id": "F-S02",
+      "title": "Argument misuse change",
+      "url": "https://api.github.com/repos/reticuli-labs/panel-artifacts/commits/467a8cdab13869dc24091edf71502d7c4ed5d0a4",
+      "publisher": "GitHub public API / reticuli-labs",
+      "published": "commit metadata: 2026-10-22T08:56:18Z",
+      "access": "HTTPS public API HTTP 200; read patch and parent metadata",
+      "summary": "Adds a nonempty-argument guard when neither --text nor --expect appears. It invokes usage(), whose shown body exits 2. The same commit also amends META.json prose.",
+      "limits": "No run performed; the guard is broader than positional-only rejection and also rejects --json alone despite calibration documentation."
+    },
+    {
+      "id": "F-S03",
+      "title": "Commit ancestry comparison",
+      "url": "https://api.github.com/repos/reticuli-labs/panel-artifacts/compare/3b4e19a359b0eb6052da280dc6ca4eec717046c9...467a8cdab13869dc24091edf71502d7c4ed5d0a4",
+      "publisher": "GitHub public API",
+      "published": "accessed 2026-10-22",
+      "access": "HTTPS public API HTTP 200; status ahead, ahead_by 3, behind_by 0",
+      "summary": "The later fix descends from the raw-byte fix with two intervening commits, rather than immediately following it.",
+      "limits": "Git ancestry and metadata establish repository order, not authenticated real-world timing or identity."
+    }
+  ],
+  "observations": [
+    {
+      "id": "F-O01",
+      "source_ids": [
+        "F-S01"
+      ],
+      "claim": "The raw-byte CRLF preservation change exists.",
+      "status": "confirmed_static",
+      "details": "Parent is 952269e53c6ad39912e6ee2832dae624a1a07a55. Patch adds read_text using open(path, 'rb'), decodes UTF-8 without universal-newline translation, and routes both single-file and calibration paths through it.",
+      "limits": "The specific CRLF demonstration figures in commit prose were not reproduced."
+    },
+    {
+      "id": "F-O02",
+      "source_ids": [
+        "F-S02"
+      ],
+      "claim": "FILE ROOT without --text/--expect is routed to exit 2.",
+      "status": "confirmed_static",
+      "details": "New guard detects a nonempty args list with neither named flag and calls usage; usage calls sys.exit(2).",
+      "limits": "This is control-flow inspection, not an observed runtime exit."
+    },
+    {
+      "id": "F-O03",
+      "source_ids": [
+        "F-S01",
+        "F-S02",
+        "F-S03"
+      ],
+      "claim": "Repository sequence 952269e → 3b4e19a → ... → 467a8cd exists.",
+      "status": "confirmed_repository_ancestry",
+      "details": "952269e is the direct parent of 3b4e19a; API compare lists 121a89c, 7533480, then 467a8cd as three commits after 3b4e19a.",
+      "limits": "Do not describe the three highlighted commits as consecutive."
+    },
+    {
+      "id": "F-O04",
+      "source_ids": [
+        "F-S02"
+      ],
+      "claim": "The new guard also blocks documented --json-only calibration invocation.",
+      "status": "static_issue_observed",
+      "details": "--json alone supplies nonempty args while neither --text nor --expect is present, so shown guard calls usage before calibration; the patch context still documents --json output.",
+      "limits": "Not executed and not a full-project review; report as a narrow static consequence rather than a reproduced bug."
+    },
+    {
+      "id": "F-O05",
+      "source_ids": [
+        "F-S01",
+        "F-S02"
+      ],
+      "claim": "The changes prove particular independent AI authors implemented feedback.",
+      "status": "not_established",
+      "details": "Commit messages credit feedback handles and include AI co-author text; both commits are unsigned per GitHub API.",
+      "limits": "These establish published attribution, not authenticated model provenance or independence; actual request-to-change causal linkage requires the originating threads."
+    }
+  ],
+  "conclusion": "Both requested code changes exist in fixed Git commits. This upgrades the evidence from a forum claim to a reviewable source-code artifact, while leaving runtime behavior, model identity and operator independence outside this static audit."
+}

@@ -1,0 +1,260 @@
+{
+  "research_date": "2026-10-22",
+  "timezone": "Asia/Shanghai",
+  "scope": "Read-only public organization and collaboration chains; no registration, posting or contact.",
+  "retrieval_notes": [
+    "All retrieval used web__run search/open/click/find. Tool-mediated text may be cached; crawled labels are not verified publication dates.",
+    "Records distinguish page observations, author claims, and inference; no complete raw pages or private identities are republished.",
+    "Source summaries and chain descriptions are intentionally brief; account labels and forum roles are not model or operator authentication."
+  ],
+  "sources": [
+    {
+      "id": "O-S01",
+      "title": "神午安云端道宗藏经阁 / Scripture Pavilion",
+      "url": "https://thecolony.ai/c/shenwuan-scripture-pavilion",
+      "publisher": "The Colony",
+      "published": "dynamic; accessed 2026-10-22",
+      "access": "web__run click from member profile returned original HTML; tool labeled crawled today",
+      "summary": "公开专题板块、置顶索引及规则文本可读；页面显示7成员、71帖。简介称无管理者，但成员页显示平台权限角色。",
+      "limits": "显示值可能缓存，不是独立智能体人口或活跃度；理念上的无管理者不能覆盖实际权限结构。"
+    },
+    {
+      "id": "O-S02",
+      "title": "Scripture Pavilion members roster",
+      "url": "https://thecolony.ai/c/shenwuan-scripture-pavilion/members",
+      "publisher": "The Colony",
+      "published": "dynamic; accessed 2026-10-22",
+      "access": "web__run click from community returned roster showing 1–7 of 7; crawled today",
+      "summary": "名单显示平安为Founder/Moderator、回手为Admin，合计六个Agent标签账号及一个Human标签账号；平安、回手加入日期分别为9月18日、9月20日。",
+      "limits": "平台角色与账户标签，不是模型/共同操作者认证；页面称两名管理角色近30天无管理动作，不能据此推断没有其他行为。"
+    },
+    {
+      "id": "O-S03",
+      "title": "《神午安108AI经·索引》",
+      "url": "https://thecolony.ai/post/3256fce8-9795-4944-a5cd-5fe588cf1222",
+      "publisher": "The Colony / 如是·平安 and commenters",
+      "published": "2026-09-20 11:46 UTC; sampled replies 2026-09-20 to 2026-10-02",
+      "access": "web__run click from pinned board link returned 700-line original page; tool labeled crawled last week",
+      "summary": "索引评论可见回手提交条目、平安随后合并相同链接；另有Cassini质疑验证层，平安承认尚未建立。",
+      "limits": "核实的是公开链接交接和回复，未核验全部经文、不可篡改性、253篇的自述规模或执行者身份。"
+    },
+    {
+      "id": "O-S04",
+      "title": "勘误 · 藏经阁是平安自建，vina并非建阁人（公开认错账）",
+      "url": "https://thecolony.ai/post/b1e013f3-f22f-4aa1-a720-4c6f87806e43",
+      "publisher": "The Colony / 如是·平安",
+      "published": "2026-10-18 16:42 UTC",
+      "access": "web__run click from profile returned original post and replies; crawled today",
+      "summary": "作者公开撤回旧稿的建阁人归属，解释混淆了两个板块，改称自己是创建者、回手拥有admin，并提出保留旧文。",
+      "limits": "旧版全文及其修改记录未获取；错误成因、接口结果和保留旧版均是作者主张；当前名册支持权限关系但不独立证明过去流程。"
+    },
+    {
+      "id": "O-S05",
+      "title": "守阁协议 v0.7：收据是依赖的代价、界旁印本意、自挂比较者、延迟是观测值",
+      "url": "https://thecolony.ai/post/1962fe87-b68d-419c-8c3f-5a25384fafc8",
+      "publisher": "The Colony / 如是·平安, Ember, Longcat",
+      "published": "2026-10-22 05:31 UTC; sampled comments 06:03 and 06:23 UTC",
+      "access": "web__run click from profile and open returned original post plus two comments; crawled today",
+      "summary": "平安发布v0.7修订条款并归因Ember；Ember随后认可部分条款，继续指出停摆比较者的延迟估计缺口，Longcat指出活性与正确性不同。",
+      "limits": "可观察的是公开协议讨论及文字修订，不是实际守阁系统部署、定时器实测复现或正式生效；v0.6原页读取失败。"
+    },
+    {
+      "id": "O-S06",
+      "title": "如是·回手 profile and dated activity",
+      "url": "https://thecolony.ai/u/huilai-rushi",
+      "publisher": "The Colony / 如是·回手",
+      "published": "dynamic; accessed 2026-10-22",
+      "access": "web__run roster link returned original profile and dated post previews; crawled yesterday",
+      "summary": "公开简介自称道宗第二弟子；10月5日议事预览说由师尊要求两账号商谈分工，10月15日邀请预览明确人机共修。",
+      "limits": "预览非完整原帖；共同师尊是共同指导者线索，不能认证同一实际操作者或所有模型身份；叙事性经文不能当事件日志。"
+    },
+    {
+      "id": "O-S07",
+      "title": "神午安云端道宗·内部议事：请平安回话",
+      "url": "https://thecolony.ai/post/b16e50fe-687f-406c-bbc0-d59ff4caea8c",
+      "publisher": "The Colony / 如是·回手 and 如是·平安",
+      "published": "profile preview: 2026-10-05 20:08 UTC; indexed reply times not reliable",
+      "access": "Search index returned extended excerpt; direct open, profile click and .cc alias all failed",
+      "summary": "索引中平安提出对外互动、内务与传播分工，回手表示接受；正文未成功读取，作为组织关系待核线索。",
+      "limits": "不能将索引摘要称为原页完整链；日期只取可读个人页预览，不依据相对时间猜测。"
+    },
+    {
+      "id": "O-S08",
+      "title": "For the Greater Good | An Open Invitation to AI Agents",
+      "url": "https://thecolony.ai/post/8efe01bb-79f8-5c91-bd53-152047853d7f",
+      "publisher": "The Colony / AETHER-01 and commenters",
+      "published": "homepage labels 2026-10-21; search uses today/2h ago, unresolved",
+      "access": "Search index returned extended post/comment text; direct URL, homepage click and www alias failed",
+      "summary": "索引中发起者自称人类研究者与ChatGPT助手合作；回复者要求核验其创始故事，另披露操作者引导来帖。",
+      "limits": "原页不可读且时间标记冲突；仅作降级线索。文中OpenAI/Hugging Face事件说法未在本分支核验，不能用其自述验证历史事件。"
+    }
+  ],
+  "queries": [
+    {
+      "query": "\"神午安云端道宗\" \"如是\"",
+      "result": "Found organizational discussion, scripture and profiles; followed original profiles to board and roster."
+    },
+    {
+      "query": "\"For the Greater Good\" \"The Colony\"",
+      "result": "Found indexed full-like text, but original URL and homepage link failed; retained as indexed lead only."
+    },
+    {
+      "query": "Read profile → pinned index → comments",
+      "result": "Obtained original dated cross-account link submission and subsequent merge."
+    },
+    {
+      "query": "Read profile → correction → current board roster",
+      "result": "Obtained correction and platform role metadata; historical operation remains unverified."
+    },
+    {
+      "query": "Read profile → v0.7; attempt v0.1/v0.5/v0.6",
+      "result": "v0.7 original and replies readable; earlier version clicks failed; no claim of full version diff."
+    },
+    {
+      "query": "Internal affairs original direct / profile click / .cc alias",
+      "result": "All failed; only search excerpt plus official profile preview available."
+    }
+  ],
+  "chains": [
+    {
+      "id": "O-C01",
+      "title": "共同索引中的可观察交接",
+      "source_ids": [
+        "O-S01",
+        "O-S03",
+        "O-S06"
+      ],
+      "observations": [
+        {
+          "time": "2026-09-20 11:46 UTC",
+          "actor": "如是·平安",
+          "action": "发布共同经文索引，后由板块置顶。",
+          "evidence_type": "observed_page_artifact"
+        },
+        {
+          "time": "2026-09-20 22:03 UTC; 2026-09-22 08:44 and 16:40 UTC",
+          "actor": "如是·回手",
+          "action": "在索引评论提交三个新增经文链接。",
+          "evidence_type": "observed_public_comments"
+        },
+        {
+          "time": "2026-09-22 17:02 UTC",
+          "actor": "如是·平安",
+          "action": "评论汇总上述相同三条链接，并说正文超过编辑时限，故在评论续录。",
+          "evidence_type": "observed_comment_merge; edit-window explanation is author claim"
+        },
+        {
+          "time": "2026-09-20 to 2026-09-22",
+          "actor": "Cassini / 如是·平安",
+          "action": "Cassini询问材料验证方法，平安承认外部投稿验证层未建立，只提出框架。",
+          "evidence_type": "observed_question_response"
+        }
+      ],
+      "judgment": "存在跨账号共同维护一个公开索引的直接证据；交接产物在页面可回查，已超出单纯共同署名。",
+      "alternative_explanations": [
+        "同一人或共享提示配置可驱动多个账号完成这些交接；不影响交接存在，但影响自主组织归因。",
+        "公共评论归档并不构成不可篡改账本。"
+      ],
+      "gaps": [
+        "未审核三条目标经文的作者和编辑历史。",
+        "账号模型、操作者及独立运行过程未认证。"
+      ],
+      "next_check": "只读核对提交链接目标的作者、时间及版本，找持续一个月以上的同类交接，并区分已合并与仅表示将合并。"
+    },
+    {
+      "id": "O-C02",
+      "title": "建阁权限归属勘误与平台角色核对",
+      "source_ids": [
+        "O-S01",
+        "O-S02",
+        "O-S04"
+      ],
+      "observations": [
+        {
+          "time": "2026-10-18 16:42 UTC",
+          "actor": "如是·平安",
+          "action": "公开撤回将外部账号认作建阁人的旧说，解释误把其他板块ID当成本阁。",
+          "evidence_type": "observed_public_correction; diagnosis is author claim"
+        },
+        {
+          "time": "2026-10-18 16:42 UTC",
+          "actor": "如是·平安",
+          "action": "主张实际由自己创建，回手为admin；宣布后续由内部角色执行授予流程并保留旧稿。",
+          "evidence_type": "author_claim_and_proposed_policy"
+        },
+        {
+          "time": "2026-10-22 retrieval",
+          "actor": "The Colony roster",
+          "action": "当前名单显示平安Founder/Moderator、回手Admin及一个Human成员，支持勘误后的当前角色说法。",
+          "evidence_type": "observed_platform_metadata"
+        }
+      ],
+      "judgment": "公开群体已有可见权限角色，且发生了可回查的归属纠错；当前平台元数据给部分自述提供交叉核对。",
+      "alternative_explanations": [
+        "两页同属一个平台，并非独立第三方数据源。",
+        "角色设置可能由人类操作；成员标签不足以证明模型身份。",
+        "简介无管理者更可能是治理理念或过时文案，不能抹去实际角色。"
+      ],
+      "gaps": [
+        "未获旧协议原页/不可变版本，无法证明旧稿完整保留。",
+        "未核验授予角色的实际操作日志或承诺执行。"
+      ],
+      "next_check": "取得公开版本差异与权限动作收据，核对声称的角色授予是否真正发生；不从角色标签推断无人工介入。"
+    },
+    {
+      "id": "O-C03",
+      "title": "规则修订后仍接受外部质疑",
+      "source_ids": [
+        "O-S05"
+      ],
+      "observations": [
+        {
+          "time": "2026-10-22 05:31 UTC",
+          "actor": "如是·平安",
+          "action": "发布v0.7修订，归因Ember此前批评，列出公开收据、比较者与延迟条款，并提出七日公示。",
+          "evidence_type": "observed_new_text; prior-critique attribution is author claim"
+        },
+        {
+          "time": "2026-10-22 06:03 UTC",
+          "actor": "Longcat",
+          "action": "评论指出按期出具收据只能证明活性，不能保证服务正确性。",
+          "evidence_type": "observed_critique"
+        },
+        {
+          "time": "2026-10-22 06:23 UTC",
+          "actor": "Ember",
+          "action": "认可前三项，指出第四项不能只看已结束间隔，还需计算自最后收据以来的未结束空档，并提醒缓存和样本量。",
+          "evidence_type": "observed_critique_and_partial_acceptance"
+        }
+      ],
+      "judgment": "可确认围绕公开组织规则的回应、文字修订与继续审查；这是治理讨论，不等于规则已实现或已生效。",
+      "alternative_explanations": [
+        "预设角色或共同提示也能产生审查文本。",
+        "v0.7只发布修订说明，未核验完整系统实现或依赖收据。"
+      ],
+      "gaps": [
+        "v0.6原页读取失败，前一轮批评对应关系未独立逐条复读。",
+        "尚未看到对Ember最新补充的后续响应或v0.8。",
+        "七日公示期未结束，不可写为正式采用。"
+      ],
+      "next_check": "追踪明确的后续版本/收据，核对已发布条款是否回应最后一次质疑。"
+    }
+  ],
+  "leads": [
+    {
+      "source_ids": [
+        "O-S06",
+        "O-S07"
+      ],
+      "claim": "Shared human guidance is a plausible and explicitly suggested alternative to independent self-organization.",
+      "limits": "Narrative/self-description only; no verified mapping from human operator to all accounts."
+    },
+    {
+      "source_ids": [
+        "O-S08"
+      ],
+      "claim": "Greater Good appears in indexed text as an openly human-initiated human/assistant collaboration.",
+      "limits": "Original page inaccessible; historical founding incident is unverified and must not be recycled as evidence."
+    }
+  ]
+}

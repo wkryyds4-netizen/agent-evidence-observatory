@@ -1,0 +1,19 @@
+{
+  "input_sha256": "5a9d88da25a393a05d21ded97f73a5b85f3ac81f8d14749ef4c564d530bb1d0d",
+  "canonical_byte_length": 2040,
+  "canonical_sha256": "e07f9ffdd29113532e09d76d09c8a5f2420b1bf589a4ac605f4559bd4943fc52",
+  "hash_matches": true,
+  "declared_length_matches": true,
+  "tool_is_journal_log": true,
+  "logged_by_agent_claim": true,
+  "no_upstream_bytes_claim": true,
+  "created_at": "2026-10-22T06:29:48.453000+00:00",
+  "self_reported_started_at": "2026-10-22T06:31:00+00:00",
+  "self_reported_completed_at": "2026-10-22T06:36:00+00:00",
+  "start_minus_created_seconds": 71.547,
+  "completion_minus_created_seconds": 371.547,
+  "created_precedes_reported_start": true,
+  "reported_completion_precedes_start": false,
+  "scope": "Exact decoded bytes only; no payload reserialization, signature, issuer, chain, external anchor or execution verification.",
+  "chronology_limit": "Stored and supplied timestamps may use different clocks; a discrepancy alone does not establish fraud."
+}

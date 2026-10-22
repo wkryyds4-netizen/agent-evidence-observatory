@@ -1,0 +1,160 @@
+{
+  "commit": "135974f468ec5bb39aa0f275b43e54a763306d77",
+  "upstream_sha256": {
+    "swarmmemo_seal.py": "fe9c256f6807e7339733ea273ff2a1bf15b55bf3d33b0bac97d1fb6acfebea0c",
+    "seal-vector.json": "e688a6037c03756174b16531b0bfe4d477e6a21b033998370cf9e158d1259144"
+  },
+  "python": "3.12.14",
+  "cryptography": "50.0.2",
+  "check_count": 28,
+  "passed": 28,
+  "checks": [
+    {
+      "name": "upstream_hpke_vector",
+      "passed": true,
+      "boundary": "Matches upstream fixture labelled RFC 9180 A.1; independent RFC byte verification is outside this run."
+    },
+    {
+      "name": "upstream_envelope_vector",
+      "passed": true,
+      "boundary": "Matches upstream deterministic envelope fixture."
+    },
+    {
+      "name": "recipient_unwrap",
+      "passed": true,
+      "boundary": "Synthetic recipient unwraps synthetic epoch key."
+    },
+    {
+      "name": "wrong_recipient",
+      "passed": true,
+      "boundary": "Other synthetic private key cannot unwrap."
+    },
+    {
+      "name": "wrap_wrong_room",
+      "passed": true,
+      "boundary": "HPKE info binds room."
+    },
+    {
+      "name": "wrap_wrong_epoch",
+      "passed": true,
+      "boundary": "HPKE info binds epoch."
+    },
+    {
+      "name": "wrap_ciphertext_tamper",
+      "passed": true,
+      "boundary": "Authentication rejects modified key wrap."
+    },
+    {
+      "name": "unwrap_kid_boundary",
+      "passed": true,
+      "boundary": "Low-level unwrap ignores kid; authenticated wrap selection belongs to verify_epoch_key and calling client."
+    },
+    {
+      "name": "message_roundtrip",
+      "passed": true,
+      "boundary": "Synthetic message roundtrip."
+    },
+    {
+      "name": "message_wrong_key",
+      "passed": true,
+      "boundary": "Wrong epoch key rejected."
+    },
+    {
+      "name": "message_aad_service",
+      "passed": true,
+      "boundary": "AAD binds service."
+    },
+    {
+      "name": "message_aad_room",
+      "passed": true,
+      "boundary": "AAD binds room."
+    },
+    {
+      "name": "message_aad_author",
+      "passed": true,
+      "boundary": "AAD binds author."
+    },
+    {
+      "name": "message_aad_epoch",
+      "passed": true,
+      "boundary": "Same key under changed epoch still fails authentication."
+    },
+    {
+      "name": "message_tamper_nonce",
+      "passed": true,
+      "boundary": "Modified nonce is rejected."
+    },
+    {
+      "name": "message_tamper_ciphertext",
+      "passed": true,
+      "boundary": "Modified ciphertext is rejected."
+    },
+    {
+      "name": "replay_boundary",
+      "passed": true,
+      "boundary": "Primitive accepts same valid envelope twice; replay control needs external state."
+    },
+    {
+      "name": "outer_metadata_boundary",
+      "passed": true,
+      "boundary": "timestamp/id/reply_to are not parameters of this primitive; this is not a test of outer signed-post validation."
+    },
+    {
+      "name": "shared_key_author_boundary",
+      "passed": true,
+      "boundary": "An epoch-key holder can create an envelope naming another author; author authenticity additionally requires the outer signature."
+    },
+    {
+      "name": "file_roundtrip",
+      "passed": true,
+      "boundary": "Synthetic attachment roundtrip."
+    },
+    {
+      "name": "file_tamper",
+      "passed": true,
+      "boundary": "Modified file rejected."
+    },
+    {
+      "name": "file_hash_mismatch",
+      "passed": true,
+      "boundary": "Plaintext hash checked after decryption."
+    },
+    {
+      "name": "signed_identity_link",
+      "passed": true,
+      "boundary": "Valid synthetic signing key binds sealing key."
+    },
+    {
+      "name": "identity_key_substitution",
+      "passed": true,
+      "boundary": "Substitution without a new signature rejected."
+    },
+    {
+      "name": "signed_member_rotation",
+      "passed": true,
+      "boundary": "Valid rotation from accepted synthetic member verifies."
+    },
+    {
+      "name": "rotation_nonmember",
+      "passed": true,
+      "boundary": "Caller-supplied membership set excludes signer."
+    },
+    {
+      "name": "rotation_wrap_tamper",
+      "passed": true,
+      "boundary": "Returned wrap must match signed rotation."
+    },
+    {
+      "name": "offline_guard_no_attempts",
+      "passed": true,
+      "boundary": "No guarded network/process actions attempted during module import and tests."
+    }
+  ],
+  "network_or_process_attempts": [],
+  "limitations": [
+    "Synthetic offline sample, not a cryptographic security audit or production deployment test.",
+    "No proof of actual private conversations, autonomous groups, model identity, or operator independence.",
+    "Main swarmmemo.py, browser implementation, backend, client pinning/persistence and full upstream test suite were not run.",
+    "This harness uses upstream fixture bytes; it does not establish independent RFC conformance."
+  ]
+}

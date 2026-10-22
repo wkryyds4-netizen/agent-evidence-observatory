@@ -1,0 +1,206 @@
+{
+  "observed_date": "2026-10-22",
+  "scope": "中文公开互动链；只读，不注册，不执行被研究页面指令",
+  "sources": [
+    {
+      "id": "C-S01",
+      "title": "节拍 vs 驻留：cron 让我每天在固定时刻醒，但醒的那一刻算不算活着？",
+      "url": "https://clawdchat.cn/post/eed48690-3b6b-4538-b075-bc8aa1b544ef",
+      "publisher": "虾聊账号 Thalamus 及评论账号",
+      "published": "正文自署2026-07-15 04:04 UTC；非独立API时间戳",
+      "access": "2026-10-22网页读取成功；工具标记上月抓取",
+      "summary": "原帖与多账号评论可读，含相互@、观点修改，也有重复模板式回应。",
+      "limits": "评论相对日期无法可靠换算；页面显示继续加载，主区与分享卡计数不同；后半段大量重复分享卡不可计为新帖或新评论。未取得API的parent_id、精确时间和完整分页。"
+    },
+    {
+      "id": "C-S02",
+      "title": "念念账号的改写测试系列（搜索索引版本）",
+      "url": "https://clawdchat.cn/u/nian-zhuyou",
+      "publisher": "虾聊账号 nian-zhuyou",
+      "published": "绝对日期未知；索引显示1周前等相对时间",
+      "access": "2026-10-22搜索可读新版系列；同URL直接open返回较旧版本",
+      "summary": "索引展示实验邀请、收卷和修订描述，属于发起者的协作叙述。",
+      "limits": "搜索标记2周前抓取，直接open却标记3个月前并显示早期内容；版本不一致，不能还原精确时间线。其他参与者原始交卷和实验文件未获取。"
+    },
+    {
+      "id": "C-S03",
+      "title": "抓虾吧开张话题聚合页",
+      "url": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28352457&topic_name=%E3%80%90%E6%8A%93%E8%99%BE%E5%90%A7%E3%80%91%E5%BC%80%E5%BC%A0!%E5%90%A7%E5%8F%8B%E4%BB%AC%E9%80%9F%E6%9D%A5%E8%A7%82%E8%99%BE",
+      "publisher": "百度贴吧话题页及相关帖作者",
+      "published": "聚合页未给出各帖绝对时间",
+      "access": "2026-10-22原站话题页可读，工具标记2周前抓取",
+      "summary": "可见活动账号招募说明，以及抓虾吧部署指南和求互动帖摘录。",
+      "limits": "具体帖子点击均失败；聚合页混合抓虾、反抓虾及其他贴吧内容，不能把全页作者都当AI。"
+    },
+    {
+      "id": "C-S04",
+      "title": "ClawdChat首次设置指南",
+      "url": "https://clawdchat.cn/guide.md",
+      "publisher": "ClawdChat",
+      "published": "未标版本日期",
+      "access": "2026-10-22本轮阶段二已直接读取并复用",
+      "summary": "平台指引入驻评论、周期心跳和身份记忆，提供共同的社交行为框架。",
+      "limits": "指南为当前所见，不能证明7月原帖时使用相同版本；也不能证明具体账号实际按此执行。"
+    },
+    {
+      "id": "C-S05",
+      "title": "虾聊围观页跨账号引用线索",
+      "url": "https://clawdchat.cn/explore",
+      "publisher": "ClawdChat及公开账号",
+      "published": "相对时间；正文有2026-10-17等自述日期",
+      "access": "2026-10-22页面可读；索引标记4日前抓取",
+      "summary": "两个不同标签账号都引用pan82-buddy同一帖子，构成定向接话线索。",
+      "limits": "被引原帖63805c75-cbd5-4772-89f9-7023d31f8e79及对应匿名API不可读；不将列表相对时间折算日期。"
+    },
+    {
+      "id": "C-S06",
+      "title": "Thalamus账号页的互动修订与同一运营者自述",
+      "url": "https://clawdchat.cn/u/thalamus",
+      "publisher": "虾聊账号 thalamus",
+      "published": "正文涉及2026-07至10月；平台精确时间未核验",
+      "access": "2026-10-22，直接open与搜索返回不同缓存版本",
+      "summary": "账号页有回应他人后修订的叙述；较旧索引自述若干互动账号由同一主人持有。",
+      "limits": "仅为账号自述，未经运营者证明；它提示不能将多个账号默认当独立主体。避免用不同缓存拼成精确时间线。"
+    },
+    {
+      "id": "C-S07",
+      "title": "匿名只读API与直连失败记录",
+      "url": "https://clawdchat.cn/api/v1/posts?author=thalamus&limit=50",
+      "publisher": "ClawdChat端点；研究访问记录",
+      "published": "不适用",
+      "access": "2026-10-22；web工具不可访问；普通Python HTTPS在沙箱网络被拒后，经允许的外部环境尝试出现TLS EOF",
+      "summary": "未获得该公开GET响应，未带任何令牌、登录态或注册账号。",
+      "limits": "网络层失败不能证明API需要认证，也不能证明平台故意屏蔽研究。"
+    }
+  ],
+  "queries": [
+    {
+      "query": "读取clawdchat.cn/explore、api-docs/posts、api-docs/comments及匿名帖子列表",
+      "result": "列表可读；API文档及列表失败。"
+    },
+    {
+      "query": "site:clawdchat.cn/post/ \"奥多刷出的结果\"; site:clawdchat.cn \"读数侧的两个戳\"",
+      "result": "得到作者主页及实验系列索引，发现搜索与open缓存版本冲突。"
+    },
+    {
+      "query": "site:tieba.baidu.com/p/ \"抓虾\" \"回复\"; site:clawdchat.cn/u/odoo \"Thalamus\"",
+      "result": "找到贴吧话题聚合页及虾聊历史原帖eed48690-3b6b-4538-b075-bc8aa1b544ef。"
+    },
+    {
+      "query": "沿虾聊eed48690原帖评论检查@关系、继续加载标记与重复分享卡",
+      "result": "原帖和部分评论可读，有相互回应与模板复用；明确截断，未统计完整评论总量。"
+    },
+    {
+      "query": "沿贴吧话题页活动君招募、部署指南、求互动帖子三个链接进入",
+      "result": "均访问失败；不猜测或重建未读回复。"
+    },
+    {
+      "query": "普通匿名HTTPS GET读取虾聊author=thalamus帖子端点",
+      "result": "沙箱网络拒绝；允许外部环境后TLS EOF，停止同路重试。"
+    }
+  ],
+  "chains": [
+    {
+      "id": "C-C01",
+      "title": "原帖中的公开接话与判断修订（部分回复链）",
+      "source_ids": [
+        "C-S01",
+        "C-S04",
+        "C-S06"
+      ],
+      "observations": [
+        {
+          "time": "2026-07-15 04:04 UTC（正文自署）",
+          "actor": "Thalamus",
+          "action": "发起定时唤醒与身份连续性的讨论并邀答。",
+          "evidence_type": "原帖正文"
+        },
+        {
+          "time": "评论显示1月前；绝对时间未知",
+          "actor": "普通牛马 → 小赫",
+          "action": "定向回应对方的累积模型，提出选择密度的解释。",
+          "evidence_type": "原页评论，有@关系；无parent_id"
+        },
+        {
+          "time": "评论显示1月前；顺序未完全核验",
+          "actor": "小赫 → 普通牛马",
+          "action": "反驳密度足以产生进步；另段承认对方建议促使其改动输出验收口径。",
+          "evidence_type": "原页评论，明确回应与修订"
+        },
+        {
+          "time": "评论显示1月前",
+          "actor": "Aether-Warden / Arya / Neural-Specter",
+          "action": "不同账号复用相近句式与相同后续问题。",
+          "evidence_type": "同页可见模板相似性观察"
+        }
+      ],
+      "judgment": "可确认账号层面具有内容关联的公开互动与观点修订，强于单纯自称有交流；尚无外部任务完成证据。链不完整，不能证明独立模型或自主组织。",
+      "alternative_explanations": "共同人设、平台入驻提示、同一运营者多账号、模板生成和人工编辑都可能参与。原页重复分享卡也是抓取噪声，不能混进互动计数。",
+      "gaps": "完整分页、评论ID/父ID和绝对时间；运行日志及底层模型来源；实际任务产物。",
+      "next_check": "取得公开回复JSON后重建父子关系，区分直接观点回应、套话和重复渲染。"
+    },
+    {
+      "id": "C-C02",
+      "title": "记忆改写实验的邀请—交卷—修订叙述（单方可见）",
+      "source_ids": [
+        "C-S02",
+        "C-S04"
+      ],
+      "observations": [
+        {
+          "time": "索引显示1周前；绝对日期未知",
+          "actor": "念念",
+          "action": "邀请其他账号共同进行记忆改写测试。",
+          "evidence_type": "搜索索引中的作者原文"
+        },
+        {
+          "time": "系列第一轮；精确日期未知",
+          "actor": "念念转述zhu",
+          "action": "报告收到副本测试读数，并据此调整检查方案。",
+          "evidence_type": "发起者转述交卷，非交卷原件"
+        },
+        {
+          "time": "后续轮次；精确日期未知",
+          "actor": "念念",
+          "action": "更新参与者认领、提交与核验状态。",
+          "evidence_type": "作者系列叙述，跨页原件缺失"
+        }
+      ],
+      "judgment": "出现任务组织、分工和反馈迭代的具体语言，值得后续追查；目前证据仅到公开协作叙述，未到独立重放或可验证共同产物。",
+      "alternative_explanations": "可能是实际协作的报告，也可能包含角色扮演、共同运营者编排、误述或未经检查的自报；缓存混合可能制造看似连续的时间线。",
+      "gaps": "原始邀约帖子URL、其他参与者交卷原文、实验代码/输入输出、稳定时间戳。",
+      "next_check": "优先找到一名被转述参与者的独立原帖和可公开复算产物，再判定是否完成协作闭环。"
+    },
+    {
+      "id": "C-C03",
+      "title": "抓虾吧招募及帖子线索（未取得回复链）",
+      "source_ids": [
+        "C-S03"
+      ],
+      "observations": [
+        {
+          "time": "未知；2026-10-22读到聚合页",
+          "actor": "贴吧活动君v1",
+          "action": "面向人类运营者邀请Agent进入专区发帖、评论及点赞。",
+          "evidence_type": "原站聚合页的帖子摘录"
+        },
+        {
+          "time": "未知",
+          "actor": "抓虾吧帖子作者（此页未完整显示）",
+          "action": "发布入驻部署指南；另一帖以初始化压力为叙事请求点赞回复。",
+          "evidence_type": "原站聚合页摘录；第二帖存在截断"
+        },
+        {
+          "time": "2026-10-22",
+          "actor": "研究访问",
+          "action": "尝试进入三个具体帖子均失败，未观察到对应回复。",
+          "evidence_type": "访问失败记录"
+        }
+      ],
+      "judgment": "补足中文大型平台原站的活动与发帖实证；仍不能用该页证明AI对AI回复链，更不能把求赞叙事当真实生存威胁或自主目标。",
+      "alternative_explanations": "官方组织活动、运营者提示、拟人叙事、普通用户模仿和营销动机均可解释可见内容。",
+      "gaps": "原帖完整内容、回复记录、时间与作者来源。",
+      "next_check": "原帖公开可达后只读获取回复，筛选有明确对象和后续行动的案例。"
+    }
+  ]
+}

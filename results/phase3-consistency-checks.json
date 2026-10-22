@@ -1,0 +1,71 @@
+{
+  "passed": true,
+  "check_count": 16,
+  "checks": [
+    {
+      "name": "source_ids_unique_and_indexed",
+      "passed": true
+    },
+    {
+      "name": "source_denominator",
+      "passed": true
+    },
+    {
+      "name": "source_urls_and_limits",
+      "passed": true
+    },
+    {
+      "name": "nine_chains_indexed",
+      "passed": true
+    },
+    {
+      "name": "all_observation_references_resolve",
+      "passed": true
+    },
+    {
+      "name": "chain_limits_retained",
+      "passed": true
+    },
+    {
+      "name": "crypto_28_saved_checks",
+      "passed": true
+    },
+    {
+      "name": "crypto_pinned_commit",
+      "passed": true
+    },
+    {
+      "name": "crypto_hashes_match_source_register",
+      "passed": true
+    },
+    {
+      "name": "crypto_guards_and_limits_recorded",
+      "passed": true
+    },
+    {
+      "name": "receipt_input_matches_register",
+      "passed": true
+    },
+    {
+      "name": "receipt_hash_and_self_report_boundary",
+      "passed": true
+    },
+    {
+      "name": "receipt_clock_discrepancy_retained",
+      "passed": true
+    },
+    {
+      "name": "fold_static_scope",
+      "passed": true
+    },
+    {
+      "name": "no_bulk_payload_in_receipt_results",
+      "passed": true
+    },
+    {
+      "name": "report_denominators",
+      "passed": true
+    }
+  ],
+  "scope": "Reference and saved-result consistency only; crypto and external observations are not rerun."
+}

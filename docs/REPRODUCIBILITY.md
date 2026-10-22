@@ -1,5 +1,7 @@
 # 复现步骤
 
+阶段三新增的加密实验、回执复算与固定代码核对见[阶段三复现说明](PHASE3_REPRODUCIBILITY.md)。仓库自包含一致性检查为`python code/check_phase3.py`；加密实验单独需要cryptography和固定上游文件。
+
 ## 不需要原始语料的检查
 
 在仓库根目录运行：
