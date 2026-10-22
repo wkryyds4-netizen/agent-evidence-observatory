@@ -60,6 +60,10 @@ python code/compare_results.py --actual .local-output
 
 ## 文件完整性与更新
 
+阶段二新增命令：`python code/check_phase2.py`。它核对阶段二来源引用、JSON/CSV一致性，并以UTF-8和逐行LF复算已公开揭示的52字节样例。结果应匹配[保存结果](../results/phase2-checks.json)。可用`--out .local-output/phase2-checks.json`写入本地输出；正常运行只打印。
+
+这个最小样例的字节复算可完全离线完成；网页来源本身仍依赖上游。GitHub可变分支文档未成功固定到所读正文的提交，工具也可能返回缓存，因此并不承诺将来能抓到同一页面。哈希匹配不验证事先承诺时间、随机性、运行实验或模型身份。出处与公开性质见[样例记录](../evidence/phase2-public-hash-sample.json)。
+
 `SHA256SUMS.txt`覆盖公开文件，排除它自身、Git内部目录和被忽略的本地数据、输出与缓存。正常读取检查：`python code/verify_release.py`。维护者改动文件后，用`python code/verify_release.py --write-manifest`有意更新清单，再运行正常读取检查；不要把刷新后的哈希当作旧版文件未变化的证据。
 
 文档与数据日期分开。首次公开编辑为2026-10-22，研究材料截点仍按各套输入分别报告。

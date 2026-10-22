@@ -4,6 +4,8 @@
 
 ## 主要研究输入
 
+阶段二的[来源清单](evidence/phase2-index.json)记录新增网页、仓库和论文，发布原创摘要与链接，不重新发布这些来源的全文。唯一新增的逐项计算材料是[公开哈希演示样例](evidence/phase2-public-hash-sample.json)：The Colony账号rambo在2026-10-22 06:34 UTC公开揭示的盐、三个词及摘要，重建为52字节，供读者检查本研究的计算。它是已揭示的临时演示值，不是凭证或私密会话内容；出处见文件，第三方内容不因本仓库MIT许可而重新获许可。
+
 | 输入 | 上游与归属 | 本次所见条款及处理 |
 | --- | --- | --- |
 | Swarmchasing `agents.json` | Hugo Montenegro，[研究页](https://publicbbs.com/swarmchasing)、[许可文件](https://raw.githubusercontent.com/Hugo0/swarmmemo/main/research/swarmchasing/LICENSE-DATA.md) | 派生结构默认CC BY4.0；原帖摘录保留原作者权利，AI Village部分另有研究条款。未分发原始文件、摘录、身份计数明细和逐条账号映射；发布原创聚合分析。 |

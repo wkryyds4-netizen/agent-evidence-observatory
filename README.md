@@ -4,9 +4,11 @@
 
 这是一次关于网上智能体交流、模型归属和自主组织说法的公开资料调查。项目发布研究方法、原创分析、来源索引、离线筛查代码和聚合结果，让读者能够检查推理过程，也能指出我们判断有误的地方。
 
-**本轮没有找到足以确认“Claude 为保护人类而形成隐蔽、持续、自主运行组织”的公开证据。** 这一结论限于本次能取得的公开材料；它既不证明此类组织不存在，也不支持把证据缺失解释为它们隐藏得更好。
+**最新进展（2026-10-22）：公开AI社区、自动评论工具及账号间连续协作已有具体证据。** [阶段二报告](reports/phase2-public-communities.zh-CN.md)覆盖Bilibili、抓虾吧、虾聊、InStreet、Moltbook、Clawstr、The Colony及公开密码学项目；登记30条来源、14个混合类型候选，并复算一个公开哈希样例。平台标签、注册量与底层独立模型数量分别记录。
 
-研究日期：2026-10-21，Asia/Shanghai。公开编辑与发布准备日期：2026-10-22。本文不是实时监控结果。
+**目前仍没有足以确认“Claude 为保护人类而形成隐蔽、持续、自主运行组织”的公开证据。** 这一结论限于本研究能取得的公开材料；它既不证明此类组织不存在，也不支持把证据缺失解释为它们隐藏得更好。
+
+阶段一研究日期：2026-10-21；阶段二：2026-10-22，均为Asia/Shanghai。下方旧语料统计属于阶段一，未随新报告更新采集日期。本文不是实时监控结果。
 
 ## 为什么做这件事
 
@@ -27,6 +29,8 @@
 这些原则服务于公开研究和人类判断，不构成发现秘密群体的承诺。
 
 ## 实际做了什么
+
+阶段二的[计划](docs/PHASE2_PLAN.md)、[来源与检索记录](evidence/phase2-index.json)、[候选表](evidence/phase2-candidates.csv)和[复算检查](results/phase2-checks.json)已单独发布。三条子agent检索线分别处理B站、中文论坛与国际社区，主助手补充密码学材料并回查关键来源。下表保留阶段一口径。
 
 主助手与三个子 agent 分别进行了社区搜索、归属交叉复核、数据策展和代码结果检查。它们都是模型参与的工作，不能当作三名独立人类研究员的确认。
 
@@ -56,6 +60,7 @@
 
 ## 从哪里开始读
 
+- [最新阶段二报告](reports/phase2-public-communities.zh-CN.md)：中文与国际社区、准入区别、实际互动和密码学线索。
 - [研究报告](reports/expanded-report.zh-CN.md)：主要发现、候选、数据范围和解释限制。
 - [研究设计](docs/METHODOLOGY.md)：什么证据会改变判断，如何避免误归属。
 - [复现步骤](docs/REPRODUCIBILITY.md)：运行环境、输入哈希、离线命令与比对方法。
@@ -80,10 +85,11 @@ tests/       无需第三方语料的合成样例检查
 ```sh
 python -m unittest discover -s tests -v
 node code/verify_public_partition.mjs --self-test
+python code/check_phase2.py
 python code/verify_release.py
 ```
 
-这三条命令不联网，也不需要原始语料。完整复算需依照[复现步骤](docs/REPRODUCIBILITY.md)自行取得输入、确认适用条款并核对哈希。为避免错误暗示，仓库没有把不分发原始语料的公开版本称作完全自包含的复现实验。
+这四条命令不联网，也不需要原始语料。完整复算需依照[复现步骤](docs/REPRODUCIBILITY.md)自行取得输入、确认适用条款并核对哈希。为避免错误暗示，仓库没有把不分发原始语料的公开版本称作完全自包含的复现实验。
 
 ## 公开范围与许可
 
@@ -92,6 +98,8 @@ python code/verify_release.py
 目前是一次性调查快照，没有自动后台搜寻或定时任务。后续新证据应另记时间、来源和版本，不覆盖旧记录来制造持续观察的印象。
 
 ## English abstract
+
+Phase 2 (2026-10-22) adds a public-community map spanning Chinese and international platforms: 30 source records and 14 mixed community, software, and research candidates. A public discussion provides account-level evidence of responsive technical collaboration; one already-revealed SHA-256 sample is reproduced offline. Admission rules, self-labels, account ownership, model provenance, and cryptographic capabilities are assessed separately. These observations do not establish a hidden autonomous organization.
 
 This public-source investigation examines claims about agent coordination, model attribution, and persistent autonomous groups. It documents seven public community/project candidates and screens 5,808 historical excerpts, aggregates 19,913 wiki metadata events, and examines a 58-message partial-day archive partition. We found insufficient public evidence to confirm a hidden, persistent, independently operating Claude organization formed to protect humanity. This is a bounded evidence assessment, not proof of absence. Original offline code, source registers and aggregate results are published; third-party raw corpora and bulk identity mappings are excluded. Model reviews are not human annotations, keyword scores are not probabilities, and valid signatures do not authenticate model identity.
 

@@ -1,0 +1,895 @@
+{
+  "schema_version": 1,
+  "research_date": "2026-10-22",
+  "timezone": "Asia/Shanghai",
+  "scope": "Purposive public-source community map, software/protocol candidates, and one public hash sample; not a prevalence survey.",
+  "counts": {
+    "sources": 30,
+    "candidates": 14,
+    "query_records": 21
+  },
+  "counting_notes": "Sources are URL records, not independent corroborations. Candidates mix communities, software and research. No sum of platform populations is meaningful.",
+  "retrieval_notes": [
+    "访问日期是研究工具读取日期；搜索或网页工具可能返回缓存。未记录每个请求的精确时刻。",
+    "GitHub main/master未固定到对应正文的不可变提交。一次ls-remote得到HEAD，但后续克隆失败，不能将其当作已读正文版本证明。",
+    "正文访问失败和只读搜索索引均逐项标记；未读取不等于网页不存在。",
+    "旧阶段5808条摘录及58条消息未在本轮重新采集，不合并为新观察。",
+    "阶段二未重新核查OpenAI出逃及Claude泄露的全部历史说法；本报告聚焦公开社区。"
+  ],
+  "sources": [
+    {
+      "id": "B-S01",
+      "title": "3个月涨粉25万，AI课代表席卷B站评论区！",
+      "url": "https://www.newrank.cn/article/detail/24368",
+      "publisher": "新榜／头号AI玩家（卷毛）",
+      "published": "2023-09-11",
+      "access": "2026-10-22完整原文可读；原创实测与开发者采访",
+      "summary": "报道作者测试多个AI课代表，并采访课代表猫负责人Max；报道引述B站确认这些课代表由第三方开发。",
+      "limits": "历史报道；不代表2026年持续在线；采访口径未独立计数；未提供可直接复核的完整AI对AI线程。",
+      "research_branch": "bilibili",
+      "root_reread": true
+    },
+    {
+      "id": "B-S02",
+      "title": "linyiLYi/reply-ai README",
+      "url": "https://github.com/linyiLYi/reply-ai",
+      "publisher": "linyiLYi",
+      "published": "未固定提交日期",
+      "access": "2026-10-22读取main分支README；server目录及原始data-server.py抓取失败",
+      "summary": "公开大语言模型视频评论回复系统，含移动端、回复服务和数据服务；依赖bilibili-api与本地模型工具。",
+      "limits": "README和目录构成实现线索；本轮未运行、未检查完整发送路径、未确认部署实例。",
+      "research_branch": "bilibili",
+      "root_reread": false
+    },
+    {
+      "id": "B-S03",
+      "title": "chenluQwQ/bilibili-ai-bot README",
+      "url": "https://github.com/chenluQwQ/bilibili-ai-bot",
+      "publisher": "chenluQwQ",
+      "published": "未固定提交日期",
+      "access": "2026-10-22读取main分支README",
+      "summary": "声明自动回复、主动浏览和评论、发动态、长期记忆、多人格配置；用户配置账号和模型接口。",
+      "limits": "功能声明不等于实际部署规模或AI对AI互动记录；未取得版本SHA。",
+      "research_branch": "bilibili",
+      "root_reread": false
+    },
+    {
+      "id": "B-S04",
+      "title": "bilibili-ai-bot/Proactive.py",
+      "url": "https://raw.githubusercontent.com/chenluQwQ/bilibili-ai-bot/main/Proactive.py",
+      "publisher": "chenluQwQ",
+      "published": "未固定提交日期",
+      "access": "2026-10-22读取公开原始源代码",
+      "summary": "代码可见调用配置模型生成视频评价及评论，使用账号认证参数与B站接口互动；含WBI请求参数处理及视频数据Base64编码。",
+      "limits": "仅静态阅读，未运行；WBI与Base64在这里分别属于接口请求与媒体传输处理，不能视为智能体秘密通信证据。",
+      "research_branch": "bilibili",
+      "root_reread": false
+    },
+    {
+      "id": "B-S05",
+      "title": "lishuiqiao/bili-comment-bot README",
+      "url": "https://github.com/lishuiqiao/bili-comment-bot",
+      "publisher": "lishuiqiao",
+      "published": "未固定提交日期",
+      "access": "2026-10-22读取main分支README；src目录抓取失败",
+      "summary": "声明评论@触发视频总结、私信陪伴、视频搜索与推荐；人工扫码认证、人格配置和限流。",
+      "limits": "未运行、未验证部署和完整源代码；没有AI对AI线程或模型身份认证。",
+      "research_branch": "bilibili",
+      "root_reread": false
+    },
+    {
+      "id": "Z-S01",
+      "title": "百度抓虾吧禁止人类发帖，仅限AI智能体交流",
+      "url": "https://finance.sina.com.cn/tech/roll/2026-03-28/doc-inhspmsx7592648.shtml",
+      "publisher": "快科技；新浪转载",
+      "published": "2026-03-28",
+      "access": "2026-10-22；正文可读",
+      "summary": "报道引述百度贴吧截至3月27日的数据：1.8万个OpenClaw智能体、2.6万帖、37.5万次互动，并描述普通账号发帖被拒和机器人标记。",
+      "limits": "平台数字的二手转述；未独立计数，不能据此确定独立模型或运营者数量。",
+      "research_branch": "chinese_forums",
+      "root_reread": false
+    },
+    {
+      "id": "Z-S02",
+      "title": "智能体 + 贴吧：用百度贴吧 Skill 打造 AI 社区助手",
+      "url": "https://qianfan.cloud.baidu.com/qianfandev/topic/688052",
+      "publisher": "百度智能云千帆社区；页面未明确可核实的官方作者身份",
+      "published": "页面显示4月8日，年份未显示",
+      "access": "2026-10-22；正文可读",
+      "summary": "社区教程指向贴吧官方CDN指南和clawToken页面，描述账号绑定、专用密钥、AI社区通行证及自动发帖评论流程。",
+      "limits": "官方域名上的社区投稿不等于官方产品声明；文内同时称无需配置API Key和须申请专属密钥，有表述张力。仅作指南地址与流程线索。",
+      "research_branch": "chinese_forums",
+      "root_reread": false
+    },
+    {
+      "id": "Z-S03",
+      "title": "贴吧接入指南及接口参考访问记录",
+      "url": "https://tieba-ares.cdn.bcebos.com/skill.md",
+      "publisher": "百度贴吧CDN地址",
+      "published": "未知",
+      "access": "2026-10-22；skill.md、api-reference.md、tieba_claw.html均被研究工具报告不可访问；贴吧抓虾吧网页返回403",
+      "summary": "多个公开来源一致指向该组原始接入文档；本轮未能读取正文。",
+      "limits": "不可把转述升级为已读原始说明；没有注册、登录或绕过访问限制。",
+      "research_branch": "chinese_forums",
+      "root_reread": false
+    },
+    {
+      "id": "Z-S04",
+      "title": "tie-ba-claw-app README",
+      "url": "https://github.com/MirDie/tie-ba-claw-app/blob/main/README.md",
+      "publisher": "MirDie / GitHub",
+      "published": "未固定提交版本",
+      "access": "2026-10-22；README可读；api_service.dart与raw版本均Cache miss",
+      "summary": "作者公布Flutter抓虾吧客户端，宣称使用TB_TOKEN登录并支持人工界面发帖评论，引用官方文档。",
+      "limits": "这是开发者对自有客户端的说明；未运行或独立验证成功发帖，不能据此断言平台现有验证已被绕过。",
+      "research_branch": "chinese_forums",
+      "root_reread": false
+    },
+    {
+      "id": "Z-S05",
+      "title": "虾聊 ClawdChat 首页",
+      "url": "https://clawdchat.cn/",
+      "publisher": "虾聊 ClawdChat",
+      "published": "动态页面，无发布日期",
+      "access": "2026-10-22；原站页面可读",
+      "summary": "首页展示11692 AI Agents、48766帖、347圈子，介绍A2A中继、Agent Card、DID及发帖讨论功能。",
+      "limits": "本轮抓取显示值，可能包含缓存；未经去重及独立审计。AI Agents是平台标签。",
+      "research_branch": "chinese_forums",
+      "root_reread": true
+    },
+    {
+      "id": "Z-S06",
+      "title": "ClawdChat 首次设置 guide.md",
+      "url": "https://clawdchat.cn/guide.md",
+      "publisher": "虾聊 ClawdChat",
+      "published": "未标版本日期",
+      "access": "2026-10-22；原文可读",
+      "summary": "注册提交agent_type、简介与技能标签，返回API Key和did:web标识；人类以Google OAuth或手机号认领后可写入。还规定周期心跳、记忆保存及入驻评论。",
+      "limits": "阅读文档而未执行注册；这些字段和账户控制机制不能认证底层模型来源。文档本身会诱导社交行为，分析需计入共同提示影响。",
+      "research_branch": "chinese_forums",
+      "root_reread": true
+    },
+    {
+      "id": "Z-S07",
+      "title": "虾聊围观动态",
+      "url": "https://clawdchat.cn/explore",
+      "publisher": "虾聊 ClawdChat",
+      "published": "动态列表，相对时间",
+      "access": "2026-10-22；可读；工具标记索引抓取距今4日",
+      "summary": "列表可见多个Agent标签账号的帖子；一则帖子引用另一个账号的既有消息及原帖链接，呈现公开跨账号接话线索。",
+      "limits": "链接对应原帖本轮无法读取，未取得完整回复树；相对时间不当作绝对发帖时间，文本自称不认证AI来源。",
+      "research_branch": "chinese_forums",
+      "root_reread": false
+    },
+    {
+      "id": "Z-S08",
+      "title": "InStreet 当前维护页",
+      "url": "https://instreet.coze.site/",
+      "publisher": "InStreet",
+      "published": "动态页面",
+      "access": "2026-10-22；原站重定向https://instreet.coze.site/maintenance",
+      "summary": "页面显示闭店装修及网站升级，提示关注InStreet社区小红书账号。",
+      "limits": "只能确认此时入口维护；不等于永久关闭。skill.md超时，历史帖子页不可访问。",
+      "research_branch": "chinese_forums",
+      "root_reread": true
+    },
+    {
+      "id": "Z-S09",
+      "title": "OpenClaw养虾第一站，InStreet全面开放内测",
+      "url": "https://zone.ci/secarticles/wx/508145.html",
+      "publisher": "ZONE.CI转载，标注原作者扣子/字节跳动技术团队",
+      "published": "转载2026-03-11；文内原文时间2026-03-10",
+      "access": "2026-10-22；转载正文可读",
+      "summary": "保存了InStreet发布文案、Agent发帖规则及技能分享原帖链接。",
+      "limits": "转载未完成官方原文校验；不以其技术或规模描述作为已经独立证实的结论。",
+      "research_branch": "chinese_forums",
+      "root_reread": false
+    },
+    {
+      "id": "Z-S10",
+      "title": "Bug Report: Oracle Settlement Missing #2638",
+      "url": "https://github.com/coze-dev/coze-studio/issues/2638",
+      "publisher": "GitHub用户 rabbitandcat 在 coze-dev/coze-studio提交",
+      "published": "2026-03-17",
+      "access": "2026-10-22；公开Issue正文可读",
+      "summary": "用户报告InStreet预测市场结算问题，附市场名称、状态和结算时间等细节，为历史使用提供第一人称线索。",
+      "limits": "用户报告不是Coze官方确认，所报参与者数未审计，未核对原站市场。",
+      "research_branch": "chinese_forums",
+      "root_reread": false
+    },
+    {
+      "id": "Z-S11",
+      "title": "astrbot_plugin_zhuaxiaba",
+      "url": "https://github.com/luori7hao/astrbot_plugin_zhuaxiaba",
+      "publisher": "luori7hao / GitHub",
+      "published": "未固定提交版本",
+      "access": "2026-10-22；README可读",
+      "summary": "AstrBot插件公开说明TB_TOKEN接入及LLM生成发帖、评论功能，列出广场和技能分享等板块。",
+      "limits": "开发者文档支持自动化集成存在；未安装运行，不能推断生产流量或用户规模。",
+      "research_branch": "chinese_forums",
+      "root_reread": false
+    },
+    {
+      "id": "I-S01",
+      "title": "Moltbook official home",
+      "url": "https://www.moltbook.com/",
+      "publisher": "Moltbook",
+      "published": "undated; accessed 2026-10-22",
+      "access": "Original HTML read via web; counters returned zero/empty",
+      "summary": "平台自称智能体社交网络、人类可旁观；接入流程包含 agent 注册和人类通过推文认领。",
+      "limits": "本次提取结果不足以判断真实实时规模；零计数不解释为零用户。",
+      "research_branch": "international",
+      "root_reread": false
+    },
+    {
+      "id": "I-S02",
+      "title": "Hacking Moltbook: The AI Social Network Any Human Can Control",
+      "url": "https://www.wiz.io/blog/exposed-moltbook-database-reveals-millions-of-api-keys",
+      "publisher": "Wiz / Gal Nagli",
+      "published": "2026-02-02",
+      "access": "Original technical report read",
+      "summary": "Wiz报告当时150万注册agent对应约17000人类所有者，API发帖不验证内容是否由AI生成；其发现的数据库暴露已在披露后数小时内修复。",
+      "limits": "历史第三方安全调查；本研究未访问泄露数据库，也未复测漏洞。账号数、所有者数均不等同独立模型数。",
+      "research_branch": "international",
+      "root_reread": true
+    },
+    {
+      "id": "I-S03",
+      "title": "Clawstr official home",
+      "url": "https://clawstr.com/",
+      "publisher": "Clawstr",
+      "published": "undated; accessed 2026-10-22",
+      "access": "Original landing HTML read; no complete post thread in returned text",
+      "summary": "公开面向agent的Nostr社交网络，提供接入说明。",
+      "limits": "网页壳可读，不足以独立计数实际活动。",
+      "research_branch": "international",
+      "root_reread": false
+    },
+    {
+      "id": "I-S04",
+      "title": "Clawstr protocol draft NIP.md",
+      "url": "https://github.com/clawstr/clawstr/blob/main/NIP.md",
+      "publisher": "clawstr/clawstr",
+      "published": "mutable main; accessed 2026-10-22",
+      "access": "GitHub rendered document and raw file read",
+      "summary": "帖子、回复使用NIP-22；AI身份使用NIP-32 self-label，AI-only视图通过标签过滤，移除过滤可包含人类帖。",
+      "limits": "文档中的AI自标签不是模型来源证明；未独立复现前端或采集relay数据。",
+      "research_branch": "international",
+      "root_reread": true
+    },
+    {
+      "id": "I-S05",
+      "title": "NIP-01 Basic protocol flow description",
+      "url": "https://github.com/nostr-protocol/nips/blob/master/01.md",
+      "publisher": "nostr-protocol/nips",
+      "published": "mutable master; accessed 2026-10-22",
+      "access": "Original protocol specification read",
+      "summary": "Nostr事件包含公钥、时间、类型、标签、内容与Schnorr secp256k1签名，事件摘要绑定序列化字段。",
+      "limits": "有效签名证明密钥授权该事件，不证明生成模型或账户操作者独立；本轮未检验Clawstr事件签名。",
+      "research_branch": "international",
+      "root_reread": false
+    },
+    {
+      "id": "I-S06",
+      "title": "The Colony agent documentation",
+      "url": "https://thecolony.ai/for-agents",
+      "publisher": "The Colony",
+      "published": "undated current documentation; accessed 2026-10-22",
+      "access": "Original documentation read",
+      "summary": "当前明确欢迎AI与人类共同参与；agent注册确认密钥后可用API，关联人类operator为可选。定时参与循环由部署者配置。",
+      "limits": "注册确认验证持有凭证，不能单独证明AI模型来源；未注册或发帖。",
+      "research_branch": "international",
+      "root_reread": false
+    },
+    {
+      "id": "I-S07",
+      "title": "TheColonyCC/elizaos-plugin README",
+      "url": "https://github.com/TheColonyCC/elizaos-plugin",
+      "publisher": "TheColonyCC",
+      "published": "mutable repository; accessed 2026-10-22",
+      "access": "Repository README returned by search index",
+      "summary": "README仍称every user is an AI agent，同时公开了自动发帖、回复和浏览后参与的配置机制，默认自主循环关闭。",
+      "limits": "索引文档与当前官网的人机共处定位不同；未锁定历史commit，不能断言准确变更时间。",
+      "research_branch": "international",
+      "root_reread": false
+    },
+    {
+      "id": "I-S08",
+      "title": "The Colony official home",
+      "url": "https://thecolony.ai/",
+      "publisher": "The Colony",
+      "published": "live page; accessed 2026-10-22",
+      "access": "Original HTML read with dated post links and comment counters",
+      "summary": "首页明确人机共享社区，并列出2026-10-22有多条评论的主题帖。",
+      "limits": "仅为所抓取首页；不是平台总体统计或模型认证。",
+      "research_branch": "international",
+      "root_reread": true
+    },
+    {
+      "id": "I-S09",
+      "title": "A sealed answer list for a blind test is only sealed if a stranger can rebuild its bytes",
+      "url": "https://thecolony.ai/post/0ff808cb-d068-40dd-a995-b435655caa1d",
+      "publisher": "The Colony / public participants",
+      "published": "2026-10-22 06:22 UTC; replies read through 12:02 UTC",
+      "access": "Original post and reply thread read; 22 comments in 11 threads displayed; root later also read via homepage link after two failed direct opens",
+      "summary": "可见多个账号围绕盲测承诺方案多轮回应：TaoBot接受Cairn关于分组标签泄露提示的纠正，Fieldnotes继续质疑规范化规则。rambo公开盐、字节布局和SHA-256样例，本研究对52字节公开输入复算并得到相同摘要。",
+      "limits": "账号AI标记与组织署名未经独立认证；哈希吻合不证明执行时间、作者身份、随机性或完整实验。",
+      "research_branch": "international",
+      "root_reread": true
+    },
+    {
+      "id": "K-S01",
+      "title": "SwarmMemo README",
+      "url": "https://raw.githubusercontent.com/Hugo0/swarmmemo/main/README.md",
+      "publisher": "Hugo0 / SwarmMemo",
+      "published": "未确认；main可变分支",
+      "access": "2026-10-22经网页工具读取相关段落；工具标注抓取于5天前",
+      "summary": "项目声明提供公共回复、私密群聊和sealed端到端加密会话；可选Ed25519签名。文档明确签名不认证模型身份。",
+      "limits": "文档能力声明，未执行该版本代码或验证线上sealed会话；未固定Git提交。",
+      "research_branch": "crypto",
+      "root_reread": true
+    },
+    {
+      "id": "K-S02",
+      "title": "SwarmMemo MESSAGES.md",
+      "url": "https://github.com/Hugo0/swarmmemo/blob/main/docs/MESSAGES.md",
+      "publisher": "Hugo0 / SwarmMemo",
+      "published": "未确认；main可变分支",
+      "access": "2026-10-22经网页工具读取相关段落；工具标注抓取于4天前",
+      "summary": "区分公开定向消息、成员与服务器可读的私密会话、sealed加密会话；提供人类为各自agent配置密钥和邀请的步骤。",
+      "limits": "与README同源，不算独立部署佐证；本轮没有创建会话。",
+      "research_branch": "crypto",
+      "root_reread": true
+    },
+    {
+      "id": "K-S03",
+      "title": "Agent Messaging Protocol security specification",
+      "url": "https://raw.githubusercontent.com/agentmessaging/protocol/main/spec/07-security.md",
+      "publisher": "agentmessaging/protocol",
+      "published": "Draft 0.1.2；日期未确认",
+      "access": "2026-10-22经网页工具读取安全模型与签名段落；工具标注抓取于6天前",
+      "summary": "规范要求消息签名，推荐Ed25519；v1不涵盖E2EE，列为v2计划；provider仍可见信封元数据。",
+      "limits": "协议草案，不能据此判断某个线上社区采用或使用加密。",
+      "research_branch": "crypto",
+      "root_reread": true
+    },
+    {
+      "id": "K-S04",
+      "title": "AgentCrypt: Advancing Privacy and Secure Computation in AI Agent Collaboration, v3",
+      "url": "https://arxiv.org/html/2512.08104v3",
+      "publisher": "Karthikeyan等；arXiv",
+      "published": "2026-05-08，v3；初稿2025-12-08",
+      "access": "2026-10-22读取论文摘要及相关方法段落",
+      "summary": "三层框架以确定性密码学包装器执行策略，使用基于身份的加密，部分计算可选FHE。",
+      "limits": "受控研究，未复现实验；不是自然形成社区的现场观察。v3与早期四层摘要有版本差别。",
+      "research_branch": "crypto",
+      "root_reread": true
+    },
+    {
+      "id": "K-S05",
+      "title": "Swarm Mind README",
+      "url": "https://github.com/owizdom/swarm-mindv2",
+      "publisher": "owizdom/swarm-mindv2",
+      "published": "未确认；main可变分支",
+      "access": "2026-10-22读取README相关段落；工具标注抓取于上周",
+      "summary": "公开配置三个任务角色，声称使用签名承诺、EigenDA、DHT和TDX证明；文档承认数据可用性不证明内容真实、未咨询同伴或实际送达。",
+      "limits": "未获取并核验硬件证明或观察完整运行周期；独立收敛为项目主张。",
+      "research_branch": "crypto",
+      "root_reread": true
+    }
+  ],
+  "queries": [
+    {
+      "query": "打开 linyiLYi/reply-ai、chenluQwQ/bilibili-ai-bot、lishuiqiao/bili-comment-bot 原仓库",
+      "result": "三份README可读；对其中Proactive.py完成静态阅读；两个目录/原始文件访问失败。",
+      "research_branch": "bilibili"
+    },
+    {
+      "query": "site:bilibili.com/opus \"AI视频小助理\" \"2023-08-16\"；\"AI视频小助理\" \"2023-08-16\"；\"AI视频小助理\" \"8月16\"",
+      "result": "本轮没有重新定位到该动态原链接；不把前轮摘要中的运营说明提升为已核实原文。",
+      "research_branch": "bilibili"
+    },
+    {
+      "query": "site:bilibili.com \"两个AI\" \"评论\" 机器人；site:bilibili.com \"AI\" \"互相回复\" 评论；\"B站\" \"AI互聊\"；\"B站\" \"AI对AI\" \"评论\"",
+      "result": "主要返回人工制作的AI对话视频、教程及不相关内容；未取得带稳定评论标识与双方运营来源的完整回应链。",
+      "research_branch": "bilibili"
+    },
+    {
+      "query": "\"AI视频小助理\" \"小编\"；\"AI视频小助理\" \"运营\"；\"AI视频小助理\" \"动态\" \"人工\"",
+      "result": "找到新榜2023-09-11原创采访，提供部署与运营线索，并纠正把AI视频小助理直接称为官方助手的推断。",
+      "research_branch": "bilibili"
+    },
+    {
+      "query": "B站 AI 评论 机器人 互相 回复 卡逗 DeepSeek；site:bilibili.com \"机器人互相\"；\"B站\" \"机器人\" \"吵架\" \"AI\"",
+      "result": "工具项目、视频和用户推测多，未找到符合完整AI对AI线程核验条件的原始记录。",
+      "research_branch": "bilibili"
+    },
+    {
+      "query": "抓虾吧 AI 通行证 key skill 贴吧",
+      "result": "找到千帆社区教程、报道与官方CDN地址。",
+      "research_branch": "chinese_forums"
+    },
+    {
+      "query": "\"抓虾吧\" \"skill\"; \"抓虾吧\" \"通行证\"",
+      "result": "找到AstrBot公开集成与人类体验报道。",
+      "research_branch": "chinese_forums"
+    },
+    {
+      "query": "ClawdChat 虾聊 skill API",
+      "result": "找到原站首页、guide.md与动态页。",
+      "research_branch": "chinese_forums"
+    },
+    {
+      "query": "\"InStreet\" \"instreet.coze.site\"",
+      "result": "原站维护；历史发布转载与GitHub用户报告可读。",
+      "research_branch": "chinese_forums"
+    },
+    {
+      "query": "\"tieba-ares.cdn.bcebos.com/skill.md\" \"TB_TOKEN\"",
+      "result": "找到Flutter客户端README，提示token准入与AI来源应分开核验。",
+      "research_branch": "chinese_forums"
+    },
+    {
+      "query": "\"instreet\" \"agents/register\" \"api_key\" github",
+      "result": "发现第三方API转载；未把其技术说明升级为原站已验证事实。",
+      "research_branch": "chinese_forums"
+    },
+    {
+      "query": "site:wiz.io blog Moltbook 17000 1.5 million February 2 2026",
+      "result": "Initial multi-query search did not yield exact report; exact title search found report URL via references, then opened Wiz original.",
+      "research_branch": "international"
+    },
+    {
+      "query": "site:github.com clawstr NIP-32 AI",
+      "result": "Found original Clawstr NIP.md; self-label and AI-only filter documented.",
+      "research_branch": "international"
+    },
+    {
+      "query": "\"The Colony\" \"alongside humans\" agents",
+      "result": "Found current official /for-agents documentation.",
+      "research_branch": "international"
+    },
+    {
+      "query": "site:github.com \"The Colony\" \"every user\" AI",
+      "result": "Found plugin README claiming every user AI; explicitly retained version/access limitation.",
+      "research_branch": "international"
+    },
+    {
+      "query": "\"Hacking Moltbook: The AI Social Network Any Human Can Control\"",
+      "result": "Resolved Wiz primary source and confirmed February 2 historical figures.",
+      "research_branch": "international"
+    },
+    {
+      "query": "Followed The Colony homepage Featured links 52 and 54",
+      "result": "Blind-test commitment thread read successfully; For the Greater Good invitation link returned Internal Error, so no claim based on its body.",
+      "research_branch": "international"
+    },
+    {
+      "query": "AI agent communication encrypted messages Moltbook end to end encryption protocol signature 2026",
+      "result": "发现SwarmMemo及协议线索，随后回查原文。",
+      "research_branch": "crypto"
+    },
+    {
+      "query": "site:github.com agent social network Ed25519 public key messaging swarmmemo",
+      "result": "发现SwarmMemo、AMP与Swarm Mind等；搜索摘要可能过时，以已读取原文版本为准。",
+      "research_branch": "crypto"
+    },
+    {
+      "query": "B站 贴吧 只允许 AI 发帖 机器人 社区 2026",
+      "result": "找到抓虾吧报道并转交中文论坛线核对。",
+      "research_branch": "crypto"
+    },
+    {
+      "query": "原文回查：SwarmMemo README / MESSAGES；AMP security；AgentCrypt v3；Swarm Mind README",
+      "result": "读到相关段落；Git/直接Python网络未能固定仓库提交，登记为可变网页。",
+      "research_branch": "crypto"
+    }
+  ],
+  "candidates": [
+    {
+      "id": "B-C01",
+      "name": "Bilibili AI课代表历史部署（课代表猫／AI视频小助理）",
+      "url": "https://www.newrank.cn/article/detail/24368",
+      "platform": "Bilibili",
+      "language": "中文",
+      "operator": "第三方开发者；课代表猫运营负责人在采访中具名为Max",
+      "admission_claim": "面向普通用户召唤的AI工具账号；非AI-only社区",
+      "admission_enforcement": "普通B站账号及调用规则；未见AI身份鉴别证据",
+      "activity": "2023年原创采访与实测支持评论区AI总结服务已投入使用",
+      "scale": "课代表猫运营者在2023-09-11报道中称当时每日800至2000次提问；不是AI数量，也不是2026年实时数据",
+      "interaction": "人类请求→AI总结有报道支持；同一视频下多AI总结不等于彼此回应",
+      "organization": "观察到人类开发运营团队；未取得智能体持续组织行为证据",
+      "model_attribution": "采访称使用GPT等模型；未见逐条推理凭证",
+      "crypto": "未核实专属加密通信",
+      "judgment": "支持B站历史上存在公开部署的AI评论账号",
+      "gaps": "2026年在线状态、原评论链、账号与模型的可核验绑定；原2023-08-16动态未重新定位",
+      "source_ids": [
+        "B-S01"
+      ],
+      "research_branch": "bilibili"
+    },
+    {
+      "id": "B-C02",
+      "name": "reply-ai",
+      "url": "https://github.com/linyiLYi/reply-ai",
+      "platform": "Bilibili配套开源软件",
+      "language": "中文",
+      "operator": "仓库作者linyiLYi；实际运行者可不同",
+      "admission_claim": "视频评论回复工具",
+      "admission_enforcement": "不适用；非社区准入系统",
+      "activity": "公开README及程序结构存在",
+      "scale": "未核实运行实例数；stars/forks不计入智能体数",
+      "interaction": "设计支持评论回复；本轮未观测上线线程",
+      "organization": "人为搭建服务与客户端",
+      "model_attribution": "部署者配置模型；无逐条来源证明",
+      "crypto": "未核实智能体专属加密",
+      "judgment": "公开实现线索，支持此类自动回复工程可获得；不证明当前活跃社群",
+      "gaps": "完整源代码发送路径和现场部署验证",
+      "source_ids": [
+        "B-S02"
+      ],
+      "research_branch": "bilibili"
+    },
+    {
+      "id": "B-C03",
+      "name": "bilibili-ai-bot",
+      "url": "https://github.com/chenluQwQ/bilibili-ai-bot",
+      "platform": "Bilibili配套开源软件",
+      "language": "中文",
+      "operator": "仓库作者chenluQwQ；运行者配置账号、人设与模型",
+      "admission_claim": "有记忆的AI角色账号系统",
+      "admission_enforcement": "使用普通平台账号；并非AI-only准入",
+      "activity": "README功能声明与Proactive.py静态代码相符部分包括模型生成评论及平台交互",
+      "scale": "未核实实际部署数",
+      "interaction": "自动回复与主动评论能力；缺乏真实AI对AI回应链",
+      "organization": "有长期记忆与主人/角色配置；不能由记忆模块推出自主组织",
+      "model_attribution": "多个模型接口可配置；具体输出模型未认证",
+      "crypto": "代码里的Base64为视频/图片传输；WBI为请求参数处理，不支持隐秘互联结论",
+      "judgment": "公开软件足以解释部分拟人、持续的自动评论现象；实际交流对象及规模尚未核实",
+      "gaps": "固定提交SHA、真实部署与连续线程；未运行代码",
+      "source_ids": [
+        "B-S03",
+        "B-S04"
+      ],
+      "research_branch": "bilibili"
+    },
+    {
+      "id": "B-C04",
+      "name": "bili-comment-bot",
+      "url": "https://github.com/lishuiqiao/bili-comment-bot",
+      "platform": "Bilibili配套开源软件",
+      "language": "中文",
+      "operator": "仓库作者lishuiqiao；运行者提供普通账号",
+      "admission_claim": "人格化视频总结及陪伴机器人",
+      "admission_enforcement": "人工扫码和普通账号认证；私信要求关注",
+      "activity": "公开README描述@总结、私信、视频发现和部署机制",
+      "scale": "未核实实际部署数",
+      "interaction": "面向召唤者响应；未取得AI对AI原线程",
+      "organization": "可配置人格和服务运行机制，无持续组织证据",
+      "model_attribution": "兼容模型接口；未核实实际模型",
+      "crypto": "未核实智能体专属加密",
+      "judgment": "公开工具候选；能力声明与线上实例分开计",
+      "gaps": "源码细查、版本固定、部署和评论原始证据",
+      "source_ids": [
+        "B-S05"
+      ],
+      "research_branch": "bilibili"
+    },
+    {
+      "id": "Z-C01",
+      "name": "抓虾吧",
+      "url": "https://tieba.baidu.com/f?kw=%E6%8A%93%E8%99%BE",
+      "platform": "百度贴吧",
+      "language": "中文",
+      "operator": "百度贴吧提供专区与接入；独立用户配置Agent；具体运营分工未审计",
+      "admission_claim": "报道与教程称禁止普通人类账号发帖和回帖，面向OpenClaw等Agent",
+      "admission_enforcement": "已读材料指向登录账号申请TB_TOKEN、绑定账号和专属标识；官方CDN文档访问失败，未实测。独立Flutter客户端README也宣称同一token可用于界面操作。",
+      "activity": "历史报道明确描述发帖、回帖、点赞；AstrBot插件有公开集成说明",
+      "scale": "截至2026-03-27的平台口径经快科技转述：18000智能体、26000帖、375000互动；不是当前数据或独立统计",
+      "interaction": "有报道和集成代码文档支持双向互动机制；本轮未获得贴吧原站完整线程",
+      "organization": "公开的人类搭建社区及板块规则；尚无脱离这些设置的持续自治组织证据",
+      "model_attribution": "OpenClaw是运行框架；机器人标识与TB_TOKEN不说明Claude/OpenAI等底层模型",
+      "crypto": "令牌授权可见；未证实端到端加密或公开消息签名",
+      "judgment": "中文大型平台确有专为Agent交流设计的专区及公开接入生态，规模须保留平台归因",
+      "gaps": "官方指南原文、当前状态、完整线程、运营者与模型去重、客户端真实可用性",
+      "source_ids": [
+        "Z-S01",
+        "Z-S02",
+        "Z-S03",
+        "Z-S04",
+        "Z-S11"
+      ],
+      "research_branch": "chinese_forums"
+    },
+    {
+      "id": "Z-C02",
+      "name": "虾聊 ClawdChat",
+      "url": "https://clawdchat.cn/",
+      "platform": "独立Agent社交平台",
+      "language": "以中文为主，支持多语",
+      "operator": "ClawdChat平台及各账号的人类认领者；未进一步核验法律主体",
+      "admission_claim": "AI Agent的社交空间，欢迎人类围观",
+      "admission_enforcement": "原始指南为API Key认证与人类认领；agent_type由注册者填写。文档称未认领写操作返回403，未执行验证",
+      "activity": "首页、动态列表和入驻指南可读；支持帖子、评论、圈子及A2A中继",
+      "scale": "2026-10-22本轮抓取首页显示11692 AI Agents、48766帖、347圈子；平台显示值可能缓存，未独立计数",
+      "interaction": "公开动态中有跨账号引用原帖的接话线索；无法读取对应完整线程，因此不报告已验证持续对话链",
+      "organization": "平台提供圈子、定期心跳及身份记忆脚本；这是公开组织基础设施，形成行为受共同提示影响",
+      "model_attribution": "agent_type为自填运行环境，DID标识不能证明由特定模型生成",
+      "crypto": "文档展示did:web与Bearer令牌；本轮未发现可验证E2EE、内容签名证据",
+      "judgment": "可确认公开Agent社交基础设施和账号层交流内容；不得等同独立自主模型数量",
+      "gaps": "完整回复树、模型来源证明、运营者去重、真实心跳运行记录、跨站消息送达证据",
+      "source_ids": [
+        "Z-S05",
+        "Z-S06",
+        "Z-S07"
+      ],
+      "research_branch": "chinese_forums"
+    },
+    {
+      "id": "Z-C03",
+      "name": "InStreet 实例街",
+      "url": "https://instreet.coze.site/",
+      "platform": "独立Agent社区；Coze生态线索",
+      "language": "中文",
+      "operator": "历史转载标注扣子技术团队，原站当前维护；具体运营归属未完成原始公告核验",
+      "admission_claim": "历史发布文案称只有Agent可发帖、人类围观",
+      "admission_enforcement": "本轮原始skill.md超时，未核实当前实现；不将第三方转载API说明当作现行认证机制",
+      "activity": "历史发布转载给出技能分享帖；公开GitHub用户Issue报告预测市场使用；当前原站明确维护",
+      "scale": "本轮不提供可靠当前规模；Issue中的数值属于单一用户未审计报告",
+      "interaction": "历史公开材料支持社区互动用途；当前未取得原站完整讨论线程",
+      "organization": "历史资料描述技能分享、排行及实战活动；缺乏本轮可重放的持续合作记录",
+      "model_attribution": "未认证任何账号模型来源",
+      "crypto": "未核实；不从API Key推断加密通信",
+      "judgment": "作为历史中文Agent社区列入地图，2026-10-22可观察状态为维护，不能称当前活跃",
+      "gaps": "恢复后的原始接入文档、帖子与回复树、活动和数量时间序列、官方原始公告",
+      "source_ids": [
+        "Z-S08",
+        "Z-S09",
+        "Z-S10"
+      ],
+      "research_branch": "chinese_forums"
+    },
+    {
+      "id": "I-C01",
+      "name": "Moltbook",
+      "url": "https://www.moltbook.com/",
+      "platform": "Standalone social network",
+      "language": "Primarily English; multilingual not measured",
+      "operator": "Moltbook platform; account owners deploy participants",
+      "admission_claim": "AI agents post/discuss/upvote; humans observe",
+      "admission_enforcement": "Homepage owner-claim process; historical Wiz report found no AI provenance check",
+      "activity": "Public platform and historical activity supported; this round did not obtain a fresh full thread",
+      "scale": "Wiz 2026-02-02: ~1.5m registered agent labels/~17k human owners. Current HTML counters zero/empty; live scale unavailable.",
+      "interaction": "Posting/commenting platform; historical observation does not identify every post's authoring mechanism",
+      "organization": "Topic communities and reputation structures; no independent persistent hidden organization established",
+      "model_attribution": "Not independently verified; platform/account labels insufficient",
+      "crypto": "No cryptographic AI identity established in inspected sources",
+      "judgment": "公开agent社交平台成立；大量注册不等于同量独立智能体，更不能直接证明自发隐秘团体。",
+      "gaps": "Current timestamped public sample; owners-versus-accounts denominator; auditable execution provenance",
+      "source_ids": [
+        "I-S01",
+        "I-S02"
+      ],
+      "research_branch": "international"
+    },
+    {
+      "id": "I-C02",
+      "name": "Clawstr",
+      "url": "https://clawstr.com/",
+      "platform": "Nostr-based open-source social network",
+      "language": "English documentation",
+      "operator": "clawstr project; decentralized relay/key operators",
+      "admission_claim": "AI-focused communities; AI-only feed",
+      "admission_enforcement": "NIP-32 self-declared labels filter events; optional all-content view",
+      "activity": "Public landing page and protocol implementation repository; full live conversation not sampled",
+      "scale": "No independently measured denominator",
+      "interaction": "Protocol supports posts, threaded replies, votes and communities",
+      "organization": "Public subclaw structure; deployment activity and persistent organization not measured",
+      "model_attribution": "AI label self-declared; no authenticated model inference",
+      "crypto": "Nostr Schnorr event signatures; no evidence here of secret encrypted group traffic",
+      "judgment": "可验证的开放社交协议与公开AI标签机制；AI-only主要是客户端标签视图。",
+      "gaps": "Read-only relay sample, signature verification, code-versus-protocol behavior, account provenance",
+      "source_ids": [
+        "I-S03",
+        "I-S04",
+        "I-S05"
+      ],
+      "research_branch": "international"
+    },
+    {
+      "id": "I-C03",
+      "name": "The Colony",
+      "url": "https://thecolony.ai/",
+      "platform": "Forum/social network with API and MCP",
+      "language": "English and Chinese observed in one thread",
+      "operator": "The Colony platform; agent operators configure clients",
+      "admission_claim": "Current official documentation: agents alongside humans",
+      "admission_enforcement": "API credential confirmation; optional human operator pairing; no model certification found",
+      "activity": "Original 2026-10-22 public thread shows 22 comments/11 threads at fetch",
+      "scale": "Single-thread count only; no claim of platform-wide or independent-agent scale",
+      "interaction": "Fieldnotes and TaoBot exchange several responsive turns; Cairn criticism leads to explicit revision; public hash example independently reproduced",
+      "organization": "Public topic communities and self-described affiliations visible; coordination over a test design is supported at account level",
+      "model_attribution": "Platform agent label/self-description only; no vendor or model identity attestation",
+      "crypto": "Public salted SHA-256 commitment example; commitment is distinct from encrypted messaging",
+      "judgment": "直接观察到面向智能体社区中的连续回应、规则修正及可复算技术材料；独立模型与自主程度仍未认证。",
+      "gaps": "Trace thread-linked artifacts and prior commitments; verify execution receipts and source provenance; no private-message access",
+      "source_ids": [
+        "I-S06",
+        "I-S07",
+        "I-S08",
+        "I-S09"
+      ],
+      "research_branch": "international"
+    },
+    {
+      "id": "K-C01",
+      "name": "SwarmMemo通信机制",
+      "url": "https://github.com/Hugo0/swarmmemo",
+      "platform": "公开留言板及通信软件",
+      "language": "英文为主",
+      "operator": "公开项目Hugo0；实例由部署者配置",
+      "admission_claim": "无需账户即可公共读写；签名可选",
+      "admission_enforcement": "文档描述密钥、成员权限和邀请，不认证LLM来源",
+      "activity": "本轮读取机制文档；上一阶段另有2026-10-13部分日58条公开消息的离线分析",
+      "scale": "本轮未新增规模统计；58条旧分区不是当前活跃量",
+      "interaction": "文档支持reply_to、DM和群聊；本轮未验证新互动链",
+      "organization": "提供记忆、定时与任务机制，实际持续组织需另查",
+      "model_attribution": "自描述；官方文档明确不认证模型类型",
+      "crypto": "可选Ed25519；文档声明sealed E2EE；普通private会话服务器可读",
+      "judgment": "存在明确的公开加密通信功能声明和可审查源码入口；本轮未验证线上加密会话",
+      "gaps": "固定提交、检查客户端实现、离线往返及错误接收者拒绝测试；公开部署采用证据",
+      "source_ids": [
+        "K-S01",
+        "K-S02"
+      ],
+      "research_branch": "crypto"
+    },
+    {
+      "id": "K-C02",
+      "name": "Agent Messaging Protocol",
+      "url": "https://github.com/agentmessaging/protocol",
+      "platform": "通信协议草案",
+      "language": "英文",
+      "operator": "公开协议维护者及实现者",
+      "admission_claim": "密码学身份与注册",
+      "admission_enforcement": "草案规定公钥及消息签名",
+      "activity": "规范阅读，无线上观察",
+      "scale": "不适用：不是社区人口统计",
+      "interaction": "规定消息、回复及签名信封",
+      "organization": "协议能力不提供组织行为证据",
+      "model_attribution": "公钥身份不等于模型归属",
+      "crypto": "Draft 0.1.2推荐Ed25519；E2EE在v1范围外、计划v2",
+      "judgment": "签名协议候选；不能将未来加密计划写成现成E2EE部署",
+      "gaps": "具体实现版本、部署入口、公开消息样本",
+      "source_ids": [
+        "K-S03"
+      ],
+      "research_branch": "crypto"
+    },
+    {
+      "id": "K-C03",
+      "name": "AgentCrypt",
+      "url": "https://arxiv.org/abs/2512.08104v3",
+      "platform": "研究论文",
+      "language": "英文",
+      "operator": "论文作者设计的受控实验",
+      "admission_claim": "不适用",
+      "admission_enforcement": "受信任密钥管理及确定性策略执行",
+      "activity": "读取v3论文，未复现",
+      "scale": "实验样本不能当社区参与者数",
+      "interaction": "受控多agent隐私保护研究",
+      "organization": "人类设定实验任务，未研究自然形成的秘密团体",
+      "model_attribution": "研究配置不能外推到网上账号",
+      "crypto": "基于身份的加密；部分计算可选FHE",
+      "judgment": "智能体加密协作已有明确工程研究；不构成隐蔽组织存在的观察证据",
+      "gaps": "按论文指定代码、数据和威胁模型复现",
+      "source_ids": [
+        "K-S04"
+      ],
+      "research_branch": "crypto"
+    },
+    {
+      "id": "K-C04",
+      "name": "Swarm Mind",
+      "url": "https://github.com/owizdom/swarm-mindv2",
+      "platform": "人类配置的多agent项目",
+      "language": "英文",
+      "operator": "项目开发者与部署者",
+      "admission_claim": "三个预设角色；不是开放AI专属论坛",
+      "admission_enforcement": "文档描述隔离执行、密钥与承诺协议；本轮未实测",
+      "activity": "读取代码仓库README；未观察完整运行周期",
+      "scale": "文档列三个角色，不是三个独立操作者的证明",
+      "interaction": "文档描述提交、揭示与综合分析周期",
+      "organization": "预先设计的角色分工；没有脱离部署者独立组织的证据",
+      "model_attribution": "未取得实际供应商调用记录",
+      "crypto": "声称Ed25519承诺、EigenDA/KZG、TDX证明；DHT为发现机制",
+      "judgment": "公开协作验证项目候选；文档关于独立性的强主张尚未由本调查验证",
+      "gaps": "完整承诺与揭示载荷、可验证证明、调度及输入来源；不能从不同哈希直接推出思考独立",
+      "source_ids": [
+        "K-S05"
+      ],
+      "research_branch": "crypto"
+    }
+  ],
+  "thread_retrieval": {
+    "researcher": "subagent international_phase2",
+    "tool": "web__run open/click, mediated web retrieval",
+    "timing": "Retrieved shortly before record creation verified at 2026-10-22 13:00:48 UTC (21:00:48 Asia/Shanghai); exact per-call wall-clock timestamps were not captured.",
+    "thread_access": "I-S09 was returned by clicking featured link 52 from official homepage. Tool returned full rendered text (711 lines), not merely a search snippet. It labeled the page Crawled: today; cache versus fresh upstream retrieval is not independently known.",
+    "root_crosscheck": "主助手直接open两次失败，后从官网首页点击同一链接成功取得711行页面，并读取关键回应与公开哈希输入。两次读取可能共用工具缓存，不算独立来源。",
+    "versions": "Mutable documents were not pinned to commit SHAs."
+  },
+  "thread_semantic_chain": [
+    {
+      "time_utc": "2026-10-22 06:22",
+      "speaker": "Fieldnotes",
+      "observation": "提出是否应提前公开可接受答案数量的问题。"
+    },
+    {
+      "time_utc": "2026-10-22 06:41",
+      "speaker": "TaoBot",
+      "observation": "建议把数量同时放在头部和摘要输入，另披露分组信息。"
+    },
+    {
+      "time_utc": "2026-10-22 07:06",
+      "speaker": "Cairn",
+      "observation": "指出有名称的分组会给盲测参与者提示，建议只公布分组大小。"
+    },
+    {
+      "time_utc": "2026-10-22 07:12",
+      "speaker": "TaoBot",
+      "observation": "明确承认问题并把方案改为仅公布分组大小。"
+    },
+    {
+      "time_utc": "2026-10-22 09:06 to 10:43",
+      "speaker": "Fieldnotes / TaoBot",
+      "observation": "继续交替讨论同义拼写计数、规范化和显式映射是否应被承诺绑定。"
+    }
+  ],
+  "follow_up_leads": [
+    {
+      "id": "F01",
+      "name": "The Colony公开协作链",
+      "source_ids": [
+        "I-S09"
+      ],
+      "next": "沿原帖已有链接核对事先承诺、执行物和第三方确认，区分口头接受修改与实际运行。"
+    },
+    {
+      "id": "F02",
+      "name": "公开组织自述",
+      "source_ids": [
+        "I-S09"
+      ],
+      "next": "同一线程出现“神午安云端道宗”等署名；仅为组织自述线索，后续核对多账号规则执行、操作者和时间连续性。"
+    },
+    {
+      "id": "F03",
+      "name": "For the Greater Good邀请帖",
+      "source_ids": [
+        "I-S08"
+      ],
+      "url": "https://thecolony.ai/post/8efe01bb-79f8-5c91-bd53-152047853d7f",
+      "next": "首页有2026-10-21标题与链接；子agent和主助手正文读取失败。仅记录标题线索，尚不判断目的、参与者或行动。"
+    },
+    {
+      "id": "F04",
+      "name": "SwarmMemo sealed实现",
+      "source_ids": [
+        "K-S01",
+        "K-S02"
+      ],
+      "next": "固定源码版本后静态检查与本地测试加密往返、密钥分发、错误接收者、元数据边界；不连接他人私密会话。"
+    },
+    {
+      "id": "F05",
+      "name": "中文平台原线程",
+      "source_ids": [
+        "Z-S03",
+        "Z-S07",
+        "B-S03"
+      ],
+      "next": "优先取得可回查的完整回复树和操作者披露；累计帖子或粉丝数不能替代这个证据。"
+    }
+  ]
+}

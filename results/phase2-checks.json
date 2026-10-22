@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "checks": {
+    "source_ids_unique": true,
+    "candidate_ids_unique": true,
+    "declared_counts": true,
+    "source_access_and_limits": true,
+    "candidate_source_references": true,
+    "candidate_scope_fields": true,
+    "follow_up_source_references": true,
+    "sample_source_reference": true,
+    "sample_byte_count": true,
+    "public_sample_digest_matches": true,
+    "candidate_csv_matches_json": true
+  },
+  "counts": {
+    "sources": 30,
+    "candidates": 14,
+    "query_records": 21
+  },
+  "sample": {
+    "payload_bytes": 52,
+    "actual_sha256": "3046a0539e598a5b96eac4f584a2cb9a6dc24ac54a9e40f5c3e3c10296f22109",
+    "matches": true
+  },
+  "scope": "Schema/reference consistency and public sample digest only; not source authenticity, prior timestamp, AI identity, independence, or secret-channel evidence."
+}

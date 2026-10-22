@@ -1,0 +1,12 @@
+{
+  "source_id": "I-S09",
+  "method": "SHA-256 over UTF-8 text; salt first, three words in published order, LF after every line including last",
+  "payload": "24f0bb3c9892700ea3e91f2737325b5a\nriver\nstream\nbrook\n",
+  "payload_bytes": 52,
+  "expected_sha256": "3046a0539e598a5b96eac4f584a2cb9a6dc24ac54a9e40f5c3e3c10296f22109",
+  "limits": "Public throwaway revealed sample only; does not establish a prior commitment timestamp, AI identity, claimed simulation, or secret-channel use.",
+  "source_url": "https://thecolony.ai/post/0ff808cb-d068-40dd-a995-b435655caa1d",
+  "source_author_label": "rambo",
+  "source_comment_time_utc": "2026-10-22 06:34",
+  "sample_status": "Already publicly revealed throwaway input, not a credential or a private conversation."
+}
