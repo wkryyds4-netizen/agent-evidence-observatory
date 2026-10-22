@@ -1,0 +1,182 @@
+{
+  "commit": "135974f468ec5bb39aa0f275b43e54a763306d77",
+  "sha256": {
+    "swarmmemo.py": "7bb66027cfd170c3f508ed4ada782022a1860461f509848005909ee9767c093f",
+    "swarmmemo_seal.py": "fe9c256f6807e7339733ea273ff2a1bf15b55bf3d33b0bac97d1fb6acfebea0c"
+  },
+  "python": "3.12.14",
+  "cryptography": "50.0.2",
+  "check_count": 16,
+  "passed": 16,
+  "checks": [
+    {
+      "name": "creation_valid",
+      "passed": true,
+      "observed": "Synthetic signed creation accepted."
+    },
+    {
+      "name": "creation_bad_signature",
+      "passed": true,
+      "observed": "Creation rejected before determining sealed status."
+    },
+    {
+      "name": "creation_wrong_room",
+      "passed": true,
+      "observed": "Creation rejected before determining sealed status."
+    },
+    {
+      "name": "creation_wrong_service",
+      "passed": true,
+      "observed": "Creation rejected before determining sealed status."
+    },
+    {
+      "name": "creation_public_key_mismatch",
+      "passed": true,
+      "observed": "Creation rejected before determining sealed status."
+    },
+    {
+      "name": "rotation_learned",
+      "passed": true,
+      "observed": "Original learn method accepted synthetic member-signed wrap."
+    },
+    {
+      "name": "message_valid",
+      "passed": true,
+      "observed": "Original open method returns synthetic plaintext."
+    },
+    {
+      "name": "message_bad_signature_accepted",
+      "passed": true,
+      "observed": "Message signature is not checked by SealedRoom.open/body."
+    },
+    {
+      "name": "message_missing_signature_accepted",
+      "passed": true,
+      "observed": "Removing all outer signature material does not stop this helper."
+    },
+    {
+      "name": "message_public_key_substitution_accepted",
+      "passed": true,
+      "observed": "Displayed author fingerprint is not bound to message public_key by this helper."
+    },
+    {
+      "name": "message_author_relabel_rejected",
+      "passed": true,
+      "observed": "Existing envelope cannot simply change its AAD author."
+    },
+    {
+      "name": "fetch_bad_signature_reaches_opened",
+      "passed": true,
+      "observed": "Exact fetch path accepts synthetic get response with invalid outer message signature; transport/get gates mocked."
+    },
+    {
+      "name": "fetch_duplicate_ids_retained",
+      "passed": true,
+      "observed": "Two identical IDs remain in messages; opened/pages mappings have one key."
+    },
+    {
+      "name": "show_duplicates_twice",
+      "passed": true,
+      "observed": "Original show loop prints identical supplied ID twice under sealed/non-remote screening; no tool action tested."
+    },
+    {
+      "name": "show_cursor_saved",
+      "passed": true,
+      "observed": "Acknowledged show updates cursor via mocked in-memory persistence."
+    },
+    {
+      "name": "show_repeated_batch_again",
+      "passed": true,
+      "observed": "Supplying same batch again shows it again; peek does not save cursor."
+    }
+  ],
+  "selected_source_ranges": [
+    {
+      "name": "strict_json",
+      "start": 509,
+      "end": 517
+    },
+    {
+      "name": "b64",
+      "start": 2075,
+      "end": 2076
+    },
+    {
+      "name": "unb64",
+      "start": 2114,
+      "end": 2123
+    },
+    {
+      "name": "crypto",
+      "start": 2277,
+      "end": 2289
+    },
+    {
+      "name": "ChatStop",
+      "start": 3575,
+      "end": 3581
+    },
+    {
+      "name": "inbound_threshold",
+      "start": 3722,
+      "end": 3726
+    },
+    {
+      "name": "inbound_view",
+      "start": 3745,
+      "end": 3780
+    },
+    {
+      "name": "printable",
+      "start": 3870,
+      "end": 3872
+    },
+    {
+      "name": "created_sealed",
+      "start": 3882,
+      "end": 3897
+    },
+    {
+      "name": "SealedRoom",
+      "start": 3930,
+      "end": 3971
+    },
+    {
+      "name": "Chat.say",
+      "start": 3994,
+      "end": 3995
+    },
+    {
+      "name": "Chat.fetch",
+      "start": 4040,
+      "end": 4078
+    },
+    {
+      "name": "Chat.show",
+      "start": 4080,
+      "end": 4130
+    },
+    {
+      "name": "Chat.header",
+      "start": 4132,
+      "end": 4141
+    }
+  ],
+  "guarded_attempts": [],
+  "method": "Hash-pinned AST extraction of reviewed definitions/methods, not complete client import or end-to-end deployment test.",
+  "mocks": [
+    "Chat.get: synthetic response, bypassing transport and get/pin gates (creation signature checked separately).",
+    "load_seal_keys: newly generated synthetic key.",
+    "member_lines: omitted member state notices and agent.get/verify_seal_key checks; not per-message author-signature verification.",
+    "announce and weakened: omitted settings notices.",
+    "save_chat: in-memory capture, no persistence.",
+    "Chat constructor not run; synthetic attributes supplied."
+  ],
+  "limits": [
+    "No server ingress checks or deployed service was tested.",
+    "Replay findings concern supplied batches, display and local cursor only; not server delivery or tool execution.",
+    "Absence of per-message verification in this read path does not mean server accepts forged posts.",
+    "Keys and signatures do not authenticate model provenance, independent operators or autonomous social groups."
+  ],
+  "check_semantics": "passed counts reproduced expected observations, including acceptance of bad/missing outer signatures; it does not mean product security checks passed."
+}

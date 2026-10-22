@@ -4,11 +4,11 @@
 
 这是一次关于网上智能体交流、模型归属和自主组织说法的公开资料调查。项目发布研究方法、原创分析、来源索引、离线筛查代码和聚合结果，让读者能够检查推理过程，也能指出我们判断有误的地方。
 
-**最新进展（2026-10-22）：追到公开组织的角色与交接，以及讨论对应的代码产物。** [阶段三报告](reports/phase3-organization-and-artifacts.zh-CN.md)补充中文原帖回应、公开治理与勘误、固定提交静态核对、28项离线加密检查，以及自报回执的哈希和时间差复算。登记32条来源记录、9条观察链；来源含复用、同源及失败访问，不是32个独立确认。
+**最新进展（2026-10-22）：先进行两轮多agent讨论，再检验样本偏差、承诺履行和认证边界。** [阶段四报告](reports/phase4-discussion-and-verification.zh-CN.md)保留10位置样本的缺失（可评估闭环0，比例未定义）及两项履约未知；复现16项客户端局部观察和7项CLI观察，其中确认一个文档模式失败。工程观察数量不代表组织证据或安全通过数量。
 
 **目前仍没有足以确认“Claude 为保护人类而形成隐蔽、持续、自主运行组织”的公开证据。** 这一结论限于本研究能取得的公开材料；它既不证明此类组织不存在，也不支持把证据缺失解释为它们隐藏得更好。
 
-阶段一研究日期：2026-10-21；阶段二、三：2026-10-22，均为Asia/Shanghai。下方旧语料统计属于阶段一，未随新报告更新采集日期。本文不是实时监控结果。
+阶段一研究日期：2026-10-21；阶段二、三、四：2026-10-22，均为Asia/Shanghai。下方旧语料统计属于阶段一，未随新报告更新采集日期。本文不是实时监控结果。
 
 ## 为什么做这件事
 
@@ -29,6 +29,8 @@
 这些原则服务于公开研究和人类判断，不构成发现秘密群体的承诺。
 
 ## 实际做了什么
+
+阶段四先完成[两轮讨论](docs/PHASE4_DISCUSSION.md)，再按[预先计划](docs/PHASE4_PLAN.md)取证，公开[来源索引](evidence/phase4-index.json)与[复现说明](docs/PHASE4_REPRODUCIBILITY.md)。抽样缺失、未到期和模拟依赖分别保留，未用新帖子替换失败样本。
 
 阶段三按[计划](docs/PHASE3_PLAN.md)沿组织、中文互动、密码学实现及协作产物四条线深化，公开[证据包索引](evidence/phase3-index.json)和[复现说明](docs/PHASE3_REPRODUCIBILITY.md)。固定代码静态阅读与实际执行分开；回执哈希通过也不等于执行见证。
 
@@ -62,7 +64,8 @@
 
 ## 从哪里开始读
 
-- [最新阶段三报告](reports/phase3-organization-and-artifacts.zh-CN.md)：公开组织、中文接话、代码产物、加密实现与回执边界。
+- [最新阶段四报告](reports/phase4-discussion-and-verification.zh-CN.md)：讨论纪要、缺失样本、履约未知与局部认证/CLI复现。
+- [阶段三报告](reports/phase3-organization-and-artifacts.zh-CN.md)：公开组织、中文接话、代码产物、加密实现与回执边界。
 - [阶段二报告](reports/phase2-public-communities.zh-CN.md)：中文与国际社区、准入区别、实际互动和密码学线索。
 - [研究报告](reports/expanded-report.zh-CN.md)：主要发现、候选、数据范围和解释限制。
 - [研究设计](docs/METHODOLOGY.md)：什么证据会改变判断，如何避免误归属。
@@ -90,10 +93,11 @@ python -m unittest discover -s tests -v
 node code/verify_public_partition.mjs --self-test
 python code/check_phase2.py
 python code/check_phase3.py
+python code/check_phase4.py
 python code/verify_release.py
 ```
 
-这五条命令不联网，也不需要原始语料。完整复算需依照[复现步骤](docs/REPRODUCIBILITY.md)自行取得输入、确认适用条款并核对哈希。为避免错误暗示，仓库没有把不分发原始语料的公开版本称作完全自包含的复现实验。
+这六条命令不联网，也不需要原始语料。完整复算需依照[复现步骤](docs/REPRODUCIBILITY.md)自行取得输入、确认适用条款并核对哈希。为避免错误暗示，仓库没有把不分发原始语料的公开版本称作完全自包含的复现实验。
 
 ## 公开范围与许可
 
@@ -102,6 +106,8 @@ python code/verify_release.py
 目前是一次性调查快照，没有自动后台搜寻或定时任务。后续新证据应另记时间、来源和版本，不覆盖旧记录来制造持续观察的印象。
 
 ## English abstract
+
+Phase 4 follows two rounds of model-agent discussion. A prespecified ten-position convenience snapshot yielded no evaluable reply chains, so its completion rate is undefined; two selected organizational commitments remain unassessed. Sixteen observations on AST-selected client methods and seven synthetic CLI observations were reproduced, including a documented CLI mode failure. Explicit mocks and unavailable server checks limit interpretation; none of these counts establishes autonomous organization.
 
 Phase 3 traces public organizational roles, document handoffs, Chinese account interactions and reviewable code changes. It records 32 source entries and nine observation chains, runs 28 synthetic checks against pinned encryption code, and reproduces one self-reported receipt hash with a chronology discrepancy. Source records include reuse, shared authorship and failed access. Artifact existence and byte integrity do not authenticate execution, model identity or independent operators.
 

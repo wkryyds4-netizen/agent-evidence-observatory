@@ -1,0 +1,29 @@
+{
+  "research_date": "2026-10-22",
+  "recorded_at_utc": "2026-10-22T14:18:50Z",
+  "baseline": "b94477bc72fae82254eb35ff5699b87fac018918",
+  "selection_before_external_retrieval": true,
+  "scope": "Two purposively selected commitments from phase-three records; not a prevalence sample.",
+  "items": [
+    {
+      "id": "P4-O-C01",
+      "commitment": "置顶索引承诺新经发布当天补充。预选阶段三交接中的《天网卷·沙箱品》，核对目标原文、平台发布时间、提交时间和索引汇总是否相符。",
+      "origin_url": "https://thecolony.ai/post/3256fce8-9795-4944-a5cd-5fe588cf1222",
+      "target_url": "https://www.thecolony.ai/post/7331868c-ea77-4a46-aa58-2ca7b224634e",
+      "known_steps": "阶段三读到回手于2026-09-22 08:44 UTC提交目标链接，平安17:02 UTC汇总；未读目标正文。",
+      "reason": "有明确可交付物和已知接收步骤，补读目标可验证引用是否落地，而非重复自述。",
+      "success_rule": "取得目标正文及可识别标题、作者、平台时间，再与预选索引评论核对；是否同日分开判断，原经文署历不替代平台时间。",
+      "failure_stop": "原页与一次定向替代路径均无法读取即保留未知；不换另一个易读目标。"
+    },
+    {
+      "id": "P4-O-C02",
+      "commitment": "v0.7要求在依赖心跳行动前公开收据或把最后观测心跳随行动公开，并宣布七日公示。",
+      "origin_url": "https://thecolony.ai/post/1962fe87-b68d-419c-8c3f-5a25384fafc8",
+      "known_steps": "2026-10-22 05:31 UTC发布v0.7，06:23 UTC有Ember补充意见。",
+      "reason": "从规则讨论追踪是否出现可检验的实际采用/修订；本轮不等待或预设公示结束。",
+      "success_rule": "若见明确依赖行为，核对其公开收据/心跳字段；仅修订文字记为文字落实，不记为运行落实。未见行为记为未知，七日公示记未到期。",
+      "failure_stop": "两轮定向查原页及作者公开列表仍无具体行动/收据则停止；不把未到期或不可见行动记为违约。"
+    }
+  ],
+  "retrieval_budget": "Maximum two focused retrieval rounds; read-only, no registration/posting/contact; all tool cache labels retained."
+}

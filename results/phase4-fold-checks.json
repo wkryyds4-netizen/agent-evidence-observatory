@@ -1,0 +1,92 @@
+{
+  "commit": "467a8cdab13869dc24091edf71502d7c4ed5d0a4",
+  "input_sha256": {
+    "fold_check.py": "ddb3174849cca5c1a0d534191e79a9318acd12b7ad2f3d5897dd022543e87b8c",
+    "META.json": "83d1e57dd7a0cc6b81970587480010d0eb6557736d143984abf9dc1f9b3b18ab"
+  },
+  "recipe_constants": {
+    "header_bytes": 12,
+    "chunk_bytes": 3000,
+    "link": "sha256(chunk + link)",
+    "fold_direction": "last_to_first",
+    "link_seed_hex": "0000000000000000000000000000000000000000000000000000000000000000",
+    "magic_descriptor_hex": "28b52ffda0"
+  },
+  "python": "3.14.5",
+  "cases": [
+    {
+      "name": "default_calibration_with_synthetic_fixture",
+      "exit_code": 0,
+      "expected_observation_exit": 0,
+      "expected_marker_found": true,
+      "observation_reproduced": true,
+      "stdout_sha256": "8789219ba645189d21af417af3346cb17578d24f470301d59e25160d554f935c",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "documented_json_only_is_rejected",
+      "exit_code": 2,
+      "expected_observation_exit": 2,
+      "expected_marker_found": true,
+      "observation_reproduced": true,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "b9a85b74832f6fbfdb5636bf81659c532e3dd8322768a5ba487650f4c261b067"
+    },
+    {
+      "name": "explicit_flags_matching_root",
+      "exit_code": 0,
+      "expected_observation_exit": 0,
+      "expected_marker_found": true,
+      "observation_reproduced": true,
+      "stdout_sha256": "eee98a160749b74afa85d27669300deeee69ebc68b8d1200896d2e6aeb776238",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "explicit_flags_wrong_root",
+      "exit_code": 1,
+      "expected_observation_exit": 1,
+      "expected_marker_found": true,
+      "observation_reproduced": true,
+      "stdout_sha256": "fdd244fb5faa8a0eb1db762cb12a238cb899b95fc9b05537e3e76a6372f8aa2b",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "positional_arguments_rejected",
+      "exit_code": 2,
+      "expected_observation_exit": 2,
+      "expected_marker_found": true,
+      "observation_reproduced": true,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "b9a85b74832f6fbfdb5636bf81659c532e3dd8322768a5ba487650f4c261b067"
+    },
+    {
+      "name": "missing_expect_rejected",
+      "exit_code": 2,
+      "expected_observation_exit": 2,
+      "expected_marker_found": true,
+      "observation_reproduced": true,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "ba1ef8f04b31882b4df6c862365acb08c348da9563fb32de7d74509a6335d637"
+    },
+    {
+      "name": "crlf_does_not_match_lf_root",
+      "exit_code": 1,
+      "expected_observation_exit": 1,
+      "expected_marker_found": true,
+      "observation_reproduced": true,
+      "stdout_sha256": "46dab1ba2094791ff17d72c621a07b8b6d1b71bb1477ded596366d4fd353b062",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "case_count": 7,
+  "observations_reproduced": 7,
+  "json_calibration_file_created": false,
+  "documented_json_mode_contract_satisfied": false,
+  "scope": "Pinned CLI with generated fixture content. Reproducing a documented-mode failure is not a product pass.",
+  "limits": [
+    "No real proposal text, chain transaction or governance outcome tested.",
+    "No model identity, operator independence or autonomous organization established.",
+    "Two fixture roots use a separately written implementation of the same recipe, not an external protocol oracle.",
+    "Output hashes record this local run; CLI help contains whitespace and may vary with line-ending conversion."
+  ]
+}

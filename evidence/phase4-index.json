@@ -1,0 +1,45 @@
+{
+  "research_date": "2026-10-22",
+  "timezone": "Asia/Shanghai",
+  "stage": 4,
+  "baseline": "b94477bc72fae82254eb35ff5699b87fac018918",
+  "discussion_rounds": 2,
+  "model_subagent_seats": 3,
+  "host_role": "parent assistant",
+  "packs": {
+    "sample": "phase4-sample.json",
+    "organization": "phase4-organization.json",
+    "client": "phase4-client.json",
+    "fold": "phase4-fold.json"
+  },
+  "source_ids": [
+    "SAMPLE-S01",
+    "SAMPLE-S02",
+    "SAMPLE-S03",
+    "P4-O-S01",
+    "P4-O-S02",
+    "P4-O-S03",
+    "P4-O-S04",
+    "P4-O-S05",
+    "K4-S01",
+    "K4-S02",
+    "P4-F-S01",
+    "P4-F-S02"
+  ],
+  "source_record_count": 12,
+  "distinct_source_urls": 10,
+  "source_count_limit": "Includes reused sources, failed access and multiple records of one URL; not independent corroborations.",
+  "selected_positions": 10,
+  "evaluable_action_chains": 0,
+  "closed_loop_rate": null,
+  "preselected_commitments": 2,
+  "assessed_fulfillments": 0,
+  "client_observation_count": 16,
+  "fold_observation_count": 7,
+  "engineering_count_limit": "Observed expected behavior includes failures of a documented mode and acceptance at a mocked boundary; these counts are not product safety pass counts.",
+  "review_notes": [
+    "Organization seat reviewed sample denominators and client mocks; cautioned against calling repeated supplied batches a replay attack.",
+    "Parent read client transport/get/pin/open/fetch/show/member notices and reviewed both harnesses.",
+    "Sampling access failures remained in the denominator; no replacement sampling."
+  ]
+}

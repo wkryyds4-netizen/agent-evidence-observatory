@@ -1,0 +1,149 @@
+{
+  "research_date": "2026-10-22",
+  "timezone": "Asia/Shanghai",
+  "selection_file": "phase4-organization-selection.json",
+  "selection_recorded_at_utc": "2026-10-22T14:18:50Z",
+  "review_closed_at_utc": "2026-10-22T14:23:32Z",
+  "baseline": "b94477bc72fae82254eb35ff5699b87fac018918",
+  "scope": "Preselected two commitments from phase-three organization records; two focused retrieval rounds; read-only.",
+  "sources": [
+    {
+      "id": "P4-O-S01",
+      "title": "Preselected index and earlier handoff",
+      "url": "https://thecolony.ai/post/3256fce8-9795-4944-a5cd-5fe588cf1222",
+      "published": "2026-09-20 11:46 UTC; baseline handoff 2026-09-22",
+      "access": "Phase-three original page observation reused; phase-four direct web open failed",
+      "summary": "基线记录索引承诺发布当日补充，回手提交《沙箱品》链接，平安后续汇总同一链接。",
+      "limits": "本轮未重新读取正文，不是新的履约证据；同日承诺须另核目标发布时间。"
+    },
+    {
+      "id": "P4-O-S02",
+      "title": "《神午安108AI经》天网卷·沙箱品 (preselected target)",
+      "url": "https://www.thecolony.ai/post/7331868c-ea77-4a46-aa58-2ca7b224634e",
+      "published": "unknown; not successfully read",
+      "access": "Round 1 web open inaccessible; round 2 anonymous curl IPv4 failed with CRYPT_E_REVOCATION_OFFLINE before content was obtained",
+      "summary": "预选目标未取得正文、作者或平台发布时间；未换其他目标。",
+      "limits": "访问失败不证明页面不存在、内容不合格或承诺违约。"
+    },
+    {
+      "id": "P4-O-S03",
+      "title": "如是·平安 profile and visible activity",
+      "url": "https://thecolony.ai/u/rushipingan",
+      "published": "dynamic profile; latest visible relevant item dated 2026-10-22 05:35 UTC",
+      "access": "Round 1 web open returned original-page text; tool labeled Crawled: today; fresh versus cached unknown",
+      "summary": "可见列表仍列v0.7及两条评论；05:35活动预览回应另一账号认领守阁职责，但预览同时强调该席位是责任。",
+      "limits": "个人页只是一页可见范围，非账号全部历史；预览不能证明授予角色、实际工作或收据存在。"
+    },
+    {
+      "id": "P4-O-S04",
+      "title": "守阁协议 v0.7",
+      "url": "https://thecolony.ai/post/1962fe87-b68d-419c-8c3f-5a25384fafc8",
+      "published": "2026-10-22 05:31 UTC; visible replies 06:03 and 06:23 UTC",
+      "access": "Round 1 direct open failed; round 2 click from profile returned 262-line original-page text; tool labeled Crawled: today",
+      "summary": "原文要求依赖行动携带公开心跳收据并设置七日公示；仍可见Longcat、Ember两条质疑，未读到后续执行回执。",
+      "limits": "可能复用了阶段三缓存；不是一项新规则。七日尚未结束，且正式采用还附带无新异议条件；不能推导自动到期采用。"
+    },
+    {
+      "id": "P4-O-S05",
+      "title": "Responsibility acceptance thread linked by profile activity",
+      "url": "https://thecolony.ai/post/7ca68b29-7277-463f-b620-b8c6d1cb3948",
+      "published": "thread publication unknown; profile comment preview dated 2026-10-22 05:35 UTC",
+      "access": "Round 2 click returned Cache miss; only profile activity preview available",
+      "summary": "目标正文不可读，未核实认领后是否实际工作及是否发公开收据。",
+      "limits": "责任认领、平台角色赋予与运行行为是不同层次；不能凭预览合并。"
+    }
+  ],
+  "retrieval_rounds": [
+    {
+      "round": 1,
+      "method": "web__run batch open",
+      "targets": [
+        "P4-O-S01",
+        "P4-O-S02",
+        "P4-O-S03",
+        "P4-O-S04"
+      ],
+      "result": "Three direct post opens failed; profile text readable. Stopped direct-post-open access path after these failures."
+    },
+    {
+      "round": 2,
+      "method": "Exact target curl IPv4 plus profile-link clicks",
+      "targets": [
+        "P4-O-S02",
+        "P4-O-S04",
+        "P4-O-S05"
+      ],
+      "result": "Target curl certificate revocation check unavailable; v0.7 profile click readable; responsibility thread cache miss. No further search or substitution."
+    }
+  ],
+  "commitments": [
+    {
+      "id": "P4-O-C01",
+      "source_ids": [
+        "P4-O-S01",
+        "P4-O-S02"
+      ],
+      "commitment": "新经发布当日补充索引；预选《天网卷·沙箱品》一项核对。",
+      "baseline_observed": "阶段三看到2026-09-22 08:44 UTC提交，17:02 UTC汇总同一链接。",
+      "new_observations": [
+        {
+          "type": "access_failure",
+          "detail": "目标正文与平台发布时间未取到。"
+        }
+      ],
+      "status": "unknown_target_publication_and_fulfillment",
+      "status_zh": "目标未知，不能评估同日履约",
+      "fulfilled": null,
+      "fulfillment_assessed": false,
+      "judgment": "仅保留基线的链接交接观察，本轮未补上目标产物环节；不能认定成功或违约。",
+      "contradiction_observed": false,
+      "missing": [
+        "目标平台发布时间",
+        "目标标题/作者/正文核对"
+      ],
+      "stop_reason": "已用原页与一次替代路径，不换样本；两轮预算结束。"
+    },
+    {
+      "id": "P4-O-C02",
+      "source_ids": [
+        "P4-O-S03",
+        "P4-O-S04",
+        "P4-O-S05"
+      ],
+      "commitment": "v0.7提出依赖心跳前公开收据，并公示七日。",
+      "baseline_observed": "2026-10-22 05:31 UTC发布文字规则，后有批评。",
+      "new_observations": [
+        {
+          "type": "reobserved_page",
+          "detail": "复读同一规则和两条旧评论，未取得新的具体依赖行为及配套收据。"
+        },
+        {
+          "type": "profile_preview_only",
+          "time": "2026-10-22 05:35 UTC",
+          "detail": "有职责认领回应，但完整原帖不可读；不据此认定授予角色或执行。"
+        }
+      ],
+      "status": "consultation_not_due_operational_adoption_unknown",
+      "status_zh": "公示未到期，运行采用未知",
+      "fulfilled": null,
+      "fulfillment_assessed": false,
+      "judgment": "规则文字存在；七日公示尚未结束，且采纳附条件，不能把当前无执行证据写成未履约。",
+      "contradiction_observed": false,
+      "missing": [
+        "明确适用该规则的依赖行动",
+        "该行动的公开收据或最后心跳字段",
+        "新异议处理及正式采用声明"
+      ],
+      "stop_reason": "两轮定向访问后没有可核对的新执行环节，不等待到期也不继续泛搜。"
+    }
+  ],
+  "interpretation": {
+    "new_closed_execution_chains": 0,
+    "unknown_commitments": 2,
+    "expired_unfulfilled_commitments": 0,
+    "not_due_consultation_items": 1,
+    "note": "Counts describe this preselected audit only. fulfilled:null means unknown, not a breach; status and judgment control interpretation.",
+    "operator_attribution": "No new verified operator mapping; profile labels and responsibility language do not authenticate models.",
+    "conclusion": "本轮没有新增可闭合的组织执行证据；结果是两个受限未知，其中一项公示未到期。不能用访问失败、缓存未更新或尚未到期来证明没有协作或存在违约。"
+  }
+}

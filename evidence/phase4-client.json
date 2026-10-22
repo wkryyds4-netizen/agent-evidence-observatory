@@ -1,0 +1,123 @@
+{
+  "date": "2026-10-22",
+  "commit": "135974f468ec5bb39aa0f275b43e54a763306d77",
+  "sources": [
+    {
+      "id": "K4-S01",
+      "title": "SwarmMemo Python主客户端固定源码",
+      "url": "https://github.com/Hugo0/swarmmemo/blob/135974f468ec5bb39aa0f275b43e54a763306d77/clients/python/swarmmemo.py",
+      "publisher": "Hugo0/swarmmemo",
+      "published": "2026-10-22T13:26:01Z（提交时间）",
+      "access": "2026-10-22公开GitHub contents API固定ref；完整文件347110字节；重算Git blob与API一致",
+      "sha256": "7bb66027cfd170c3f508ed4ada782022a1860461f509848005909ee9767c093f",
+      "git_blob_sha": "1021bf5b9d05c8134709cf7152a56bd4f2bf51ce",
+      "license": "Apache-2.0",
+      "summary": "静态追踪Client返回、Chat.get/pin/fetch/show及SealedRoom消息解密链。只执行已完整阅读、按AST选取的定义/方法。",
+      "limits": "没有import完整主客户端；没有运行实际HTTP、客户端初始化、真实密钥加载或持久化；服务器不在本次范围。"
+    },
+    {
+      "id": "K4-S02",
+      "title": "SwarmMemo sealed加密模块固定源码",
+      "url": "https://github.com/Hugo0/swarmmemo/blob/135974f468ec5bb39aa0f275b43e54a763306d77/clients/python/swarmmemo_seal.py",
+      "publisher": "Hugo0/swarmmemo",
+      "published": "2026-10-22T13:26:01Z（提交时间）",
+      "access": "沿用阶段三已取得并完整阅读的本地固定版本，执行前重新检查SHA256",
+      "sha256": "fe9c256f6807e7339733ea273ff2a1bf15b55bf3d33b0bac97d1fb6acfebea0c",
+      "git_blob_sha": "ee144cb8d3eb33645aeabe59ae703762fb726c28",
+      "license": "Apache-2.0",
+      "summary": "为合成消息提供实际AEAD与Ed25519 rotation验证，无网络调用。",
+      "limits": "本轮以合成密钥和数据调用，不接线上sealed会话。"
+    }
+  ],
+  "queries": [
+    {
+      "query": "GitHub contents API clients/python/swarmmemo.py?ref=135974f468ec5bb39aa0f275b43e54a763306d77",
+      "result": "curl --ipv4在授权提升环境完整获取，无账户凭证；Base64解码且Git blob重算相符。"
+    },
+    {
+      "query": "静态搜索signature/signed_payload、created_sealed、Client._request/send/command、Chat.get/pin/fetch/show/member_lines、SealedRoom",
+      "result": "定位创建与rotation签名验证；在所读的消息到展示路径未找到每条消息外层作者签名验证。"
+    },
+    {
+      "query": "固定哈希AST选择定义及方法，使用已存在Python 3.12.14/cryptography 50.0.2执行原创harness",
+      "result": "最终16项针对性观察符合预期；0被守卫网络/进程事件；无安装依赖。"
+    }
+  ],
+  "checks": [
+    {
+      "id": "K4-C01",
+      "kind": "static-plus-synthetic",
+      "question": "创建记录是否验签及绑定service/room/public_key？",
+      "method": "精确抽取created_sealed，生成有效与四种错误合成记录",
+      "result": "有效记录接受；错误签名、房间、服务、公钥绑定不符均拒绝。",
+      "limits": "Chat.pin的真实文件固定及HTTPS未运行。",
+      "source_ids": [
+        "K4-S01"
+      ]
+    },
+    {
+      "id": "K4-C02",
+      "kind": "static-plus-synthetic",
+      "question": "读取sealed消息时是否在客户端验证每条消息的外层作者签名？",
+      "method": "SealedRoom.learn/open/body原始定义；Chat.fetch与show原始方法，Chat.get提供合成响应，展示相关外部边界显式stub",
+      "result": "正确合成rotation可解密；消息外层signature错误、缺失或public_key改写仍被被测helper打开；仅改变author而保留原密文被AAD拒绝。无效签名消息在合成fetch/show链到达输出。",
+      "limits": "测试入口为合成响应，不是服务端收到伪造post；不能排除服务器入站验签或真实部署保护。成员提示的agent.get/verify_seal_key被stub，未测试完整客户端。",
+      "source_ids": [
+        "K4-S01",
+        "K4-S02"
+      ]
+    },
+    {
+      "id": "K4-C03",
+      "kind": "static-plus-synthetic",
+      "question": "重复输入如何影响展示及本地状态？",
+      "method": "向fetch提供同一ID的两份合成消息，再以相同批次调用show；save_chat使用内存捕获",
+      "result": "fetch保留两条，show显示两次；相同批次再次输入再次显示；acknowledge更新cursor，peek不保存。",
+      "limits": "不说明真实服务器重复投递，不涉及工具执行；真实磁盘持久化、崩溃恢复和端到端重放防护未测试。",
+      "source_ids": [
+        "K4-S01"
+      ]
+    },
+    {
+      "id": "K4-C04",
+      "kind": "method-audit",
+      "question": "本轮执行隔离到什么范围？",
+      "method": "导入前强制SHA256；只编译AST选出的已阅读定义/方法；网络/进程审计钩子",
+      "result": "16个结果均符合预设观察，0被守卫事件；源码选择区间、全部stub和局限保存在results/phase4-client-checks.json",
+      "limits": "16通过表示观察符合预期，含接受无效签名的边界观察，不是16项安全合格；审计钩子不是通用恶意代码沙箱。",
+      "source_ids": [
+        "K4-S01",
+        "K4-S02"
+      ]
+    }
+  ],
+  "static_paths": [
+    {
+      "name": "transport return",
+      "lines": "2720-2790",
+      "observation": "_request解码JSON；command/send返回响应。读到的链未对响应中逐条message验签。"
+    },
+    {
+      "name": "creation and room",
+      "lines": "3882-3898,4011-4038",
+      "observation": "created_sealed验创建签名与字段；get核对conversation.room；pin记录sealed/creator并比较变化。"
+    },
+    {
+      "name": "epoch and envelope",
+      "lines": "3930-3971",
+      "observation": "learn验证成员签名的rotation；body依据上下文service/room与消息author做AEAD解密。"
+    },
+    {
+      "name": "fetch/show",
+      "lines": "4040-4130",
+      "observation": "fetch追加message，opened/pages按ID映射；show遍历消息并保存cursor，未见逐条外层作者签名验证或持久seen去重。"
+    },
+    {
+      "name": "member notices",
+      "lines": "4164-4187",
+      "observation": "member_lines可读取并验证成员sealing-key记录，失败显示提示；本轮stub此边，不等价于逐条message作者验签。"
+    }
+  ],
+  "judgment": "所读客户端链对创建和epoch轮换有认证，但本轮未找到每条消息外层作者签名的本地检查，合成对象观察与此相符。真实服务接收、返回及部署保护未被测；这是客户端验证范围结果，不是线上漏洞结论。",
+  "social_limit": "即使消息与密钥可靠绑定，也只支持签名主体连续性；不证明底层模型、密钥独占、运营者独立或自主组织。"
+}

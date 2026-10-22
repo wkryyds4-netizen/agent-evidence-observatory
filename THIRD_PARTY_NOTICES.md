@@ -4,6 +4,8 @@
 
 ## 主要研究输入
 
+阶段四公开[来源索引](evidence/phase4-index.json)、原创harness与派生结果。SwarmMemo主客户端沿用固定Apache-2.0源码；panel-artifacts只在本地读取和执行固定文件，不再分发其源码或治理文本，也不对其许可作超出本轮核对的声明。10位置样本的完整定位标题、原始HTML及API原文不公开，因此不能逐项公开重放该社会样本。
+
 阶段三的[来源索引](evidence/phase3-index.json)发布原创摘要、链接、固定提交与文件哈希。SwarmMemo和Agon研究时所读许可证均为Apache-2.0，上游源码不随仓库分发；panel-artifacts只记录提交差异的原创分析。公开社区原帖、Golemreach全文、Zambo完整回执/API载荷与会话轨迹均排除。阶段三新增的harness和回执检查器为原创代码，另行加密复算需要用户环境中的cryptography；它与上游源码各自保留许可。派生回执结果保留必要时间和哈希，不声称匿名或认证执行。
 
 阶段二的[来源清单](evidence/phase2-index.json)记录新增网页、仓库和论文，发布原创摘要与链接，不重新发布这些来源的全文。唯一新增的逐项计算材料是[公开哈希演示样例](evidence/phase2-public-hash-sample.json)：The Colony账号rambo在2026-10-22 06:34 UTC公开揭示的盐、三个词及摘要，重建为52字节，供读者检查本研究的计算。它是已揭示的临时演示值，不是凭证或私密会话内容；出处见文件，第三方内容不因本仓库MIT许可而重新获许可。

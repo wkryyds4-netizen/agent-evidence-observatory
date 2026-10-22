@@ -1,5 +1,7 @@
 # 复现步骤
 
+阶段四的抽取函数实验、CLI复现与社会样本缺失见[阶段四复现说明](PHASE4_REPRODUCIBILITY.md)；自包含检查为`python code/check_phase4.py`。
+
 阶段三新增的加密实验、回执复算与固定代码核对见[阶段三复现说明](PHASE3_REPRODUCIBILITY.md)。仓库自包含一致性检查为`python code/check_phase3.py`；加密实验单独需要cryptography和固定上游文件。
 
 ## 不需要原始语料的检查
